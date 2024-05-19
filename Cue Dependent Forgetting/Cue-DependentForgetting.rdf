@@ -29,7 +29,7 @@
         <hasComponent>http://www.ontologydesignpatterns.org/cp/owl/situation.owl</hasComponent>
         <hasComponent>https://w3id.org/framester/data/framestercore/</hasComponent>
         <hasComponent>https://www.cidoc-crm.org/html/cidoc_crm_v7.1.3.html</hasComponent>
-        <userStory xml:lang="en">It&apos;s the end of the semester, and Alex has been preparing for the final physics exam for weeks. Despite feeling well-prepared the night before, Alex experiences a surge of anxiety as the exam begins, causing a critical formula to slip from memory at a crucial moment. Halfway through the exam, Alex encounters a problem that requires the use of this specific formula. Despite knowing they&apos;ve used it multiple times before, the stress of the exam environment makes it impossible to recall. Frustrated and anxious, Alex moves on to other questions, leaving that part blank.
+        <userStory xml:lang="en">It's the end of the semester, and Alex has been preparing for the final physics exam for weeks. Despite feeling well-prepared the night before, Alex experiences a surge of anxiety as the exam begins, causing a critical formula to slip from memory at a crucial moment. Halfway through the exam, Alex encounters a problem that requires the use of this specific formula. Despite knowing they&apos;ve used it multiple times before, the stress of the exam environment makes it impossible to recall. Frustrated and anxious, Alex moves on to other questions, leaving that part blank.
 
 As time dwindles, Alex reviews their answers, and when revisiting the problematic question, a seemingly unrelated memory flashes through their mind: a joke made by their study group about the formula. This cue, tied to a relaxed and humorous moment, suddenly triggers the forgotten formula&apos;s recall.</userStory>
         <terms:created>18/5/2024</terms:created>
@@ -178,9 +178,9 @@ As time dwindles, Alex reviews their answers, and when revisiting the problemati
     
 
 
-    <!-- http://www.ontologydesignpatterns.org/cp/owl/reaction.owl.v0.1# hasOutcome -->
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/reaction.owl.v0.1#hasOutcome -->
 
-    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/cp/owl/reaction.owl.v0.1# hasOutcome">
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/cp/owl/reaction.owl.v0.1#hasOutcome">
         <rdfs:domain rdf:resource="https://w3id.org/framester/data/framestercore/Memorization"/>
         <rdfs:range rdf:resource="http://dbpedia.org/ontology/Knowledge"/>
         <rdf:about>http://ontologydesignpatterns.org/wiki/Submissions:Reaction</rdf:about>
@@ -191,9 +191,9 @@ As time dwindles, Alex reviews their answers, and when revisiting the problemati
     
 
 
-    <!-- http://www.ontologydesignpatterns.org/cp/owl/reaction.owl.v0.1# raise -->
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/reaction.owl.v0.1#raise -->
 
-    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/cp/owl/reaction.owl.v0.1# raise">
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/cp/owl/reaction.owl.v0.1#raise">
         <rdfs:domain rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/tree/main#Trigger"/>
         <rdfs:range rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/tree/main#Reproducing"/>
         <rdf:about>http://ontologydesignpatterns.org/wiki/Submissions:Reaction</rdf:about>
@@ -203,15 +203,15 @@ As time dwindles, Alex reviews their answers, and when revisiting the problemati
     
 
 
-    <!-- http://www.ontologydesignpatterns.org/cp/owl/sequence.owl# precedes -->
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#precedes -->
 
-    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/cp/owl/sequence.owl# precedes">
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#precedes">
         <rdfs:domain rdf:resource="https://w3id.org/framester/data/framestercore/Memorization"/>
         <rdfs:range rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/tree/main#Reproducing"/>
         <rdf:about>http://ontologydesignpatterns.org/wiki/Submissions:Sequence</rdf:about>
         <rdfs:isDefinedBy>http://www.ontologydesignpatterns.org/cp/owl/sequence.owl</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">precedes</rdfs:label>
-        <terms:description xml:lang="en">A relation between entities, expressing a &apos;sequence&apos; schema.</terms:description>
+        <terms:description xml:lang="en">A relation between entities, expressing a 'sequence' schema.</terms:description>
     </owl:ObjectProperty>
     
 
@@ -219,20 +219,20 @@ As time dwindles, Alex reviews their answers, and when revisiting the problemati
     <!-- http://www.ontologydesignpatterns.org/cp/owl/situation.owl#hasSetting -->
 
     <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/cp/owl/situation.owl#hasSetting">
-        <owl:inverseOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/situation.owl# isSettingFor"/>
+        <owl:inverseOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/situation.owl#isSettingFor"/>
         <rdfs:domain rdf:resource="https://w3id.org/framester/data/framestercore/Memorization"/>
         <rdfs:range rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/situation.owl#Situation"/>
         <rdf:about>http://ontologydesignpatterns.org/wiki/Submissions:Situation</rdf:about>
         <rdfs:isDefinedBy>http://www.ontologydesignpatterns.org/cp/owl/situation.owl</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">hasSetting</rdfs:label>
-        <terms:description xml:lang="en">A relation between entities and situations, e.g. this morning I&apos;ve prepared my coffee with a new fantastic Arabica; (i.e.: (an amount of) a new fantastic Arabica hasSetting the preparation of my coffee this morning).</terms:description>
+        <terms:description xml:lang="en">A relation between entities and situations, e.g. this morning I've prepared my coffee with a new fantastic Arabica; (i.e.: (an amount of) a new fantastic Arabica hasSetting the preparation of my coffee this morning).</terms:description>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.ontologydesignpatterns.org/cp/owl/situation.owl# isSettingFor -->
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/situation.owl#isSettingFor -->
 
-    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/cp/owl/situation.owl# isSettingFor">
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/cp/owl/situation.owl#isSettingFor">
         <rdfs:domain rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/situation.owl#Situation"/>
         <rdfs:range rdf:resource="https://w3id.org/framester/data/framestercore/Memorization"/>
         <rdf:about>http://ontologydesignpatterns.org/wiki/Submissions:Situation</rdf:about>
@@ -283,8 +283,11 @@ As time dwindles, Alex reviews their answers, and when revisiting the problemati
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:range>
+        <rdfs:isDefinedBy>https://cidoc-crm.org/html/cidoc_crm_v7.1.3.html#P2</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">hasType</rdfs:label>
+        <terms:description xml:lang="en">This property allows sub-typing of entities – a form of specialization – through the use of a terminological hierarchy, or thesaurus.</terms:description>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://www.cidoc-crm.org/html/cidoc_crm_v7.1.3.html#isAbout -->
@@ -381,14 +384,14 @@ As time dwindles, Alex reviews their answers, and when revisiting the problemati
         <rdf:about>http://ontologydesignpatterns.org/wiki/Submissions:Situation</rdf:about>
         <rdfs:isDefinedBy>http://www.ontologydesignpatterns.org/cp/owl/situation.owl</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Situation</rdfs:label>
-        <terms:description xml:lang="en">A view on a set of entities. It can be seen as a &apos;relational context&apos;, reifying a relation.
+        <terms:description xml:lang="en">A view on a set of entities. It can be seen as a relational context, reifying a relation.
 For example, a PlanExecution is a context including some actions executed by agents according to certain parameters and expected tasks to be achieved from a Plan; a DiagnosedSituation is a context of observed entities that is interpreted on the basis of a Diagnosis, etc.
 
 Situation is also able to represent reified n-ary relations, where isSettingFor is the top-level relation for all binary projections of the n-ary relation. If used in a transformation pattern for n-ary relations, the designer should take care of:
 
-- creating only one situation for each instance of an n-ary relation, otherwise the &apos;identification constraint&apos; (Calvanese et al., IJCAI 2001) could be violated
+- creating only one situation for each instance of an n-ary relation, otherwise the identification constraint (Calvanese et al., IJCAI 2001) could be violated
 
-- adding an &apos;exact cardinality&apos; restriction corresponding to the arity of the n-ary relation, otherwise the designer would actually represent a polymorphic relation.</terms:description>
+- adding an exact cardinality restriction corresponding to the arity of the n-ary relation, otherwise the designer would actually represent a polymorphic relation.</terms:description>
     </owl:Class>
     
 
