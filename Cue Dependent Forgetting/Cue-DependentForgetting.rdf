@@ -1,0 +1,504 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://github.com/ranacoskun/cognitive_bias_ontology/tree/main#"
+     xml:base="https://github.com/ranacoskun/cognitive_bias_ontology/tree/main"
+     xmlns:fs="https://w3id.org/framester/data/framestercore/"
+     xmlns:cbi="https://github.com/ranacoskun/cognitive_bias_ontology/tree/main#"
+     xmlns:crm="https://www.cidoc-crm.org/html/cidoc_crm_v7.1.3.html#"
+     xmlns:dbo="http://dbpedia.org/ontology/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:exob="http://ontologydesignpatterns.org/wiki/Submissions:Experience_%26_Observation#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:terms="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/"
+     xmlns:reaction="http://www.ontologydesignpatterns.org/cp/owl/reaction.owl.v0.1#"
+     xmlns:sequence="http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#"
+     xmlns:situation="http://www.ontologydesignpatterns.org/cp/owl/situation.owl#"
+     xmlns:classification="http://www.ontologydesignpatterns.org/cp/owl/classification.owl#">
+    <owl:Ontology rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology/tree/main#">
+        <rdf:about>https://github.com/ranacoskun/cognitive_bias_ontology/tree/main#</rdf:about>
+        <rdfs:comment xml:lang="en">Cue-dependent forgetting bias, also known as retrieval failure, is a phenomenon where the ability to recall information is hindered due to the absence of cues or triggers that were present at the time the memory was encoded. Memory recall is significantly improved by the context or cues that were associated with the initial encoding of the information. These cues can be environmental (such as the place where the learning occurred), emotional (the emotional state at the time of learning), or semantic (related to the meaning of the information).</rdfs:comment>
+        <rdfs:isDefinedBy>https://github.com/ranacoskun/cognitive_bias_ontology/tree/main/Cue%20Dependent%20Forgetting</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Cue-Dependent Forgetting module of the Cognitive Bias Ontology</rdfs:label>
+        <hasComponent>http://dbpedia.org/ontology/</hasComponent>
+        <hasComponent>http://ontologydesignpatterns.org/wiki/Submissions:Experience_%26_Observation</hasComponent>
+        <hasComponent>http://www.ontologydesignpatterns.org/cp/owl/classification.owl</hasComponent>
+        <hasComponent>http://www.ontologydesignpatterns.org/cp/owl/reaction.owl.v0.1</hasComponent>
+        <hasComponent>http://www.ontologydesignpatterns.org/cp/owl/sequence.owl</hasComponent>
+        <hasComponent>http://www.ontologydesignpatterns.org/cp/owl/situation.owl</hasComponent>
+        <hasComponent>https://w3id.org/framester/data/framestercore/</hasComponent>
+        <hasComponent>https://www.cidoc-crm.org/html/cidoc_crm_v7.1.3.html</hasComponent>
+        <userStory xml:lang="en">It&apos;s the end of the semester, and Alex has been preparing for the final physics exam for weeks. Despite feeling well-prepared the night before, Alex experiences a surge of anxiety as the exam begins, causing a critical formula to slip from memory at a crucial moment. Halfway through the exam, Alex encounters a problem that requires the use of this specific formula. Despite knowing they&apos;ve used it multiple times before, the stress of the exam environment makes it impossible to recall. Frustrated and anxious, Alex moves on to other questions, leaving that part blank.
+
+As time dwindles, Alex reviews their answers, and when revisiting the problematic question, a seemingly unrelated memory flashes through their mind: a joke made by their study group about the formula. This cue, tied to a relaxed and humorous moment, suddenly triggers the forgotten formula&apos;s recall.</userStory>
+        <terms:created>18/5/2024</terms:created>
+        <terms:creator xml:lang="en">Evgeniia Vdovichenko</terms:creator>
+        <terms:description xml:lang="en">Cue-Dependent Forgetting Bias specification of Cognitive Bias Ontology</terms:description>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/1999/02/22-rdf-syntax-ns#about -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#about"/>
+    
+
+
+    <!-- https://github.com/ranacoskun/cognitive_bias_ontology/tree/main#hasComponent -->
+
+    <owl:AnnotationProperty rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology/tree/main#hasComponent"/>
+    
+
+
+    <!-- https://github.com/ranacoskun/cognitive_bias_ontology/tree/main#userStory -->
+
+    <owl:AnnotationProperty rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology/tree/main#userStory"/>
+    
+
+
+    <!-- https://www.dublincore.org/specifications/dublin-core/dcmi-terms/created -->
+
+    <owl:AnnotationProperty rdf:about="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/created"/>
+    
+
+
+    <!-- https://www.dublincore.org/specifications/dublin-core/dcmi-terms/creator -->
+
+    <owl:AnnotationProperty rdf:about="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/creator"/>
+    
+
+
+    <!-- https://www.dublincore.org/specifications/dublin-core/dcmi-terms/description -->
+
+    <owl:AnnotationProperty rdf:about="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/description"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://ontologydesignpatterns.org/wiki/Submissions:Experience_%26_Observation#isEngagedIn -->
+
+    <owl:ObjectProperty rdf:about="http://ontologydesignpatterns.org/wiki/Submissions:Experience_%26_Observation#isEngagedIn">
+        <rdfs:domain rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/tree/main#BiasedAgent"/>
+        <rdfs:range rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/situation.owl#Situation"/>
+        <rdf:about>http://ontologydesignpatterns.org/wiki/Submissions:Experience_%26_Observation</rdf:about>
+        <rdfs:label xml:lang="en">isEngagedIn</rdfs:label>
+        <terms:description xml:lang="en">Because an activity may engage other participants than the one performing it, engagements are in general considered individual rather than collective, therefore each participants has their own engagement and only some of them will be conscious and/or documented.</terms:description>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/classification.owl#isClassifiedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/cp/owl/classification.owl#isClassifiedBy">
+        <rdfs:domain rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/tree/main#BiasedAgent"/>
+        <rdfs:domain rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/tree/main#CueDependentForgetting"/>
+        <rdfs:range rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/tree/main#CognitiveBias"/>
+        <rdfs:range rdf:resource="https://w3id.org/framester/data/framestercore/People"/>
+        <rdf:about>http://ontologydesignpatterns.org/wiki/Submissions:Classification</rdf:about>
+        <rdfs:isDefinedBy>http://www.ontologydesignpatterns.org/cp/owl/classification.owl</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">isClassifiedB</rdfs:label>
+        <terms:description xml:lang="en">To represent the relations between concepts (roles, task, parameters) and entities (person, events, values), which concepts can be assigned to. To formalize the application (e.g. tagging) of informal knowledge organization systems such as lexica, thesauri, subject directories, folksonomies, etc., where concepts are first-order elements.</terms:description>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/reaction.owl.v0.1#isOutcomeOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/cp/owl/reaction.owl.v0.1#isOutcomeOf">
+        <owl:inverseOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/reaction.owl.v0.1# hasOutcome"/>
+        <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Knowledge"/>
+        <rdfs:range rdf:resource="https://w3id.org/framester/data/framestercore/Memorization"/>
+        <rdf:about>http://ontologydesignpatterns.org/wiki/Submissions:Reaction</rdf:about>
+        <rdfs:isDefinedBy>http://www.ontologydesignpatterns.org/cp/owl/reaction.owl.v0.1</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">isOutcomeOf</rdfs:label>
+        <terms:description xml:lang="en">Is also true that some outcome follows some action</terms:description>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/reaction.owl.v0.1#isPerformedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/cp/owl/reaction.owl.v0.1#isPerformedBy">
+        <owl:inverseOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/reaction.owl.v0.1#performs"/>
+        <rdfs:domain rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/tree/main#Reproducing"/>
+        <rdfs:domain rdf:resource="https://w3id.org/framester/data/framestercore/Memorization"/>
+        <rdfs:range rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/tree/main#BiasedAgent"/>
+        <rdf:about>http://ontologydesignpatterns.org/wiki/Submissions:Reaction</rdf:about>
+        <rdfs:isDefinedBy>http://www.ontologydesignpatterns.org/cp/owl/reaction.owl.v0.1</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">isPerformedBy</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/reaction.owl.v0.1#isRaisedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/cp/owl/reaction.owl.v0.1#isRaisedBy">
+        <owl:inverseOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/reaction.owl.v0.1# raise"/>
+        <rdfs:domain rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/tree/main#Reproducing"/>
+        <rdfs:range rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/tree/main#Trigger"/>
+        <rdf:about>http://ontologydesignpatterns.org/wiki/Submissions:Reaction</rdf:about>
+        <rdfs:isDefinedBy>http://www.ontologydesignpatterns.org/cp/owl/reaction.owl.v0.1</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">isRaisedBy</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/reaction.owl.v0.1#performs -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/cp/owl/reaction.owl.v0.1#performs">
+        <rdfs:domain rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/tree/main#BiasedAgent"/>
+        <rdfs:range rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/tree/main#Reproducing"/>
+        <rdfs:range rdf:resource="https://w3id.org/framester/data/framestercore/Memorization"/>
+        <rdf:about>http://ontologydesignpatterns.org/wiki/Submissions:Reaction</rdf:about>
+        <rdfs:isDefinedBy>http://www.ontologydesignpatterns.org/cp/owl/reaction.owl.v0.1</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">performs</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/reaction.owl.v0.1# hasOutcome -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/cp/owl/reaction.owl.v0.1# hasOutcome">
+        <rdfs:domain rdf:resource="https://w3id.org/framester/data/framestercore/Memorization"/>
+        <rdfs:range rdf:resource="http://dbpedia.org/ontology/Knowledge"/>
+        <rdf:about>http://ontologydesignpatterns.org/wiki/Submissions:Reaction</rdf:about>
+        <rdfs:isDefinedBy>http://www.ontologydesignpatterns.org/cp/owl/reaction.owl.v0.1</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">hasOutcome</rdfs:label>
+        <terms:description xml:lang="en">Is also true that some action directly preceeds its outcome</terms:description>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/reaction.owl.v0.1# raise -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/cp/owl/reaction.owl.v0.1# raise">
+        <rdfs:domain rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/tree/main#Trigger"/>
+        <rdfs:range rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/tree/main#Reproducing"/>
+        <rdf:about>http://ontologydesignpatterns.org/wiki/Submissions:Reaction</rdf:about>
+        <rdfs:isDefinedBy>http://www.ontologydesignpatterns.org/cp/owl/reaction.owl.v0.1</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">raise</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/sequence.owl# precedes -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/cp/owl/sequence.owl# precedes">
+        <rdfs:domain rdf:resource="https://w3id.org/framester/data/framestercore/Memorization"/>
+        <rdfs:range rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/tree/main#Reproducing"/>
+        <rdf:about>http://ontologydesignpatterns.org/wiki/Submissions:Sequence</rdf:about>
+        <rdfs:isDefinedBy>http://www.ontologydesignpatterns.org/cp/owl/sequence.owl</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">precedes</rdfs:label>
+        <terms:description xml:lang="en">A relation between entities, expressing a &apos;sequence&apos; schema.</terms:description>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/situation.owl#hasSetting -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/cp/owl/situation.owl#hasSetting">
+        <owl:inverseOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/situation.owl# isSettingFor"/>
+        <rdfs:domain rdf:resource="https://w3id.org/framester/data/framestercore/Memorization"/>
+        <rdfs:range rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/situation.owl#Situation"/>
+        <rdf:about>http://ontologydesignpatterns.org/wiki/Submissions:Situation</rdf:about>
+        <rdfs:isDefinedBy>http://www.ontologydesignpatterns.org/cp/owl/situation.owl</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">hasSetting</rdfs:label>
+        <terms:description xml:lang="en">A relation between entities and situations, e.g. this morning I&apos;ve prepared my coffee with a new fantastic Arabica; (i.e.: (an amount of) a new fantastic Arabica hasSetting the preparation of my coffee this morning).</terms:description>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/situation.owl# isSettingFor -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/cp/owl/situation.owl# isSettingFor">
+        <rdfs:domain rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/situation.owl#Situation"/>
+        <rdfs:range rdf:resource="https://w3id.org/framester/data/framestercore/Memorization"/>
+        <rdf:about>http://ontologydesignpatterns.org/wiki/Submissions:Situation</rdf:about>
+        <rdfs:isDefinedBy>http://www.ontologydesignpatterns.org/cp/owl/situation.owl</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">isSettingFor</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/ranacoskun/cognitive_bias_ontology/tree/main#affectedBy -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology/tree/main#affectedBy">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/tree/main#BiasedAgent"/>
+        <rdfs:range rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/tree/main#CognitiveBias"/>
+        <rdfs:isDefinedBy>https://github.com/ranacoskun/cognitive_bias_ontology/tree/main#affectedBy</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">affectedBy</rdfs:label>
+        <terms:description xml:lang="en">Represents the cognitive bias a BiasedObject experiences, including cue-dependent forgetting.</terms:description>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/ranacoskun/cognitive_bias_ontology/tree/main#containsTrigger -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology/tree/main#containsTrigger">
+        <rdfs:domain rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/situation.owl#Situation"/>
+        <rdfs:range rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/tree/main#Trigger"/>
+        <rdfs:isDefinedBy>https://github.com/ranacoskun/cognitive_bias_ontology/tree/main#containsTrigger</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">containsTrigger</rdfs:label>
+        <terms:description xml:lang="en">Models and identifies which aspects of a situation are critical for initiating the cognitive process of memory recall.</terms:description>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.cidoc-crm.org/html/cidoc_crm_v7.1.3.html#hasType -->
+
+    <owl:ObjectProperty rdf:about="https://www.cidoc-crm.org/html/cidoc_crm_v7.1.3.html#hasType">
+        <rdfs:domain rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/tree/main#Trigger"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/tree/main#context-dependent"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:range>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/tree/main#state-dependent"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.cidoc-crm.org/html/cidoc_crm_v7.1.3.html#isAbout -->
+
+    <owl:ObjectProperty rdf:about="https://www.cidoc-crm.org/html/cidoc_crm_v7.1.3.html#isAbout">
+        <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Knowledge"/>
+        <rdfs:range rdf:resource="https://w3id.org/framester/data/framestercore/Information"/>
+        <rdfs:isDefinedBy>https://cidoc-crm.org/html/cidoc_crm_v7.1.3.html#P129</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">isAbout</rdfs:label>
+        <terms:description xml:lang="en">This property documents that an instance of E89 Propositional Object has as subject an instance of E1 CRM Entity. This differs from P67 refers to (is referred to by), which refers to an instance of E1 CRM Entity, in that it describes the primary subject or subjects of an instance of E89 Propositional Object.</terms:description>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.cidoc-crm.org/html/cidoc_crm_v7.1.3.html#usedSpecificObject -->
+
+    <owl:ObjectProperty rdf:about="https://www.cidoc-crm.org/html/cidoc_crm_v7.1.3.html#usedSpecificObject">
+        <rdfs:domain rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/tree/main#Reproducing"/>
+        <rdfs:domain rdf:resource="https://w3id.org/framester/data/framestercore/Memorization"/>
+        <rdfs:range rdf:resource="http://dbpedia.org/ontology/Knowledge"/>
+        <rdfs:range rdf:resource="https://w3id.org/framester/data/framestercore/Information"/>
+        <rdfs:isDefinedBy>https://cidoc-crm.org/html/cidoc_crm_v7.1.3.html#P16</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">used specific object</rdfs:label>
+        <terms:description xml:lang="en">This property describes the use of material or immaterial things in a way essential to the performance or the outcome of an instance of E7 Activity. It implies that the presence of the object in question was a necessary condition for the action.</terms:description>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://github.com/ranacoskun/cognitive_bias_ontology/tree/main#context-dependent -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology/tree/main#context-dependent">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.cidoc-crm.org/html/cidoc_crm_v7.1.3.html#hasType"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/tree/main#Trigger"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/ranacoskun/cognitive_bias_ontology/tree/main#state-dependent -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology/tree/main#state-dependent">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.cidoc-crm.org/html/cidoc_crm_v7.1.3.html#hasType"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/tree/main#Trigger"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://dbpedia.org/ontology/Knowledge -->
+
+    <owl:Class rdf:about="http://dbpedia.org/ontology/Knowledge">
+        <rdfs:isDefinedBy>https://dbpedia.org/page/Knowledge</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Knowledge</rdfs:label>
+        <terms:description xml:lang="en">Can be defined as awareness of facts or as practical skills and may also refer to familiarity with objects or situations. Knowledge of facts, also called propositional knowledge, is often defined as true belief that is distinct from opinion or guesswork by virtue of justification. While there is wide agreement among philosophers that propositional knowledge is a form of true belief, many controversies in philosophy focus on justification: whether it is needed at all, how to understand it, and whether something else besides it is needed. These controversies intensified due to a series of thought experiments by Edmund Gettier and have provoked various alternative definitions. Some of them deny that justification is necessary and replace it, for example, with reliability or the man.</terms:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/situation.owl#Situation -->
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/cp/owl/situation.owl#Situation">
+        <rdf:about>http://ontologydesignpatterns.org/wiki/Submissions:Situation</rdf:about>
+        <rdfs:isDefinedBy>http://www.ontologydesignpatterns.org/cp/owl/situation.owl</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Situation</rdfs:label>
+        <terms:description xml:lang="en">A view on a set of entities. It can be seen as a &apos;relational context&apos;, reifying a relation.
+For example, a PlanExecution is a context including some actions executed by agents according to certain parameters and expected tasks to be achieved from a Plan; a DiagnosedSituation is a context of observed entities that is interpreted on the basis of a Diagnosis, etc.
+
+Situation is also able to represent reified n-ary relations, where isSettingFor is the top-level relation for all binary projections of the n-ary relation. If used in a transformation pattern for n-ary relations, the designer should take care of:
+
+- creating only one situation for each instance of an n-ary relation, otherwise the &apos;identification constraint&apos; (Calvanese et al., IJCAI 2001) could be violated
+
+- adding an &apos;exact cardinality&apos; restriction corresponding to the arity of the n-ary relation, otherwise the designer would actually represent a polymorphic relation.</terms:description>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/ranacoskun/cognitive_bias_ontology/tree/main#BiasedAgent -->
+
+    <owl:Class rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology/tree/main#BiasedAgent">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/framester/data/framestercore/People"/>
+        <rdfs:isDefinedBy>https://github.com/ranacoskun/cognitive_bias_ontology/tree/main#BiasedAgent</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">BiasedAgent</rdfs:label>
+        <terms:description xml:lang="en">Represents an entity that experiences the bias.</terms:description>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/ranacoskun/cognitive_bias_ontology/tree/main#CognitiveBias -->
+
+    <owl:Class rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology/tree/main#CognitiveBias">
+        <rdfs:isDefinedBy>https://github.com/ranacoskun/cognitive_bias_ontology/tree/main#CognitiveBias</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">CognitiveBias</rdfs:label>
+        <terms:description xml:lang="en">A general class representing cognitive biases, which are systematic patterns of deviation from norm or rationality in judgment.</terms:description>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/ranacoskun/cognitive_bias_ontology/tree/main#CueDependentForgetting -->
+
+    <owl:Class rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology/tree/main#CueDependentForgetting">
+        <rdfs:subClassOf rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/tree/main#CognitiveBias"/>
+        <rdfs:isDefinedBy>https://github.com/ranacoskun/cognitive_bias_ontology/tree/main#CueDependentForgetting</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">CueDependentForgetting</rdfs:label>
+        <terms:description xml:lang="en">A specific cognitive bias where the ability to recall information is dependent on cues present at the time of encoding and at the time of retrieval.</terms:description>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/ranacoskun/cognitive_bias_ontology/tree/main#Reproducing -->
+
+    <owl:Class rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology/tree/main#Reproducing">
+        <rdfs:isDefinedBy>https://github.com/ranacoskun/cognitive_bias_ontology/tree/main#Reproducing</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Reproducing</rdfs:label>
+        <terms:description xml:lang="en">Models the process of recalling and possibly reconstructing memories. This class deals with how an agent processes and reproduces information from memory.</terms:description>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/ranacoskun/cognitive_bias_ontology/tree/main#Trigger -->
+
+    <owl:Class rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology/tree/main#Trigger">
+        <rdfs:isDefinedBy>https://github.com/ranacoskun/cognitive_bias_ontology/tree/main#Trigger</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Trigger</rdfs:label>
+        <terms:description xml:lang="en">Represents an environmental or contextual stimulus that facilitates the recall of memories by a BiasedAgent. Has types depending on the provenance of the trigger: context-dependent (referring to the environment) and state-dependent (referring to the person experiencing the bias).</terms:description>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/framester/data/framestercore/Information -->
+
+    <owl:Class rdf:about="https://w3id.org/framester/data/framestercore/Information">
+        <rdfs:isDefinedBy>https://w3id.org/framester/data/framestercore/Information</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Information</rdfs:label>
+        <terms:description xml:lang="en">Describes the information which the person would like to memorize.</terms:description>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/framester/data/framestercore/Memorization -->
+
+    <owl:Class rdf:about="https://w3id.org/framester/data/framestercore/Memorization">
+        <rdfs:isDefinedBy>https://w3id.org/framester/data/framestercore/Memorization</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Memorization</rdfs:label>
+        <terms:description xml:lang="en">Models memorizing activity.</terms:description>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/framester/data/framestercore/People -->
+
+    <owl:Class rdf:about="https://w3id.org/framester/data/framestercore/People">
+        <rdfs:isDefinedBy>https://w3id.org/framester/data/framestercore/People</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">People</rdfs:label>
+        <terms:description xml:lang="en">Denotes a human being and express that we are talking about human cognitive biases.</terms:description>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://dbpedia.org/ontology/Knowledge"/>
+            <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/cp/owl/situation.owl#Situation"/>
+            <rdf:Description rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology/tree/main#CognitiveBias"/>
+            <rdf:Description rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology/tree/main#Reproducing"/>
+            <rdf:Description rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology/tree/main#Trigger"/>
+            <rdf:Description rdf:about="https://w3id.org/framester/data/framestercore/Information"/>
+            <rdf:Description rdf:about="https://w3id.org/framester/data/framestercore/Memorization"/>
+            <rdf:Description rdf:about="https://w3id.org/framester/data/framestercore/People"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+
