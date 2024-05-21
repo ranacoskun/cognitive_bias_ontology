@@ -1,0 +1,235 @@
+Prefix(:=<http://www.semanticweb.org/owly/ontologies/2024/4/untitled-ontology-6/>)
+Prefix(cbi:=<https://github.com/ranacoskun/cognitive_bias_ontology>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<https://github.com/ranacoskun/cognitive_bias_ontology>
+
+Declaration(Class(<http://etna.istc.cnr.it/framester2/data/framestercore/Event>))
+Declaration(Class(<http://etna.istc.cnr.it/framester2/data/framestercore/Memorization>))
+Declaration(Class(<http://etna.istc.cnr.it/framester2/data/framestercore/People>))
+Declaration(Class(<https://dbpedia.org/ontology/Media>))
+Declaration(Class(<https://github.com/ranacoskun/cbi:BiasedAgent>))
+Declaration(Class(<https://github.com/ranacoskun/cbi:CognitiveBias>))
+Declaration(Class(<https://github.com/ranacoskun/cognitive_bias_ontology#cbi:Cause>))
+Declaration(Class(<https://github.com/ranacoskun/cognitive_bias_ontology#cbi:CognitiveError>))
+Declaration(Class(<https://github.com/ranacoskun/cognitive_bias_ontology#cbi:Correction>))
+Declaration(Class(<https://github.com/ranacoskun/cognitive_bias_ontology#cbi:Cryptomnesia>))
+Declaration(Class(<https://github.com/ranacoskun/cognitive_bias_ontology#cbi:Effect>))
+Declaration(Class(<https://github.com/ranacoskun/cognitive_bias_ontology#cbi:Evidence>))
+Declaration(Class(<https://github.com/ranacoskun/cognitive_bias_ontology#cbi:FalseMemory>))
+Declaration(Class(<https://github.com/ranacoskun/cognitive_bias_ontology#cbi:MemoryTest>))
+Declaration(Class(<https://github.com/ranacoskun/cognitive_bias_ontology#cbi:MisattributedMemory>))
+Declaration(Class(<https://github.com/ranacoskun/cognitive_bias_ontology#cbi:OriginalSource>))
+Declaration(Class(<https://github.com/ranacoskun/cognitive_bias_ontology#cbi:Prevention>))
+Declaration(Class(<https://github.com/ranacoskun/cognitive_bias_ontology#cbi:RecalledIdea>))
+Declaration(Class(<https://github.com/ranacoskun/cognitive_bias_ontology#cbi:SourceConfusion>))
+Declaration(ObjectProperty(rdfs:subClassOf))
+Declaration(ObjectProperty(<https://github.com/ranacoskun/cognitive_bias_ontology#cbi:canBeCorrectedBy>))
+Declaration(ObjectProperty(<https://github.com/ranacoskun/cognitive_bias_ontology#cbi:canBePreventedBy>))
+Declaration(ObjectProperty(<https://github.com/ranacoskun/cognitive_bias_ontology#cbi:creates>))
+Declaration(ObjectProperty(<https://github.com/ranacoskun/cognitive_bias_ontology#cbi:forgets>))
+Declaration(ObjectProperty(<https://github.com/ranacoskun/cognitive_bias_ontology#cbi:generatedBy>))
+Declaration(ObjectProperty(<https://github.com/ranacoskun/cognitive_bias_ontology#cbi:hasBias>))
+Declaration(ObjectProperty(<https://github.com/ranacoskun/cognitive_bias_ontology#cbi:hasCause>))
+Declaration(ObjectProperty(<https://github.com/ranacoskun/cognitive_bias_ontology#cbi:hasEffect>))
+Declaration(ObjectProperty(<https://github.com/ranacoskun/cognitive_bias_ontology#cbi:hasParticipant>))
+Declaration(ObjectProperty(<https://github.com/ranacoskun/cognitive_bias_ontology#cbi:isAssessedBy>))
+Declaration(ObjectProperty(<https://github.com/ranacoskun/cognitive_bias_ontology#cbi:isDerivedFrom>))
+Declaration(ObjectProperty(<https://github.com/ranacoskun/cognitive_bias_ontology#cbi:isRecalledIn>))
+Declaration(ObjectProperty(<https://github.com/ranacoskun/cognitive_bias_ontology#cbi:isSupportedOrRefutedBy>))
+Declaration(ObjectProperty(<https://github.com/ranacoskun/cognitive_bias_ontology#cbi:leadsTo>))
+Declaration(ObjectProperty(<https://github.com/ranacoskun/cognitive_bias_ontology#cbi:occursIn>))
+Declaration(ObjectProperty(<https://github.com/ranacoskun/cognitive_bias_ontology#cbi:relatesToEvent>))
+
+############################
+#   Object Properties
+############################
+
+# Object Property: rdfs:subClassOf (rdfs:subClassOf)
+
+SubObjectPropertyOf(rdfs:subClassOf owl:topObjectProperty)
+ObjectPropertyDomain(rdfs:subClassOf <https://github.com/ranacoskun/cognitive_bias_ontology#cbi:Cryptomnesia>)
+ObjectPropertyDomain(rdfs:subClassOf <https://github.com/ranacoskun/cognitive_bias_ontology#cbi:FalseMemory>)
+ObjectPropertyDomain(rdfs:subClassOf <https://github.com/ranacoskun/cognitive_bias_ontology#cbi:SourceConfusion>)
+
+# Object Property: <https://github.com/ranacoskun/cognitive_bias_ontology#cbi:canBeCorrectedBy> (<https://github.com/ranacoskun/cognitive_bias_ontology#cbi:canBeCorrectedBy>)
+
+AnnotationAssertion(rdfs:comment <https://github.com/ranacoskun/cognitive_bias_ontology#cbi:canBeCorrectedBy> "Describes the relation between the bias and the correction to enact")
+ObjectPropertyDomain(<https://github.com/ranacoskun/cognitive_bias_ontology#cbi:canBeCorrectedBy> <https://github.com/ranacoskun/cognitive_bias_ontology#cbi:FalseMemory>)
+ObjectPropertyRange(<https://github.com/ranacoskun/cognitive_bias_ontology#cbi:canBeCorrectedBy> <https://github.com/ranacoskun/cognitive_bias_ontology#cbi:Correction>)
+
+# Object Property: <https://github.com/ranacoskun/cognitive_bias_ontology#cbi:canBePreventedBy> (<https://github.com/ranacoskun/cognitive_bias_ontology#cbi:canBePreventedBy>)
+
+AnnotationAssertion(rdfs:comment <https://github.com/ranacoskun/cognitive_bias_ontology#cbi:canBePreventedBy> "Describes the relation between the bias and the prevention techniques to it")
+ObjectPropertyDomain(<https://github.com/ranacoskun/cognitive_bias_ontology#cbi:canBePreventedBy> <https://github.com/ranacoskun/cognitive_bias_ontology#cbi:FalseMemory>)
+ObjectPropertyRange(<https://github.com/ranacoskun/cognitive_bias_ontology#cbi:canBePreventedBy> <https://github.com/ranacoskun/cognitive_bias_ontology#cbi:Prevention>)
+
+# Object Property: <https://github.com/ranacoskun/cognitive_bias_ontology#cbi:creates> (<https://github.com/ranacoskun/cognitive_bias_ontology#cbi:creates>)
+
+AnnotationAssertion(rdfs:comment <https://github.com/ranacoskun/cognitive_bias_ontology#cbi:creates> "Creates the relation between the person affected by the bias and the creation of a self assessed original creation")
+ObjectPropertyDomain(<https://github.com/ranacoskun/cognitive_bias_ontology#cbi:creates> <http://etna.istc.cnr.it/framester2/data/framestercore/People>)
+ObjectPropertyRange(<https://github.com/ranacoskun/cognitive_bias_ontology#cbi:creates> <https://github.com/ranacoskun/cognitive_bias_ontology#cbi:RecalledIdea>)
+
+# Object Property: <https://github.com/ranacoskun/cognitive_bias_ontology#cbi:forgets> (<https://github.com/ranacoskun/cognitive_bias_ontology#cbi:forgets>)
+
+AnnotationAssertion(rdfs:comment <https://github.com/ranacoskun/cognitive_bias_ontology#cbi:forgets> "Describes the lost of memory from the biased agents towards the Original Source")
+ObjectPropertyDomain(<https://github.com/ranacoskun/cognitive_bias_ontology#cbi:forgets> <http://etna.istc.cnr.it/framester2/data/framestercore/People>)
+ObjectPropertyDomain(<https://github.com/ranacoskun/cognitive_bias_ontology#cbi:forgets> <https://github.com/ranacoskun/cognitive_bias_ontology#cbi:SourceConfusion>)
+ObjectPropertyRange(<https://github.com/ranacoskun/cognitive_bias_ontology#cbi:forgets> <https://github.com/ranacoskun/cognitive_bias_ontology#cbi:OriginalSource>)
+
+# Object Property: <https://github.com/ranacoskun/cognitive_bias_ontology#cbi:generatedBy> (<https://github.com/ranacoskun/cognitive_bias_ontology#cbi:generatedBy>)
+
+AnnotationAssertion(rdfs:comment <https://github.com/ranacoskun/cognitive_bias_ontology#cbi:generatedBy> "Describes the relation between a bias and the source from which it starts or come from")
+ObjectPropertyDomain(<https://github.com/ranacoskun/cognitive_bias_ontology#cbi:generatedBy> <http://etna.istc.cnr.it/framester2/data/framestercore/Memorization>)
+ObjectPropertyDomain(<https://github.com/ranacoskun/cognitive_bias_ontology#cbi:generatedBy> <https://github.com/ranacoskun/cognitive_bias_ontology#cbi:SourceConfusion>)
+ObjectPropertyRange(<https://github.com/ranacoskun/cognitive_bias_ontology#cbi:generatedBy> <http://etna.istc.cnr.it/framester2/data/framestercore/Event>)
+ObjectPropertyRange(<https://github.com/ranacoskun/cognitive_bias_ontology#cbi:generatedBy> <https://github.com/ranacoskun/cognitive_bias_ontology#cbi:OriginalSource>)
+
+# Object Property: <https://github.com/ranacoskun/cognitive_bias_ontology#cbi:hasBias> (<https://github.com/ranacoskun/cognitive_bias_ontology#cbi:hasBias>)
+
+AnnotationAssertion(rdfs:comment <https://github.com/ranacoskun/cognitive_bias_ontology#cbi:hasBias> "Describes the relationship between Biased Agent and Bias")
+ObjectPropertyDomain(<https://github.com/ranacoskun/cognitive_bias_ontology#cbi:hasBias> <http://etna.istc.cnr.it/framester2/data/framestercore/People>)
+ObjectPropertyRange(<https://github.com/ranacoskun/cognitive_bias_ontology#cbi:hasBias> <https://github.com/ranacoskun/cognitive_bias_ontology#cbi:Cryptomnesia>)
+ObjectPropertyRange(<https://github.com/ranacoskun/cognitive_bias_ontology#cbi:hasBias> <https://github.com/ranacoskun/cognitive_bias_ontology#cbi:FalseMemory>)
+ObjectPropertyRange(<https://github.com/ranacoskun/cognitive_bias_ontology#cbi:hasBias> <https://github.com/ranacoskun/cognitive_bias_ontology#cbi:SourceConfusion>)
+
+# Object Property: <https://github.com/ranacoskun/cognitive_bias_ontology#cbi:hasCause> (<https://github.com/ranacoskun/cognitive_bias_ontology#cbi:hasCause>)
+
+AnnotationAssertion(rdfs:comment <https://github.com/ranacoskun/cognitive_bias_ontology#cbi:hasCause> "Describes the relation between the a Bias and its inherent cause")
+ObjectPropertyDomain(<https://github.com/ranacoskun/cognitive_bias_ontology#cbi:hasCause> <https://github.com/ranacoskun/cognitive_bias_ontology#cbi:FalseMemory>)
+ObjectPropertyRange(<https://github.com/ranacoskun/cognitive_bias_ontology#cbi:hasCause> <https://github.com/ranacoskun/cognitive_bias_ontology#cbi:Cause>)
+
+# Object Property: <https://github.com/ranacoskun/cognitive_bias_ontology#cbi:hasEffect> (<https://github.com/ranacoskun/cognitive_bias_ontology#cbi:hasEffect>)
+
+AnnotationAssertion(rdfs:comment <https://github.com/ranacoskun/cognitive_bias_ontology#cbi:hasEffect> "Describes the relation between the bias and its effect")
+ObjectPropertyDomain(<https://github.com/ranacoskun/cognitive_bias_ontology#cbi:hasEffect> <https://github.com/ranacoskun/cognitive_bias_ontology#cbi:FalseMemory>)
+ObjectPropertyRange(<https://github.com/ranacoskun/cognitive_bias_ontology#cbi:hasEffect> <https://github.com/ranacoskun/cognitive_bias_ontology#cbi:Effect>)
+
+# Object Property: <https://github.com/ranacoskun/cognitive_bias_ontology#cbi:hasParticipant> (<https://github.com/ranacoskun/cognitive_bias_ontology#cbi:hasParticipant>)
+
+AnnotationAssertion(rdfs:comment <https://github.com/ranacoskun/cognitive_bias_ontology#cbi:hasParticipant> "Describes the relation between the Event and the Biased Agent who participate")
+ObjectPropertyDomain(<https://github.com/ranacoskun/cognitive_bias_ontology#cbi:hasParticipant> <http://etna.istc.cnr.it/framester2/data/framestercore/Event>)
+ObjectPropertyDomain(<https://github.com/ranacoskun/cognitive_bias_ontology#cbi:hasParticipant> <https://github.com/ranacoskun/cognitive_bias_ontology#cbi:CognitiveError>)
+ObjectPropertyRange(<https://github.com/ranacoskun/cognitive_bias_ontology#cbi:hasParticipant> <http://etna.istc.cnr.it/framester2/data/framestercore/People>)
+
+# Object Property: <https://github.com/ranacoskun/cognitive_bias_ontology#cbi:isAssessedBy> (<https://github.com/ranacoskun/cognitive_bias_ontology#cbi:isAssessedBy>)
+
+AnnotationAssertion(rdfs:comment <https://github.com/ranacoskun/cognitive_bias_ontology#cbi:isAssessedBy> "Describes the relation between the bias and the Memory Test")
+ObjectPropertyDomain(<https://github.com/ranacoskun/cognitive_bias_ontology#cbi:isAssessedBy> <https://github.com/ranacoskun/cognitive_bias_ontology#cbi:FalseMemory>)
+ObjectPropertyRange(<https://github.com/ranacoskun/cognitive_bias_ontology#cbi:isAssessedBy> <https://github.com/ranacoskun/cognitive_bias_ontology#cbi:MemoryTest>)
+
+# Object Property: <https://github.com/ranacoskun/cognitive_bias_ontology#cbi:isDerivedFrom> (<https://github.com/ranacoskun/cognitive_bias_ontology#cbi:isDerivedFrom>)
+
+AnnotationAssertion(rdfs:comment <https://github.com/ranacoskun/cognitive_bias_ontology#cbi:isDerivedFrom> "Puts in relation the self assessed original creation and the true original source of it")
+ObjectPropertyDomain(<https://github.com/ranacoskun/cognitive_bias_ontology#cbi:isDerivedFrom> <https://github.com/ranacoskun/cognitive_bias_ontology#cbi:RecalledIdea>)
+ObjectPropertyRange(<https://github.com/ranacoskun/cognitive_bias_ontology#cbi:isDerivedFrom> <https://github.com/ranacoskun/cognitive_bias_ontology#cbi:OriginalSource>)
+
+# Object Property: <https://github.com/ranacoskun/cognitive_bias_ontology#cbi:isRecalledIn> (<https://github.com/ranacoskun/cognitive_bias_ontology#cbi:isRecalledIn>)
+
+AnnotationAssertion(rdfs:comment <https://github.com/ranacoskun/cognitive_bias_ontology#cbi:isRecalledIn> "Describes the relation between the original source and the current Bias")
+ObjectPropertyDomain(<https://github.com/ranacoskun/cognitive_bias_ontology#cbi:isRecalledIn> <https://github.com/ranacoskun/cognitive_bias_ontology#cbi:OriginalSource>)
+ObjectPropertyRange(<https://github.com/ranacoskun/cognitive_bias_ontology#cbi:isRecalledIn> <https://github.com/ranacoskun/cognitive_bias_ontology#cbi:Cryptomnesia>)
+
+# Object Property: <https://github.com/ranacoskun/cognitive_bias_ontology#cbi:isSupportedOrRefutedBy> (<https://github.com/ranacoskun/cognitive_bias_ontology#cbi:isSupportedOrRefutedBy>)
+
+AnnotationAssertion(rdfs:comment <https://github.com/ranacoskun/cognitive_bias_ontology#cbi:isSupportedOrRefutedBy> "Describes the relation between the False Memory and the Evidence")
+ObjectPropertyDomain(<https://github.com/ranacoskun/cognitive_bias_ontology#cbi:isSupportedOrRefutedBy> <https://github.com/ranacoskun/cognitive_bias_ontology#cbi:FalseMemory>)
+ObjectPropertyRange(<https://github.com/ranacoskun/cognitive_bias_ontology#cbi:isSupportedOrRefutedBy> <https://github.com/ranacoskun/cognitive_bias_ontology#cbi:Evidence>)
+
+# Object Property: <https://github.com/ranacoskun/cognitive_bias_ontology#cbi:leadsTo> (<https://github.com/ranacoskun/cognitive_bias_ontology#cbi:leadsTo>)
+
+AnnotationAssertion(rdfs:comment <https://github.com/ranacoskun/cognitive_bias_ontology#cbi:leadsTo> "Describes the relation between the cognitive error and the bias")
+ObjectPropertyDomain(<https://github.com/ranacoskun/cognitive_bias_ontology#cbi:leadsTo> <https://github.com/ranacoskun/cognitive_bias_ontology#cbi:CognitiveError>)
+ObjectPropertyRange(<https://github.com/ranacoskun/cognitive_bias_ontology#cbi:leadsTo> <https://github.com/ranacoskun/cognitive_bias_ontology#cbi:SourceConfusion>)
+
+# Object Property: <https://github.com/ranacoskun/cognitive_bias_ontology#cbi:occursIn> (<https://github.com/ranacoskun/cognitive_bias_ontology#cbi:occursIn>)
+
+AnnotationAssertion(rdfs:comment <https://github.com/ranacoskun/cognitive_bias_ontology#cbi:occursIn> "Puts in relation the current Bias and the Media through which it can be exposed")
+ObjectPropertyDomain(<https://github.com/ranacoskun/cognitive_bias_ontology#cbi:occursIn> <https://github.com/ranacoskun/cognitive_bias_ontology#cbi:Cryptomnesia>)
+ObjectPropertyRange(<https://github.com/ranacoskun/cognitive_bias_ontology#cbi:occursIn> <https://dbpedia.org/ontology/Media>)
+
+# Object Property: <https://github.com/ranacoskun/cognitive_bias_ontology#cbi:relatesToEvent> (<https://github.com/ranacoskun/cognitive_bias_ontology#cbi:relatesToEvent>)
+
+AnnotationAssertion(rdfs:comment <https://github.com/ranacoskun/cognitive_bias_ontology#cbi:relatesToEvent> "Describes the relation between the Cognitive Error committed and the Event in which it takes place")
+ObjectPropertyDomain(<https://github.com/ranacoskun/cognitive_bias_ontology#cbi:relatesToEvent> <https://github.com/ranacoskun/cognitive_bias_ontology#cbi:CognitiveError>)
+ObjectPropertyRange(<https://github.com/ranacoskun/cognitive_bias_ontology#cbi:relatesToEvent> <http://etna.istc.cnr.it/framester2/data/framestercore/Event>)
+
+
+
+############################
+#   Classes
+############################
+
+# Class: <https://github.com/ranacoskun/cbi:BiasedAgent> (<https://github.com/ranacoskun/cbi:BiasedAgent>)
+
+AnnotationAssertion(rdfs:comment <https://github.com/ranacoskun/cbi:BiasedAgent> "Represents an entity that experiences the bias.")
+SubClassOf(<https://github.com/ranacoskun/cbi:BiasedAgent> <http://etna.istc.cnr.it/framester2/data/framestercore/People>)
+
+# Class: <https://github.com/ranacoskun/cbi:CognitiveBias> (<https://github.com/ranacoskun/cbi:CognitiveBias>)
+
+AnnotationAssertion(rdfs:comment <https://github.com/ranacoskun/cbi:CognitiveBias> "Represents the overarching concept of cognitive biases.")
+
+# Class: <https://github.com/ranacoskun/cognitive_bias_ontology#cbi:Cause> (<https://github.com/ranacoskun/cognitive_bias_ontology#cbi:Cause>)
+
+AnnotationAssertion(rdfs:comment <https://github.com/ranacoskun/cognitive_bias_ontology#cbi:Cause> "Factors that contribute to the formation of false memories")
+
+# Class: <https://github.com/ranacoskun/cognitive_bias_ontology#cbi:CognitiveError> (<https://github.com/ranacoskun/cognitive_bias_ontology#cbi:CognitiveError>)
+
+AnnotationAssertion(rdfs:comment <https://github.com/ranacoskun/cognitive_bias_ontology#cbi:CognitiveError> "A Cognitive error that leads to the Source Confusion bias, occurred during memorization")
+
+# Class: <https://github.com/ranacoskun/cognitive_bias_ontology#cbi:Correction> (<https://github.com/ranacoskun/cognitive_bias_ontology#cbi:Correction>)
+
+AnnotationAssertion(rdfs:comment <https://github.com/ranacoskun/cognitive_bias_ontology#cbi:Correction> "Methods used to identify and correct false memories.")
+
+# Class: <https://github.com/ranacoskun/cognitive_bias_ontology#cbi:Cryptomnesia> (<https://github.com/ranacoskun/cognitive_bias_ontology#cbi:Cryptomnesia>)
+
+AnnotationAssertion(rdfs:comment <https://github.com/ranacoskun/cognitive_bias_ontology#cbi:Cryptomnesia> "Describes the occurence of the Cryptomnesia bias")
+SubClassOf(<https://github.com/ranacoskun/cognitive_bias_ontology#cbi:Cryptomnesia> <https://github.com/ranacoskun/cognitive_bias_ontology#cbi:MisattributedMemory>)
+
+# Class: <https://github.com/ranacoskun/cognitive_bias_ontology#cbi:Effect> (<https://github.com/ranacoskun/cognitive_bias_ontology#cbi:Effect>)
+
+AnnotationAssertion(rdfs:comment <https://github.com/ranacoskun/cognitive_bias_ontology#cbi:Effect> "The impact or consequences of false memories on individuals and society.")
+
+# Class: <https://github.com/ranacoskun/cognitive_bias_ontology#cbi:Evidence> (<https://github.com/ranacoskun/cognitive_bias_ontology#cbi:Evidence>)
+
+AnnotationAssertion(rdfs:comment <https://github.com/ranacoskun/cognitive_bias_ontology#cbi:Evidence> "Information or data used to support or refute the accuracy of a memory.")
+
+# Class: <https://github.com/ranacoskun/cognitive_bias_ontology#cbi:FalseMemory> (<https://github.com/ranacoskun/cognitive_bias_ontology#cbi:FalseMemory>)
+
+AnnotationAssertion(rdfs:comment <https://github.com/ranacoskun/cognitive_bias_ontology#cbi:FalseMemory> "Describes the False Memory bias occurrence")
+SubClassOf(<https://github.com/ranacoskun/cognitive_bias_ontology#cbi:FalseMemory> <https://github.com/ranacoskun/cognitive_bias_ontology#cbi:MisattributedMemory>)
+
+# Class: <https://github.com/ranacoskun/cognitive_bias_ontology#cbi:MemoryTest> (<https://github.com/ranacoskun/cognitive_bias_ontology#cbi:MemoryTest>)
+
+AnnotationAssertion(rdfs:comment <https://github.com/ranacoskun/cognitive_bias_ontology#cbi:MemoryTest> "Tools or techniques used to assess the accuracy of memories and identify false ones")
+
+# Class: <https://github.com/ranacoskun/cognitive_bias_ontology#cbi:MisattributedMemory> (<https://github.com/ranacoskun/cognitive_bias_ontology#cbi:MisattributedMemory>)
+
+AnnotationAssertion(rdfs:comment <https://github.com/ranacoskun/cognitive_bias_ontology#cbi:MisattributedMemory> "Describes a generic Misattribution of Memory")
+SubClassOf(<https://github.com/ranacoskun/cognitive_bias_ontology#cbi:MisattributedMemory> <https://github.com/ranacoskun/cbi:CognitiveBias>)
+
+# Class: <https://github.com/ranacoskun/cognitive_bias_ontology#cbi:OriginalSource> (<https://github.com/ranacoskun/cognitive_bias_ontology#cbi:OriginalSource>)
+
+AnnotationAssertion(rdfs:comment <https://github.com/ranacoskun/cognitive_bias_ontology#cbi:OriginalSource> "Describes the Original Source that causes the true instantiation of a memory")
+
+# Class: <https://github.com/ranacoskun/cognitive_bias_ontology#cbi:Prevention> (<https://github.com/ranacoskun/cognitive_bias_ontology#cbi:Prevention>)
+
+AnnotationAssertion(rdfs:comment <https://github.com/ranacoskun/cognitive_bias_ontology#cbi:Prevention> "Strategies or practices aimed at reducing the occurrence of false memories")
+
+# Class: <https://github.com/ranacoskun/cognitive_bias_ontology#cbi:RecalledIdea> (<https://github.com/ranacoskun/cognitive_bias_ontology#cbi:RecalledIdea>)
+
+AnnotationAssertion(rdfs:comment <https://github.com/ranacoskun/cognitive_bias_ontology#cbi:RecalledIdea> "Describes the idea the biased agent thinks they've just created, in this domain refers to a self assessed original creation of any kind, usually a sentence, a joke, a verse.")
+
+# Class: <https://github.com/ranacoskun/cognitive_bias_ontology#cbi:SourceConfusion> (<https://github.com/ranacoskun/cognitive_bias_ontology#cbi:SourceConfusion>)
+
+AnnotationAssertion(rdfs:comment <https://github.com/ranacoskun/cognitive_bias_ontology#cbi:SourceConfusion> "Describes the Source Confusion bias occurrence")
+SubClassOf(<https://github.com/ranacoskun/cognitive_bias_ontology#cbi:SourceConfusion> <https://github.com/ranacoskun/cognitive_bias_ontology#cbi:MisattributedMemory>)
+
+
+DisjointClasses(<https://github.com/ranacoskun/cognitive_bias_ontology#cbi:Cryptomnesia> <https://github.com/ranacoskun/cognitive_bias_ontology#cbi:FalseMemory> <https://github.com/ranacoskun/cognitive_bias_ontology#cbi:SourceConfusion>)
+)
