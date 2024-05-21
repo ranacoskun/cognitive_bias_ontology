@@ -1,0 +1,379 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://github.com/ranacoskun/cognitive_bias_ontology#"
+     xml:base="https://github.com/ranacoskun/cognitive_bias_ontology"
+     xmlns:fs="https://w3id.org/framester/data/framestercore/"
+     xmlns:cbi="https://github.com/ranacoskun/cognitive_bias_ontology#"
+     xmlns:crm="https://www.cidoc-crm.org/html/cidoc_crm_v7.1.3.html#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:exob="http://ontologydesignpatterns.org/wiki/Submissions:Experience_%26_Observation#"
+     xmlns:obst="https://delicias.dia.fi.upm.es/ontologies/ObjectWithStates.owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:rsctx="https://softeng.polito.it/rsctx/#"
+     xmlns:terms="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/"
+     xmlns:actspec="http://ontologydesignpatterns.org/wiki/Submissions:ActivitySpecification#"
+     xmlns:reaction="http://www.ontologydesignpatterns.org/cp/owl/reaction.owl.v0.1#"
+     xmlns:participation="http://www.ontologydesignpatterns.org/cp/owl/participation_v1.owl#"
+     xmlns:classification="http://www.ontologydesignpatterns.org/cp/owl/classification.owl#">
+    <owl:Ontology rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology">
+        <rdfs:comment xml:lang="en">Mood-congruent memory bias is a cognitive bias that affects how we recall past events. This bias occurs when our current mood influences the way we remember information, leading us to recall memories that are consistent with our current mood more easily than those that are not. For instance, if you&apos;re feeling happy, you&apos;re more likely to remember positive events, while if you&apos;re feeling sad, you&apos;re more likely to recall negative or sad events. This bias can impact both the recall of personal memories and the interpretation of events, potentially reinforcing our current mood by selectively recalling mood-consistent memories.</rdfs:comment>
+        <rdfs:label xml:lang="en">Mood-Congruent Memory module of the Cognitive Bias Ontology</rdfs:label>
+        <hasComponent>http://ontologydesignpatterns.org/wiki/Submissions:ActivitySpecification</hasComponent>
+        <hasComponent>http://ontologydesignpatterns.org/wiki/Submissions:Experience_%26_Observation#</hasComponent>
+        <hasComponent>http://www.ontologydesignpatterns.org/cp/owl/classification.owl#</hasComponent>
+        <hasComponent>http://www.ontologydesignpatterns.org/cp/owl/participation_v1.owl</hasComponent>
+        <hasComponent>http://www.ontologydesignpatterns.org/cp/owl/reaction.owl.v0.1#</hasComponent>
+        <hasComponent>https://delicias.dia.fi.upm.es/ontologies/ObjectWithStates.owl#</hasComponent>
+        <hasComponent>https://softeng.polito.it/rsctx/#</hasComponent>
+        <hasComponent>https://w3id.org/framester/data/framestercore/</hasComponent>
+        <hasComponent>https://www.cidoc-crm.org/html/cidoc_crm_v7.1.3.html#</hasComponent>
+        <userstory xml:lang="en">On a quiet morning, Lisa, overwhelmed by anxiety, realizes her medical procedure is just a day away. With each tick of the clock, her heart races as memories of past health scares flood her mind. Sitting in her dimly lit room, she feels the weight of her worries growing, each thought darker than the last.
+
+Hesitantly, she reaches for her medical reports, her hands trembling as she reads through them. The clinical language and cold facts do little to comfort her; instead, they bring back vivid memories of times when her health faltered, increasing her dread for the upcoming procedure.
+
+Attempting to distract herself, Lisa tries to focus on positive outcomes, but the anxiety has made her recall only the negative experiences. She remembers the long recovery after her last surgery, the discomfort of treatments, and the isolation of hospital stays. These worrying memories make her current fear even more intense, casting a shadow over her ability to stay optimistic.
+
+As the day progresses, Lisa's room feels colder, and the silence louder. She knows she should reach out to someone—perhaps a friend or a counselor—but the anxiety makes it hard to find the words or the will. Instead, she curls up on her sofa, wrapped in a blanket, trying to find a semblance of peace in old books and movies that once brought her joy.
+
+Finally, as night falls, Lisa decides to write down her fears in her journal, hoping to externalize some of the anxiety. With each word, she feels a slight release but knows the true test will come in the morning, at the hospital. She falls asleep with a mix of dread and a faint hope that maybe, just as stories can have unexpected positive turns, her procedure might go better than her anxious mind anticipates.</userstory>
+        <terms:created>20/5/2024</terms:created>
+        <terms:creator xml:lang="en">Evgeniia Vdovichenko</terms:creator>
+        <terms:desciption xml:lang="en">Mood-Congruent Memory Bias specification of Cognitive Bias Ontology</terms:desciption>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/1999/02/22-rdf-syntax-ns#about -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#about"/>
+    
+
+
+    <!-- https://github.com/ranacoskun/cognitive_bias_ontology#hasComponent -->
+
+    <owl:AnnotationProperty rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology#hasComponent"/>
+    
+
+
+    <!-- https://github.com/ranacoskun/cognitive_bias_ontology#userstory -->
+
+    <owl:AnnotationProperty rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology#userstory"/>
+    
+
+
+    <!-- https://www.dublincore.org/specifications/dublin-core/dcmi-terms/created -->
+
+    <owl:AnnotationProperty rdf:about="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/created"/>
+    
+
+
+    <!-- https://www.dublincore.org/specifications/dublin-core/dcmi-terms/creator -->
+
+    <owl:AnnotationProperty rdf:about="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/creator"/>
+    
+
+
+    <!-- https://www.dublincore.org/specifications/dublin-core/dcmi-terms/desciption -->
+
+    <owl:AnnotationProperty rdf:about="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/desciption"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://ontologydesignpatterns.org/wiki/Submissions:ActivitySpecification#hasPrecondition -->
+
+    <owl:ObjectProperty rdf:about="http://ontologydesignpatterns.org/wiki/Submissions:ActivitySpecification#hasPrecondition">
+        <rdfs:domain rdf:resource="https://w3id.org/framester/data/framestercore/RememberingExperience"/>
+        <rdfs:range rdf:resource="https://softeng.polito.it/rsctx/#EmotionalState"/>
+        <rdfs:label xml:lang="en">hasPrecondition</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontologydesignpatterns.org/wiki/Submissions:Experience_%26_Observation#isEngagedIn -->
+
+    <owl:ObjectProperty rdf:about="http://ontologydesignpatterns.org/wiki/Submissions:Experience_%26_Observation#isEngagedIn">
+        <rdfs:domain rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology#BiasedAgent"/>
+        <rdfs:range rdf:resource="https://w3id.org/framester/data/framestercore/RememberingExperience"/>
+        <rdfs:label xml:lang="en">isEngagedIn</rdfs:label>
+        <terms:desciption xml:lang="en">Because an activity may engage other participants than the one performing it, engagements are in general considered individual rather than collective, therefore each participants has their own engagement and only some of them will be conscious and/or documented.</terms:desciption>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/classification.owl#isClassifiedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/cp/owl/classification.owl#isClassifiedBy">
+        <rdfs:domain rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology#MoodCongruentMemory"/>
+        <rdfs:domain rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology#BiasedAgent"/>
+        <rdfs:range rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology#CognitiveBias"/>
+        <rdfs:range rdf:resource="https://w3id.org/framester/data/framestercore/People"/>
+        <rdfs:label xml:lang="en">isClassifiedBy</rdfs:label>
+        <rdfs:seeAlso>http://ontologydesignpatterns.org/wiki/Submissions:Classification</rdfs:seeAlso>
+        <terms:desciption xml:lang="en">To represent the relations between concepts (roles, task, parameters) and entities (person, events, values), which concepts can be assigned to. To formalize the application (e.g. tagging) of informal knowledge organization systems such as lexica, thesauri, subject directories, folksonomies, etc., where concepts are first-order elements.</terms:desciption>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/participation_v1.owl#hasParticipant -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/cp/owl/participation_v1.owl#hasParticipant">
+        <owl:inverseOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/participation_v1.owl#isParticipantIn"/>
+        <rdfs:domain rdf:resource="https://w3id.org/framester/data/framestercore/Event"/>
+        <rdfs:range rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology#BiasedAgent"/>
+        <rdfs:seeAlso>http://ontologydesignpatterns.org/wiki/Submissions:Participation</rdfs:seeAlso>
+        <rdfs:label xml:lang="en">hasParticipant</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/participation_v1.owl#isParticipantIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/cp/owl/participation_v1.owl#isParticipantIn">
+        <rdfs:domain rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology#BiasedAgent"/>
+        <rdfs:range rdf:resource="https://w3id.org/framester/data/framestercore/Event"/>
+        <rdfs:seeAlso xml:lang="en">http://ontologydesignpatterns.org/wiki/Submissions:Participation</rdfs:seeAlso>
+        <rdfs:label xml:lang="en">isParticipantIn</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/reaction.owl.v0.1#hasConsequence -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/cp/owl/reaction.owl.v0.1#hasConsequence">
+        <owl:inverseOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/reaction.owl.v0.1#isConsequenceOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/framester/data/framestercore/Event"/>
+        <rdfs:range rdf:resource="https://softeng.polito.it/rsctx/#EmotionalState"/>
+        <rdfs:seeAlso xml:lang="en">http://ontologydesignpatterns.org/wiki/Submissions:Reaction</rdfs:seeAlso>
+        <rdfs:label xml:lang="en">hasConsequence</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/reaction.owl.v0.1#isConsequenceOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/cp/owl/reaction.owl.v0.1#isConsequenceOf">
+        <rdfs:domain rdf:resource="https://softeng.polito.it/rsctx/#EmotionalState"/>
+        <rdfs:range rdf:resource="https://w3id.org/framester/data/framestercore/Event"/>
+        <rdfs:label xml:lang="en">isConsequenceOf</rdfs:label>
+        <rdfs:seeAlso>http://ontologydesignpatterns.org/wiki/Submissions:Reaction</rdfs:seeAlso>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://delicias.dia.fi.upm.es/ontologies/ObjectWithStates.owl#hasState -->
+
+    <owl:ObjectProperty rdf:about="https://delicias.dia.fi.upm.es/ontologies/ObjectWithStates.owl#hasState">
+        <owl:inverseOf rdf:resource="https://delicias.dia.fi.upm.es/ontologies/ObjectWithStates.owl#isStateOf"/>
+        <rdfs:domain rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology#BiasedAgent"/>
+        <rdfs:range rdf:resource="https://softeng.polito.it/rsctx/#EmotionalState"/>
+        <rdfs:label xml:lang="en">hasState</rdfs:label>
+        <terms:desciption xml:lang="en">Defines the state of an object.</terms:desciption>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://delicias.dia.fi.upm.es/ontologies/ObjectWithStates.owl#isStateOf -->
+
+    <owl:ObjectProperty rdf:about="https://delicias.dia.fi.upm.es/ontologies/ObjectWithStates.owl#isStateOf">
+        <rdfs:domain rdf:resource="https://softeng.polito.it/rsctx/#EmotionalState"/>
+        <rdfs:range rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology#BiasedAgent"/>
+        <rdfs:label xml:lang="en">isStateOf</rdfs:label>
+        <rdfs:seeAlso>http://ontologydesignpatterns.org/wiki/Submissions:Object_with_states</rdfs:seeAlso>
+        <terms:desciption xml:lang="en">Defines the object that has an state</terms:desciption>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/ranacoskun/cognitive_bias_ontology#affectedBy -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology#affectedBy">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology#BiasedAgent"/>
+        <rdfs:range rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology#MoodCongruentMemory"/>
+        <rdfs:label xml:lang="en">affectedBy</rdfs:label>
+        <terms:desciption xml:lang="en">Describes a relationship between entities on the base of influence.</terms:desciption>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://www.cidoc-crm.org/html/cidoc_crm_v7.1.3.html#hasType -->
+
+    <owl:DatatypeProperty rdf:about="https://www.cidoc-crm.org/html/cidoc_crm_v7.1.3.html#hasType">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://softeng.polito.it/rsctx/#EmotionalState"/>
+        <rdfs:domain rdf:resource="https://w3id.org/framester/data/framestercore/RememberingExperience"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:seeAlso>https://cidoc-crm.org/html/cidoc_crm_v7.1.3.html#P2</rdfs:seeAlso>
+        <rdfs:label xml:lang="en">hasType</rdfs:label>
+        <terms:desciption xml:lang="en">This property allows sub-typing of entities – a form of specialization – through the use of a terminological hierarchy, or thesaurus.</terms:desciption>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://github.com/ranacoskun/cognitive_bias_ontology#BiasedAgent -->
+
+    <owl:Class rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology#BiasedAgent">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/framester/data/framestercore/People"/>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/ranacoskun/cognitive_bias_ontology#CognitiveBias -->
+
+    <owl:Class rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology#CognitiveBias">
+        <rdfs:label xml:lang="en">CognitiveBias</rdfs:label>
+        <terms:desciption xml:lang="en">Represents the overarching concept of cognitive biases.</terms:desciption>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/ranacoskun/cognitive_bias_ontology#MoodCongruentMemory -->
+
+    <owl:Class rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology#MoodCongruentMemory">
+        <rdfs:subClassOf rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology#CognitiveBias"/>
+        <owl:disjointWith rdf:resource="https://softeng.polito.it/rsctx/#EmotionalState"/>
+    </owl:Class>
+    
+
+
+    <!-- https://softeng.polito.it/rsctx/#EmotionalState -->
+
+    <owl:Class rdf:about="https://softeng.polito.it/rsctx/#EmotionalState">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.cidoc-crm.org/html/cidoc_crm_v7.1.3.html#hasType"/>
+                <owl:hasValue xml:lang="en">happy</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.cidoc-crm.org/html/cidoc_crm_v7.1.3.html#hasType"/>
+                <owl:hasValue xml:lang="en">sad</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">EmotionalState</rdfs:label>
+        <terms:desciption xml:lang="en">The state of a person's emotions (especially with regard to pleasure or dejection). Has type which is a predefined sting. In our case: positive, negative or other predefined values.</terms:desciption>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/framester/data/framestercore/Event -->
+
+    <owl:Class rdf:about="https://w3id.org/framester/data/framestercore/Event">
+        <rdfs:label xml:lang="en">Event</rdfs:label>
+        <terms:desciption xml:lang="en">Models any possible event in general on the abstract level.</terms:desciption>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/framester/data/framestercore/People -->
+
+    <owl:Class rdf:about="https://w3id.org/framester/data/framestercore/People">
+        <rdfs:label xml:lang="en">People</rdfs:label>
+        <terms:desciption xml:lang="en">Denotes a human being and express that we are talking about human cognitive biases.</terms:desciption>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/framester/data/framestercore/RememberingExperience -->
+
+    <owl:Class rdf:about="https://w3id.org/framester/data/framestercore/RememberingExperience">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.cidoc-crm.org/html/cidoc_crm_v7.1.3.html#hasType"/>
+                <owl:hasValue xml:lang="en">happy</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.cidoc-crm.org/html/cidoc_crm_v7.1.3.html#hasType"/>
+                <owl:hasValue xml:lang="en">sad</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">RememberingExperience</rdfs:label>
+        <terms:desciption xml:lang="en">Captures the result of remembering activity.</terms:desciption>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology#BiasedAgent"/>
+            <rdf:Description rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology#CognitiveBias"/>
+            <rdf:Description rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology#MoodCongruentMemory"/>
+            <rdf:Description rdf:about="https://softeng.polito.it/rsctx/#EmotionalState"/>
+            <rdf:Description rdf:about="https://w3id.org/framester/data/framestercore/Event"/>
+            <rdf:Description rdf:about="https://w3id.org/framester/data/framestercore/RememberingExperience"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology#CognitiveBias"/>
+            <rdf:Description rdf:about="https://softeng.polito.it/rsctx/#EmotionalState"/>
+            <rdf:Description rdf:about="https://w3id.org/framester/data/framestercore/Event"/>
+            <rdf:Description rdf:about="https://w3id.org/framester/data/framestercore/People"/>
+            <rdf:Description rdf:about="https://w3id.org/framester/data/framestercore/RememberingExperience"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+

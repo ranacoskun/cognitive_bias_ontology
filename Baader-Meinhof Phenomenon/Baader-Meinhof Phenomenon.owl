@@ -1,0 +1,448 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://github.com/ranacoskun/cognitive_bias_ontology#"
+     xml:base="https://github.com/ranacoskun/cognitive_bias_ontology"
+     xmlns:fs="https://w3id.org/framester/data/framestercore/"
+     xmlns:cbi="https://github.com/ranacoskun/cognitive_bias_ontology#"
+     xmlns:cco="smiy.sourceforge.net/cco/spec/cognitivecharacteristics.html#"
+     xmlns:crm="https://www.cidoc-crm.org/html/cidoc_crm_v7.1.3.html#"
+     xmlns:dbo="http://dbpedia.org/ontology/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:exob="http://ontologydesignpatterns.org/wiki/Submissions:Experience_%26_Observation#"
+     xmlns:fsyn="https://w3id.org/framester/data/framestersyn/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="https://www.w3.org/TR/skos-reference/"
+     xmlns:terms="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/"
+     xmlns:reaction="http://www.ontologydesignpatterns.org/cp/owl/reaction.owl.v0.1#"
+     xmlns:sequence="http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#"
+     xmlns:parameter="http://www.ontologydesignpatterns.org/cp/owl/parameter.owl#"
+     xmlns:situation="http://www.ontologydesignpatterns.org/cp/owl/situation.owl#"
+     xmlns:classification="http://www.ontologydesignpatterns.org/cp/owl/classification.owl#">
+    <owl:Ontology rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology#">
+        <rdfs:comment xml:lang="en">The Baader-Meinhof phenomenon, also known as the Frequency Illusion, is a cognitive bias in which after noticing something for the first time, there is a tendency to notice it more frequently thereafter, leading one to believe that it has an increased frequency of occurrence. This perception is not due to the actual increase in frequency but rather due to the new awareness of the item, event, or term.
+
+In essence, while the Baader-Meinhof Phenomenon often refers to more distinctive or unusual observations, the frequency illusion can apply to any information, whether common or rare. Both terms describe the same underlying cognitive bias of increased awareness and selective attention, but the Baader-Meinhof Phenomenon has a flavor of novelty and rarity attached to it.</rdfs:comment>
+        <rdfs:label xml:lang="en">Baader-Meinhof Phenomenon module of the Cognitive Bias Ontology</rdfs:label>
+        <hasComponent>http://dbpedia.org/ontology/</hasComponent>
+        <hasComponent>http://ontologydesignpatterns.org/wiki/Submissions:Experience_%26_Observation</hasComponent>
+        <hasComponent>http://www.ontologydesignpatterns.org/cp/owl/classification.owl</hasComponent>
+        <hasComponent>http://www.ontologydesignpatterns.org/cp/owl/parameter.owl</hasComponent>
+        <hasComponent>http://www.ontologydesignpatterns.org/cp/owl/reaction.owl.v0.1</hasComponent>
+        <hasComponent>http://www.ontologydesignpatterns.org/cp/owl/sequence.owl</hasComponent>
+        <hasComponent>http://www.ontologydesignpatterns.org/cp/owl/situation.owl</hasComponent>
+        <hasComponent>https://w3id.org/framester/data/framestercore/</hasComponent>
+        <hasComponent>https://w3id.org/framester/data/framestersyn/</hasComponent>
+        <hasComponent>https://www.cidoc-crm.org/html/cidoc_crm_v7.1.3.html</hasComponent>
+        <hasComponent>https://www.w3.org/TR/skos-reference/</hasComponent>
+        <hasComponent>smiy.sourceforge.net/cco/spec/cognitivecharacteristics.html</hasComponent>
+        <userStory xml:lang="en">After learning the word 'solipsism' in a philosophy class, Jamie began to encounter it everywhere: in a psychology book, during a podcast, and even in a news article about perception. This amusing frequency of a once unfamiliar term led Jamie to appreciate how new knowledge can suddenly resonate across different mediums, enhancing awareness and deepening their engagement with ongoing learning.</userStory>
+        <terms:created>18/5/2024</terms:created>
+        <terms:creator xml:lang="en">Evgeniia Vdovichenko</terms:creator>
+        <terms:description xml:lang="en">Baader-Meinhof Phenomenon specification of Cognitive Bias Ontology</terms:description>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/1999/02/22-rdf-syntax-ns#about -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#about"/>
+    
+
+
+    <!-- https://github.com/ranacoskun/cognitive_bias_ontology#hasComponent -->
+
+    <owl:AnnotationProperty rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology#hasComponent"/>
+    
+
+
+    <!-- https://github.com/ranacoskun/cognitive_bias_ontology#userStory -->
+
+    <owl:AnnotationProperty rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology#userStory"/>
+    
+
+
+    <!-- https://www.dublincore.org/specifications/dublin-core/dcmi-terms/created -->
+
+    <owl:AnnotationProperty rdf:about="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/created"/>
+    
+
+
+    <!-- https://www.dublincore.org/specifications/dublin-core/dcmi-terms/creator -->
+
+    <owl:AnnotationProperty rdf:about="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/creator"/>
+    
+
+
+    <!-- https://www.dublincore.org/specifications/dublin-core/dcmi-terms/description -->
+
+    <owl:AnnotationProperty rdf:about="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/description"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://ontologydesignpatterns.org/wiki/Submissions:Experience_%26_Observation#isEngagedIn -->
+
+    <owl:ObjectProperty rdf:about="http://ontologydesignpatterns.org/wiki/Submissions:Experience_%26_Observation#isEngagedIn">
+        <rdfs:domain rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology#BiasedAgent"/>
+        <rdfs:range rdf:resource="https://w3id.org/framester/data/framestercore/BecomingAware"/>
+        <rdfs:range rdf:resource="https://w3id.org/framester/data/framestercore/PerceptionExperience"/>
+        <rdfs:label xml:lang="en">isEngagedIn</rdfs:label>
+        <terms:description xml:lang="en">Because an activity may engage other participants than the one performing it, engagements are in general considered individual rather than collective, therefore each participants has their own engagement and only some of them will be conscious and/or documented.</terms:description>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/classification.owl#isClassifiedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/cp/owl/classification.owl#isClassifiedBy">
+        <rdfs:domain rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology#Baader-MeinhofPhenomenon"/>
+        <rdfs:domain rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology#BiasedAgent"/>
+        <rdfs:domain rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology#FrequencyIllusion"/>
+        <rdfs:range rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology#CognitiveBias"/>
+        <rdfs:range rdf:resource="https://w3id.org/framester/data/framestercore/People"/>
+        <rdfs:seeAlso>http://ontologydesignpatterns.org/wiki/Submissions:Classification</rdfs:seeAlso>
+        <rdfs:label xml:lang="en">isClassifiedBy</rdfs:label>
+        <terms:description xml:lang="en">To represent the relations between concepts (roles, task, parameters) and entities (person, events, values), which concepts can be assigned to. To formalize the application (e.g. tagging) of informal knowledge organization systems such as lexica, thesauri, subject directories, folksonomies, etc., where concepts are first-order elements.</terms:description>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/parameter.owl#isParameterFor -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/cp/owl/parameter.owl#isParameterFor">
+        <owl:inverseOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/parameter.owl# hasParameter"/>
+        <rdfs:domain rdf:resource="https://w3id.org/framester/data/framestercore/Frequency"/>
+        <rdfs:range rdf:resource="https://w3id.org/framester/data/framestercore/PerceptionExperience"/>
+        <rdf:about>http://ontologydesignpatterns.org/wiki/Submissions:Parameter</rdf:about>
+        <rdfs:label xml:lang="en">isParameterFor</rdfs:label>
+        <terms:description xml:lang="en">A Concept can have a Parameter that constrains the attributes that a classified Entity can have in a certain Situation, e.g. a 4WheelDriver Role definedIn the ItalianTrafficLaw has a MinimumAge parameter on the Amount 16</terms:description>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/parameter.owl#hasParameter -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/cp/owl/parameter.owl#hasParameter">
+        <rdfs:domain rdf:resource="https://w3id.org/framester/data/framestercore/PerceptionExperience"/>
+        <rdfs:range rdf:resource="https://w3id.org/framester/data/framestercore/Frequency"/>
+        <rdfs:seeAlso>http://ontologydesignpatterns.org/wiki/Submissions:Parameter</rdfs:seeAlso>
+        <rdfs:label xml:lang="en">hasParameter</rdfs:label>
+        <terms:description xml:lang="en">A Concept can have a Parameter that constrains the attributes that a classified Entity can have in a certain Situation, e.g. a 4WheelDriver Role definedIn the ItalianTrafficLaw has a MinimumAge parameter on the Amount 16.</terms:description>
+    </owl:ObjectProperty>
+    
+
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/reaction.owl.v0.1#isOutcomeOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/cp/owl/reaction.owl.v0.1#isOutcomeOf">
+        <owl:inverseOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/reaction.owl.v0.1# hasOutcome"/>
+        <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Knowledge"/>
+        <rdfs:range rdf:resource="https://w3id.org/framester/data/framestercore/BecomingAware"/>
+        <rdfs:seeAlso>http://ontologydesignpatterns.org/wiki/Submissions:Reaction</rdfs:seeAlso>
+        <rdfs:label xml:lang="en">isOutcomeOf</rdfs:label>
+        <terms:description xml:lang="en">Is also true that some outcome follows some action</terms:description>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/reaction.owl.v0.1#hasOutcome -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/cp/owl/reaction.owl.v0.1#hasOutcome">
+        <rdfs:domain rdf:resource="https://w3id.org/framester/data/framestercore/BecomingAware"/>
+        <rdfs:range rdf:resource="http://dbpedia.org/ontology/Knowledge"/>
+        <rdfs:seeAlso>http://ontologydesignpatterns.org/wiki/Submissions:Reaction</rdfs:seeAlso>
+        <rdfs:label xml:lang="en">hasOutcome</rdfs:label>
+        <terms:description xml:lang="en">Is also true that some action directly preceeds its outcome</terms:description>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#precedes -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#precedes">
+        <rdfs:domain rdf:resource="https://w3id.org/framester/data/framestercore/BecomingAware"/>
+        <rdfs:range rdf:resource="https://w3id.org/framester/data/framestercore/PerceptionExperience"/>
+        <rdfs:seeAlso>http://ontologydesignpatterns.org/wiki/Submissions:Sequence</rdfs:seeAlso>
+        <rdfs:label xml:lang="en">precedes</rdfs:label>
+        <terms:description xml:lang="en">A relation between entities, expressing a sequence schema.</terms:description>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/situation.owl#hasSetting -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/cp/owl/situation.owl#hasSetting">
+        <owl:inverseOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/situation.owl#isSettingFor"/>
+        <rdfs:domain rdf:resource="https://w3id.org/framester/data/framestercore/PerceptionExperience"/>
+        <rdfs:range rdf:resource="http://dbpedia.org/ontology/Concept"/>
+        <rdfs:seeAlso>http://ontologydesignpatterns.org/wiki/Submissions:Situation</rdfs:seeAlso>
+        <rdfs:label xml:lang="en">hasSetting</rdfs:label>
+        <terms:description xml:lang="en">A relation between entities and situations, e.g. this morning I've prepared my coffee with a new fantastic Arabica&apos; (i.e.: (an amount of) a new fantastic Arabica hasSetting the preparation of my coffee this morning).</terms:description>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/situation.owl#isSettingFor -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/cp/owl/situation.owl#isSettingFor">
+        <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Concept"/>
+        <rdfs:range rdf:resource="https://w3id.org/framester/data/framestercore/PerceptionExperience"/>
+        <rdfs:seeAlso>http://ontologydesignpatterns.org/wiki/Submissions:Situation</rdfs:seeAlso>
+        <rdfs:label xml:lang="en">isSettingFor</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#related -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#related">
+        <rdfs:domain rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology#Baader-MeinhofPhenomenon"/>
+        <rdfs:range rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology#FrequencyIllusion"/>
+        <rdfs:isDefinedBy>https://www.w3.org/2009/08/skos-reference/skos.html#related</rdfs:isDefinedBy>
+        <rdfs:label>related</rdfs:label>
+        <terms:description xml:lang="en">Property which asserts an associative link between two concepts.</terms:description>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/ranacoskun/cognitive_bias_ontology#affectedBy -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology#affectedBy">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology#BiasedAgent"/>
+        <rdfs:domain rdf:resource="https://w3id.org/framester/data/framestersyn/Belief"/>
+        <rdfs:range rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology#CognitiveBias"/>
+        <rdfs:range rdf:resource="https://w3id.org/framester/data/framestercore/PerceptionExperience"/>
+        <rdfs:label xml:lang="en">affectedBy</rdfs:label>
+        <terms:description xml:lang="en">Describes a relationship between entities on the base of influence.</terms:description>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.cidoc-crm.org/html/cidoc_crm_v7.1.3.html#isAbout -->
+
+    <owl:ObjectProperty rdf:about="https://www.cidoc-crm.org/html/cidoc_crm_v7.1.3.html#isAbout">
+        <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Knowledge"/>
+        <rdfs:domain rdf:resource="https://w3id.org/framester/data/framestersyn/Belief"/>
+        <rdfs:range rdf:resource="http://dbpedia.org/ontology/Concept"/>
+        <rdfs:range rdf:resource="https://w3id.org/framester/data/framestercore/Frequency"/>
+        <rdfs:isDefinedBy>https://cidoc-crm.org/html/cidoc_crm_v7.1.3.html#P129</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">isAbout</rdfs:label>
+        <terms:description xml:lang="en">This property documents that an instance of E89 Propositional Object has as subject an instance of E1 CRM Entity. This differs from P67 refers to (is referred to by), which refers to an instance of E1 CRM Entity, in that it describes the primary subject or subjects of an instance of E89 Propositional Object.</terms:description>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- smiy.sourceforge.net/cco/spec/cognitivecharacteristics.html#belief -->
+
+    <owl:ObjectProperty rdf:about="smiy.sourceforge.net/cco/spec/cognitivecharacteristics.html#belief">
+        <rdfs:domain rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology#BiasedAgent"/>
+        <rdfs:range rdf:resource="https://w3id.org/framester/data/framestersyn/Belief"/>
+        <rdfs:label xml:lang="en">belief</rdfs:label>
+        <terms:description xml:lang="en">Property which means that a person has belief - an uncertain relation for competence representation. That means beliefs, persuasions or opinions, which can also be misconceptions.</terms:description>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/parameter.owl#hasParameterDataValue -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ontologydesignpatterns.org/cp/owl/parameter.owl#hasParameterDataValue">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/framester/data/framestercore/Frequency"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">hasParameterDataValue</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://ontologydesignpatterns.org/wiki/Submissions:Parameter"/>
+        <terms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Parametrizes values from a datatype. For example, a Parameter AgeForDriving hasParameterDataValue 18 on datatype xsd:int, in the Italian traffic code. In this example, AgeForDriving isDefinedIn the Norm ItalianTrafficCodeAgeDriving.</terms:description>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://dbpedia.org/ontology/Concept -->
+
+    <owl:Class rdf:about="http://dbpedia.org/ontology/Concept">
+        <rdf:about xml:lang="en">Concepts are defined as abstract ideas. They are understood to be the fundamental building blocks of the concept behind principles, thoughts and beliefs.They play an important role in all aspects of cognition. As such, concepts are studied by several disciplines, such as linguistics, psychology, and philosophy, and these disciplines are interested in the logical and psychological structure of concepts, and how they are put together to form thoughts and sentences. The study of concepts has served as an important flagship of an emerging interdisciplinary approach called cognitive science.</rdf:about>
+        <rdfs:isDefinedBy>https://dbpedia.org/page/Concept</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Concept</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://dbpedia.org/ontology/Knowledge -->
+
+    <owl:Class rdf:about="http://dbpedia.org/ontology/Knowledge">
+        <rdfs:isDefinedBy>https://dbpedia.org/page/Knowledge</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Knowledge</rdfs:label>
+        <terms:description xml:lang="en">Can be defined as awareness of facts or as practical skills and may also refer to familiarity with objects or situations. Knowledge of facts, also called propositional knowledge, is often defined as true belief that is distinct from opinion or guesswork by virtue of justification. While there is wide agreement among philosophers that propositional knowledge is a form of true belief, many controversies in philosophy focus on justification: whether it is needed at all, how to understand it, and whether something else besides it is needed. These controversies intensified due to a series of thought experiments by Edmund Gettier and have provoked various alternative definitions. Some of them deny that justification is necessary and replace it, for example, with reliability or the man.</terms:description>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/ranacoskun/cognitive_bias_ontology#Baader-MeinhofPhenomenon -->
+
+    <owl:Class rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology#Baader-MeinhofPhenomenon">
+        <rdfs:subClassOf rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology#CognitiveBias"/>
+        <owl:disjointWith rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology#FrequencyIllusion"/>
+        <rdfs:label xml:lang="en">Baader-MeinhofPhenomenon</rdfs:label>
+        <terms:description xml:lang="en">Represents another type of the cognitive bias - Baader-MeinhofPhenomenon - a cognitive bias wherein after noticing something for the first time, there is a tendency to notice it more often, leading someone to believe that it has an increased frequency of occurrence. This is not due to the actual increase in frequency but rather due to the individual&apos;s selective attention and heightened awareness. Some sources call it also Frequency Illusion.</terms:description>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/ranacoskun/cognitive_bias_ontology#BiasedAgent -->
+
+    <owl:Class rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology#BiasedAgent">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/framester/data/framestercore/People"/>
+        <rdfs:label xml:lang="en">BiasedAgent</rdfs:label>
+        <terms:description xml:lang="en">Represents an entity that experiences the bias.</terms:description>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/ranacoskun/cognitive_bias_ontology#FrequencyIllusion -->
+
+    <owl:Class rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology#FrequencyIllusion">
+        <rdfs:subClassOf rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology#CognitiveBias"/>
+        <rdfs:label xml:lang="en">FrequencyIllusion</rdfs:label>
+        <terms:description xml:lang="en">A cognitive bias where a person believes a recently noticed item or concept has suddenly become prevalent.</terms:description>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/ranacoskun/cognitive_bias_ontology#CognitiveBias -->
+
+    <owl:Class rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology#CognitiveBias">
+        <rdfs:label xml:lang="en">CognitiveBias</rdfs:label>
+        <terms:description xml:lang="en">Represents the overarching concept of cognitive biases.</terms:description>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/framester/data/framestercore/BecomingAware -->
+
+    <owl:Class rdf:about="https://w3id.org/framester/data/framestercore/BecomingAware">
+        <rdfs:label xml:lang="en">BecomingAware</rdfs:label>
+        <terms:description xml:lang="en">The process of learning new things and concepts.</terms:description>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/framester/data/framestercore/Frequency -->
+
+    <owl:Class rdf:about="https://w3id.org/framester/data/framestercore/Frequency">
+        <rdfs:label xml:lang="en">Frequency</rdfs:label>
+        <terms:description xml:lang="en">Represents the frequency of perception experience of a particular concept, which seem to happen more often under the influence of bias.</terms:description>
+    </owl:Class>
+
+
+    <owl:Class rdf:about="https://w3id.org/framester/data/framestercore/Frequency">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/parameter.owl#hasParameterDataValue"/>
+                <owl:hasValue xml:lang="en">high</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Frequency</rdfs:label>
+        <terms:description xml:lang="en">Represents the frequency of perception experience of a particular concept, which seem to happen more often under the influence of bias.</terms:description>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/framester/data/framestercore/People -->
+
+    <owl:Class rdf:about="https://w3id.org/framester/data/framestercore/People">
+        <rdfs:label xml:lang="en">People</rdfs:label>
+        <terms:description xml:lang="en">Used to denote a human being and express that we are talking about human cognitive biases.</terms:description>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/framester/data/framestercore/PerceptionExperience -->
+
+    <owl:Class rdf:about="https://w3id.org/framester/data/framestercore/PerceptionExperience">
+        <rdfs:label xml:lang="en">PerceptionExperience</rdfs:label>
+        <terms:description xml:lang="en">Models the activity of perception of the concept.</terms:description>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/framester/data/framestersyn/Belief -->
+
+    <owl:Class rdf:about="https://w3id.org/framester/data/framestersyn/Belief">
+        <rdfs:isDefinedBy>http://etna.istc.cnr.it/framesterpage/data/framestersyn/Belief.n.1</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Belief</rdfs:label>
+        <terms:description xml:lang="en">A belief is a mental state or attitude where an individual holds something to be true or probable. Beliefs can range from factual assertions about the world to subjective evaluations, opinions, or attitudes about various matters. Beliefs can be based on evidence, personal experience, cultural upbringing, social influences, or even intuition. 
+
+Неre we used it to show that the BiasedAgent has the biased opinion (belief) to express that it is only opinion but not the real state of things.</terms:description>
+    </owl:Class>
+    
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://dbpedia.org/ontology/Concept"/>
+            <rdf:Description rdf:about="http://dbpedia.org/ontology/Knowledge"/>
+            <rdf:Description rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology#BiasedAgent"/>
+            <rdf:Description rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology#CognitiveBias"/>
+            <rdf:Description rdf:about="https://w3id.org/framester/data/framestercore/BecomingAware"/>
+            <rdf:Description rdf:about="https://w3id.org/framester/data/framestercore/Frequency"/>
+            <rdf:Description rdf:about="https://w3id.org/framester/data/framestercore/People"/>
+            <rdf:Description rdf:about="https://w3id.org/framester/data/framestercore/PerceptionExperience"/>
+            <rdf:Description rdf:about="https://w3id.org/framester/data/framestersyn/Belief"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+
