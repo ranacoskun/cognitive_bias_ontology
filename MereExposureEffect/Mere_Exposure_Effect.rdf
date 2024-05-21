@@ -1,0 +1,188 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.w3.org/2002/07/owl"
+     xmlns:fs="https://w3id.org/framester/data/framestercore/"
+     xmlns:cbi="https://github.com/ranacoskun/cognitive_bias_ontology/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:emotion="http://ns.inria.fr/emoca/"
+     xmlns:reaction="http://www.ontologydesignpatterns.org/cp/owl/reaction.owl"
+     xmlns:parameter="http://ontologydesignpatterns.org/cp/owl/parameter.owl"
+     xmlns:participation="http://ontologydesignpatterns.org/cp/owl/participation.owl"
+     xmlns:classification="http://www.ontologydesignpatterns.org/cp/owl/classification.owl">
+    <Ontology rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology/"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#subClassOf -->
+
+    <ObjectProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#subClassOf">
+        <rdfs:domain rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:MereExposureEffect"/>
+        <rdfs:range rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:CognitiveBias"/>
+        <rdfs:comment>The subject is a subclass of a class.</rdfs:comment>
+    </ObjectProperty>
+    
+
+
+    <!-- https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:affectedBy -->
+
+    <ObjectProperty rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:affectedBy">
+        <rdfs:domain rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:BiasedAgent"/>
+        <rdfs:domain rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/#fs:Preference"/>
+        <rdfs:range rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:InfluencingFactors"/>
+        <rdfs:range rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:MereExposureEffect"/>
+        <rdfs:comment>Describes a relationship between to entities on the base of influence.</rdfs:comment>
+    </ObjectProperty>
+    
+
+
+    <!-- https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:changes -->
+
+    <ObjectProperty rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:changes">
+        <rdfs:domain rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:ExposureContext"/>
+        <rdfs:range rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/#fs:Preference"/>
+        <rdfs:comment>Describes an altering.</rdfs:comment>
+    </ObjectProperty>
+    
+
+
+    <!-- https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:hasStimulus -->
+
+    <ObjectProperty rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:hasStimulus">
+        <rdfs:domain rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:MereExposureEffect"/>
+        <rdfs:range rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/#emotion:Stimulus"/>
+        <rdfs:comment>Describes the relationship between an individual and the stimulus they are exposed to.</rdfs:comment>
+    </ObjectProperty>
+    
+
+
+    <!-- https://github.com/ranacoskun/cognitive_bias_ontology/#classification:isClassifiedBy -->
+
+    <ObjectProperty rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology/#classification:isClassifiedBy">
+        <rdfs:domain rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:BiasedAgent"/>
+        <rdfs:range rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/#fs:People"/>
+        <rdfs:comment>To represent the relations between concepts (roles, task, parameters) and entities (person, events, values), which concepts can be assigned to. To formalize the application (e.g. tagging) of informal knowledge organization systems such as lexica, thesauri, subject directories, folksonomies, etc., where concepts are first-order elements.</rdfs:comment>
+    </ObjectProperty>
+    
+
+
+    <!-- https://github.com/ranacoskun/cognitive_bias_ontology/#parameter:hasParameter -->
+
+    <ObjectProperty rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology/#parameter:hasParameter">
+        <rdfs:domain rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/#emotion:Stimulus"/>
+        <rdfs:range rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/#fs:Frequency"/>
+        <rdfs:comment>To represent parameters to be used for a certain concept.</rdfs:comment>
+    </ObjectProperty>
+    
+
+
+    <!-- https://github.com/ranacoskun/cognitive_bias_ontology/#reaction:hasOutcome -->
+
+    <ObjectProperty rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology/#reaction:hasOutcome">
+        <rdfs:domain rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:ExposureContext"/>
+        <rdfs:range rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:MereExposureEffect"/>
+        <rdfs:comment>To model dynamic situations, tracking agents and actions they produce, events that are results of some action(s), and consequences as new actions, i.e. reactions.</rdfs:comment>
+    </ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:BiasedAgent -->
+
+    <Class rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:BiasedAgent">
+        <rdfs:comment>Represents an entity that experiences the bias.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:CognitiveBias -->
+
+    <Class rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:CognitiveBias">
+        <rdfs:comment>Represents the overarching concept of cognitive biases.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:ExposureContext -->
+
+    <Class rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:ExposureContext">
+        <rdfs:comment>Represents the environment or situation in which exposure to the stimulus occurs.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:InfluencingFactors -->
+
+    <Class rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:InfluencingFactors">
+        <rdfs:comment>The various internal and external elements that impact the process of cognition.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:MereExposureEffect -->
+
+    <Class rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:MereExposureEffect">
+        <rdfs:comment>Subclass of Bias, specifically representing Mere Exposure Effect.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- https://github.com/ranacoskun/cognitive_bias_ontology/#emotion:Stimulus -->
+
+    <Class rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology/#emotion:Stimulus">
+        <rdfs:comment>The Stimulus class representing any object shown to the user.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- https://github.com/ranacoskun/cognitive_bias_ontology/#fs:Frequency -->
+
+    <Class rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology/#fs:Frequency">
+        <rdfs:comment>This frame has to do with the repetition (and especially the frequency of repetition) of an event. Many of the adjectives and adverbs in this frame are based on nouns in the Calendric_unit frame. China will have to face a high frequency of sand storms in the years to come.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- https://github.com/ranacoskun/cognitive_bias_ontology/#fs:People -->
+
+    <Class rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology/#fs:People">
+        <rdfs:comment>This frame contains general words for Individuals, i.e. humans. The Person is conceived of as independent of other specific individuals with whom they have relationships and independent of their participation in any particular activity. They may have an Age, Descriptor, Origin, Persistent_characteristic, or Ethnicity. A man from Phoenix was shot yesterday. She gave birth to a screaming baby yesterday. I study 16-year-old female adolescents. I am dating an African-</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- https://github.com/ranacoskun/cognitive_bias_ontology/#fs:Preference -->
+
+    <Class rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology/#fs:Preference">
+        <rdfs:comment>An Experiencer has a greater desire to participate in some Event, as against another (contextually recoverable) event which exhibits a specific Contrast with the Event. Alternatively, the Experiencer may have a greater desire that some Focal_participant participate in the Event. The Location_of_Event may also be mentioned. Why do women prefer manly faces? I prefer open source programs over proprietary ones. Other customers prefer to send us an order together with a cheque. I prefer my tartar sauce on fish.</rdfs:comment>
+    </Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+

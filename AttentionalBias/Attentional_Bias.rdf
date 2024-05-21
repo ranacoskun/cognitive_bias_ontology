@@ -1,0 +1,169 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.w3.org/2002/07/owl"
+     xmlns:fs="https://w3id.org/framester/data/framestercore"
+     xmlns:tb="https://tobiasgrubenmann.github.io/Ontologies/Timebank/0.2/index.html#"
+     xmlns:cbi="https://github.com/ranacoskun/cognitive_bias_ontology/"
+     xmlns:crm="https://www.cidoc-crm.org/html/cidoc_crm_v7.1.3.html"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:rsctx="http://softeng.polito.it/rsctx/"
+     xmlns:emotion="http://ns.inria.fr/emoca/"
+     xmlns:classification="http://www.ontologydesignpatterns.org/cp/owl/classification.owl">
+    <Ontology rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology/"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/classification.owlisClassifiedBy -->
+
+    <ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/cp/owl/classification.owlisClassifiedBy">
+        <rdfs:domain rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology//BiasedAgent"/>
+        <rdfs:range rdf:resource="https://w3id.org/framester/data/framestercorePeople"/>
+        <rdfs:comment>To represent the relations between concepts (roles, task, parameters) and entities (person, events, values), which concepts can be assigned to. To formalize the application (e.g. tagging) of informal knowledge organization systems such as lexica, thesauri, subject directories, folksonomies, etc., where concepts are first-order elements.</rdfs:comment>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#subClassOf -->
+
+    <ObjectProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#subClassOf">
+        <rdfs:domain rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:AttentionalBias"/>
+        <rdfs:range rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:CognitiveBias"/>
+        <rdfs:comment>The subject is a subclass of a class.</rdfs:comment>
+    </ObjectProperty>
+    
+
+
+    <!-- https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:affectedBy -->
+
+    <ObjectProperty rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:affectedBy">
+        <rdfs:domain rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:CognitiveProcess"/>
+        <rdfs:domain rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology//BiasedAgent"/>
+        <rdfs:range rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:AttentionalBias"/>
+        <rdfs:comment>Describes a relationship between to entities on the base of influence.</rdfs:comment>
+    </ObjectProperty>
+    
+
+
+    <!-- https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:affects -->
+
+    <ObjectProperty rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:affects">
+        <rdfs:domain rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/#rsctx:EmotionalState"/>
+        <rdfs:range rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:AttentionalBias"/>
+        <rdfs:comment>Describes an affect of an entity on the other.</rdfs:comment>
+    </ObjectProperty>
+    
+
+
+    <!-- https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:hasTrigger -->
+
+    <ObjectProperty rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:hasTrigger">
+        <rdfs:domain rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:AttentionalBias"/>
+        <rdfs:range rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/#emotion:Stimulus"/>
+        <rdfs:comment>Signifies the stimuli, conditions, or events that initiate or activate a specific cognitive process.</rdfs:comment>
+    </ObjectProperty>
+    
+
+
+    <!-- https://github.com/ranacoskun/cognitive_bias_ontology/#crm:P69_is_associated_with -->
+
+    <ObjectProperty rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology/#crm:P69_is_associated_with">
+        <rdfs:domain rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:AttentionalBias"/>
+        <rdfs:range rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/#tb:MentalDisorder"/>
+        <rdfs:comment>This property generalises relationships like whole-part, sequence, prerequisite or inspired by between instances of E29 Design or Procedure. Any instance of E29 Design or Procedure may be associated with other designs or procedures. The property is considered to be symmetrical unless otherwise indicated by P69.1 has type. The property is not transitive.</rdfs:comment>
+    </ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:AttentionalBias -->
+
+    <Class rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:AttentionalBias">
+        <rdfs:comment>Subclass of Bias, specifically representing attentional bias.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:CognitiveBias -->
+
+    <Class rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:CognitiveBias">
+        <rdfs:comment>Represents the overarching concept of cognitive biases.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:CognitiveProcess -->
+
+    <Class rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:CognitiveProcess">
+        <rdfs:comment>Represents the general process of cognition.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- https://github.com/ranacoskun/cognitive_bias_ontology/#emotion:Stimulus -->
+
+    <Class rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology/#emotion:Stimulus">
+        <rdfs:comment>The Stimulus class representing any object shown to the user.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- https://github.com/ranacoskun/cognitive_bias_ontology/#rsctx:EmotionalState -->
+
+    <Class rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology/#rsctx:EmotionalState">
+        <rdfs:comment>The state of a person&apos;s emotions (especially with regard to pleasure or dejection).</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- https://github.com/ranacoskun/cognitive_bias_ontology/#tb:MentalDisorder -->
+
+    <Class rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology/#tb:MentalDisorder">
+        <rdfs:comment>Disorders that affect the mental states of a person.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- https://github.com/ranacoskun/cognitive_bias_ontology//BiasedAgent -->
+
+    <Class rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology//BiasedAgent">
+        <rdfs:comment>Represents an entity that experiences the bias.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- https://w3id.org/framester/data/framestercorePeople -->
+
+    <Class rdf:about="https://w3id.org/framester/data/framestercorePeople">
+        <rdfs:comment>This frame contains general words for Individuals, i.e. humans. The Person is conceived of as independent of other specific individuals with whom they have relationships and independent of their participation in any particular activity. They may have an Age, Descriptor, Origin, Persistent_characteristic, or Ethnicity. A man from Phoenix was shot yesterday. She gave birth to a screaming baby yesterday. I study 16-year-old female adolescents. I am dating an African-American man. She comforted the terrified child. I always thought of him as a stupid man.</rdfs:comment>
+    </Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+

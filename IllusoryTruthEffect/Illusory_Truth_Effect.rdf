@@ -1,0 +1,189 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.w3.org/2002/07/owl"
+     xmlns:fs="https://w3id.org/framester/data/framestercore"
+     xmlns:cbi="https://github.com/ranacoskun/cognitive_bias_ontology/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:reaction="http://www.ontologydesignpatterns.org/cp/owl/reaction.owl"
+     xmlns:dbpedia-owl="http://dbpedia.org/ontology/"
+     xmlns:classification="http://www.ontologydesignpatterns.org/cp/owl/classification.owl">
+    <Ontology rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology/"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#subClassOf -->
+
+    <ObjectProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#subClassOf">
+        <rdfs:domain rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:IllusoryTruthEffect"/>
+        <rdfs:range rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:CognitiveBias"/>
+        <rdfs:comment>The subject is a subclass of a class.</rdfs:comment>
+    </ObjectProperty>
+    
+
+
+    <!-- https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:affectedBy -->
+
+    <ObjectProperty rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:affectedBy">
+        <rdfs:domain rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:BiasedAgent"/>
+        <rdfs:domain rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/#fs:People"/>
+        <rdfs:range rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:IllusoryTruthEffect"/>
+        <rdfs:range rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:Repetition"/>
+        <rdfs:comment>Describes a relationship between to entities on the base of influence.</rdfs:comment>
+    </ObjectProperty>
+    
+
+
+    <!-- https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:affects -->
+
+    <ObjectProperty rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:affects">
+        <rdfs:domain rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:BeliefFormation"/>
+        <rdfs:range rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/#fs:Information"/>
+        <rdfs:comment>Describes an affect of an entity on the other.</rdfs:comment>
+    </ObjectProperty>
+    
+
+
+    <!-- https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:disseminates -->
+
+    <ObjectProperty rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:disseminates">
+        <rdfs:domain rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:Medium"/>
+        <rdfs:range rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/#fs:Information"/>
+        <rdfs:comment>Signifies the spread or transmission of information.</rdfs:comment>
+    </ObjectProperty>
+    
+
+
+    <!-- https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:receives -->
+
+    <ObjectProperty rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:receives">
+        <rdfs:domain rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/#fs:People"/>
+        <rdfs:range rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/#fs:Information"/>
+        <rdfs:comment>Denotes the entity or entities that receive the effects, consequences, or outcomes associated.</rdfs:comment>
+    </ObjectProperty>
+    
+
+
+    <!-- https://github.com/ranacoskun/cognitive_bias_ontology/#classification:isClassifiedBy -->
+
+    <ObjectProperty rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology/#classification:isClassifiedBy">
+        <rdfs:domain rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:BiasedAgent"/>
+        <rdfs:range rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/#fs:People"/>
+        <rdfs:comment>To represent the relations between concepts (roles, task, parameters) and entities (person, events, values), which concepts can be assigned to. To formalize the application (e.g. tagging) of informal knowledge organization systems such as lexica, thesauri, subject directories, folksonomies, etc., where concepts are first-order elements.</rdfs:comment>
+    </ObjectProperty>
+    
+
+
+    <!-- https://github.com/ranacoskun/cognitive_bias_ontology/#dbpedia-owl:uses -->
+
+    <ObjectProperty rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology/#dbpedia-owl:uses">
+        <rdfs:domain rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:Repetition"/>
+        <rdfs:range rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:Medium"/>
+    </ObjectProperty>
+    
+
+
+    <!-- https://github.com/ranacoskun/cognitive_bias_ontology/#reaction:hasOutcome -->
+
+    <ObjectProperty rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology/#reaction:hasOutcome">
+        <rdfs:domain rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:BeliefFormation"/>
+        <rdfs:domain rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:IllusoryTruthEffect"/>
+        <rdfs:range rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:BeliefFormation"/>
+        <rdfs:range rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:Repetition"/>
+        <rdfs:comment>To model dynamic situations, tracking agents and actions they produce, events that are results of some action(s), and consequences as new actions, i.e. reactions.</rdfs:comment>
+    </ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:BeliefFormation -->
+
+    <Class rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:BeliefFormation">
+        <rdfs:comment>The process through which individuals develop and maintain their beliefs over time.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:BiasedAgent -->
+
+    <Class rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:BiasedAgent">
+        <rdfs:comment>Represents the person affected by bias.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:CognitiveBias -->
+
+    <Class rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:CognitiveBias">
+        <rdfs:comment>Represents the overarching concept of cognitive biases.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:IllusoryTruthEffect -->
+
+    <Class rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:IllusoryTruthEffect">
+        <rdfs:comment>Subclass of Bias, specifically representing Illusory Truth Effect.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:Medium -->
+
+    <Class rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:Medium">
+        <rdfs:comment>Represents the medium through which a statement is communicated.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:Repetition -->
+
+    <Class rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:Repetition">
+        <rdfs:comment>The cognitive process of repeated exposure to information, stimuli, or experiences.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- https://github.com/ranacoskun/cognitive_bias_ontology/#fs:Information -->
+
+    <Class rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology/#fs:Information">
+        <rdfs:comment>A Cognizer knows or comes to know some piece of Information about a Topic. In this frame, many LUs encode a specific Means_of_Gathering and/or Source, but these may also be expressed separately. Also, the big problem is that our intel about WMD&apos;s has many times been wrong. Anyone got the straight dope on this? Get the inside scoop on sprint football player Austin Wilson. CNI I know him pretty well and I have a lot of dirt on him so I can always hold him over a barrel. What&apos;s the info about the new scanner chip?</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- https://github.com/ranacoskun/cognitive_bias_ontology/#fs:People -->
+
+    <Class rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology/#fs:People">
+        <rdfs:comment>This frame contains general words for Individuals, i.e. humans. The Person is conceived of as independent of other specific individuals with whom they have relationships and independent of their participation in any particular activity. They may have an Age, Descriptor, Origin, Persistent_characteristic, or Ethnicity. A man from Phoenix was shot yesterday. She gave birth to a screaming baby yesterday. I study 16-year-old female adolescents. I am dating an African-American man. She comforted the terrified child. I always thought of him as a stupid man.</rdfs:comment>
+    </Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+
