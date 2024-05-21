@@ -40,6 +40,7 @@
 
     <ObjectProperty rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:affects">
         <rdfs:domain rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:AvailabilityBias"/>
+        <rdfs:range rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:CognitiveProcess"/>
         <rdfs:comment>Describes an affect of an entity on the other.</rdfs:comment>
     </ObjectProperty>
     
