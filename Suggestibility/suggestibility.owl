@@ -1,0 +1,240 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://github.com/ranacoskun/cognitive_bias_ontology#"
+     xml:base="https://github.com/ranacoskun/cognitive_bias_ontology"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:fs="https://w3id.org/framester/data/framestercore/"
+     xmlns:cbi="https://github.com/ranacoskun/cognitive_bias_ontology#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:exob="http://ontologydesignpatterns.org/wiki/Submissions:Experience_%26_Observation#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:rsctx="https://softeng.polito.it/rsctx#"
+     xmlns:actspec="http://ontology.eil.utoronto.ca/icity/ActivitySpecification/"
+     xmlns:reaction="http://www.ontologydesignpatterns.org/cp/owl/reaction.owl.v0.1#"
+     xmlns:parameter="http://ontologydesignpatterns.org/cp/owl/parameter.owl"
+     xmlns:classification="http://www.ontologydesignpatterns.org/cp/owl/classification.owl#">
+    <owl:Ontology rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology#">
+        <dc:creator xml:lang="en">Rana Coskun</dc:creator>
+        <rdfs:comment xml:lang="en">Suggestibility refers to the degree to which a person&apos;s thoughts, feelings, or actions are influenced by cues or suggestions from others. It involves the likelihood of accepting and acting upon the suggestions of others. Suggestibility can vary greatly among individuals and can depend on various factors, including the person&apos;s state of mind, trust in the source of the suggestion, and susceptibility to social influence. In psychological contexts, suggestibility is often studied in relation to memory, hypnosis, and social influence, exploring how external suggestions can modify a person&apos;s perceptions, memories, and behaviors.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://github.com/ranacoskun/cognitive_bias_ontology#Suggestibility</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Suggestibility</rdfs:label>
+        <rdfs:seeAlso xml:lang="en">https://en.wikipedia.org/wiki/Suggestibility</rdfs:seeAlso>
+        <rdfs:seeAlso xml:lang="en">https://thedecisionlab.com/biases/suggestibility</rdfs:seeAlso>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://ontologydesignpatterns.org/cp/owl/parameter.owlhasParameter -->
+
+    <owl:ObjectProperty rdf:about="http://ontologydesignpatterns.org/cp/owl/parameter.owlhasParameter"/>
+    
+
+
+    <!-- http://ontologydesignpatterns.org/wiki/Submissions:Experience_%26_Observation#IsEngagedIn -->
+
+    <owl:ObjectProperty rdf:about="http://ontologydesignpatterns.org/wiki/Submissions:Experience_%26_Observation#IsEngagedIn"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/classification.owl#isClassifiedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/cp/owl/classification.owl#isClassifiedBy"/>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#subClassOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+    
+
+
+    <!-- https://github.com/ranacoskun/cognitive_bias_ontology#affectedBy -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology#affectedBy"/>
+    
+
+
+    <!-- https://github.com/ranacoskun/cognitive_bias_ontology#affects -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology#affects"/>
+    
+
+
+    <!-- https://github.com/ranacoskun/cognitive_bias_ontology#creates -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology#creates"/>
+    
+
+
+    <!-- https://github.com/ranacoskun/cognitive_bias_ontology#receivesSuggestion -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology#receivesSuggestion"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/icity/ActivitySpecification/Activity -->
+
+    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/icity/ActivitySpecification/Activity">
+        <rdfs:comment xml:lang="en">The activity represents the personal act of the agent that arises from interaction with the environment and generates personal reflection.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">http://ontology.eil.utoronto.ca/icity/ActivitySpecification/</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Activity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/reaction.owl.v0.1#Action -->
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/cp/owl/reaction.owl.v0.1#Action">
+        <rdfs:isDefinedBy xml:lang="en">Action can produce more than a single event. Mutiple events can share the same position in the sequence</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy xml:lang="en">http://ontologydesignpatterns.org/wiki/Submissions:Reaction</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Action</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/ranacoskun/cognitive_bias_ontology#BiasedAgent -->
+
+    <owl:Class rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology#BiasedAgent">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/framester/data/framestercore/People"/>
+        <rdfs:comment xml:lang="en">Represents an entity that experiences the bias.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://github.com/ranacoskun/cognitive_bias_ontology#BiasedAgent</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">BiasedAgent</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/ranacoskun/cognitive_bias_ontology#CognitiveBias -->
+
+    <owl:Class rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology#CognitiveBias">
+        <rdfs:comment xml:lang="en">Represents the overarching concept of cognitive biases.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://github.com/ranacoskun/cognitive_bias_ontology#CognitiveBias</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">CognitiveBias</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/ranacoskun/cognitive_bias_ontology#Suggestibility -->
+
+    <owl:Class rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology#Suggestibility">
+        <rdfs:subClassOf rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology#CognitiveBias"/>
+        <rdfs:comment xml:lang="en">Suggestibility refers to the degree to which a person&apos;s thoughts, feelings, or actions are influenced by cues or suggestions from others.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://github.com/ranacoskun/cognitive_bias_ontology#Suggestibility</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Suggestibility</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/ranacoskun/cognitive_bias_ontology#SuggestibilityLevel -->
+
+    <owl:Class rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology#SuggestibilityLevel">
+        <rdfs:comment xml:lang="en">Describes the biased agent&apos;s suggestibility level.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://github.com/ranacoskun/cognitive_bias_ontology#SuggestibilityLevel</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">SuggestibilityLevel</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/ranacoskun/cognitive_bias_ontology#Suggestion -->
+
+    <owl:Class rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology#Suggestion">
+        <rdfs:comment xml:lang="en">The action of calling up an idea in someone&apos;s mind by associating it with other things</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://github.com/ranacoskun/cognitive_bias_ontology#Suggestion</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Suggestion</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/ranacoskun/cognitive_bias_ontology#SuggestionSource -->
+
+    <owl:Class rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology#SuggestionSource">
+        <rdfs:comment xml:lang="en">Describes the source of suggestion that affects biased agent, can be an individual,organization or media.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://github.com/ranacoskun/cognitive_bias_ontology#SuggestionSource</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">SuggestionSource</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://softeng.polito.it/rsctx#EmotionalState -->
+
+    <owl:Class rdf:about="https://softeng.polito.it/rsctx#EmotionalState">
+        <rdfs:comment xml:lang="en">The state of a person&apos;s emotions (especially with regard to pleasure or dejection).</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://softeng.polito.it/rsctx#EmotionalState</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">EmotionalState</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/framester/data/framestercore/Event -->
+
+    <owl:Class rdf:about="https://w3id.org/framester/data/framestercore/Event">
+        <rdfs:isDefinedBy xml:lang="en">An Event takes place at a Place and Time. Big earthquakes only happen along plate boundaries. INI The party will take place on Sunday in the all-you-can-eat buffet.</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/framester/data/framestercore/Event</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Event</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/framester/data/framestercore/People -->
+
+    <owl:Class rdf:about="https://w3id.org/framester/data/framestercore/People">
+        <rdfs:comment xml:lang="en">Denotes a human being and express that we are talking about human cognitive biases.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/framester/data/framestercore/People</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">People</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/framester/data/framestercore/SubjectiveInfluence -->
+
+    <owl:Class rdf:about="https://w3id.org/framester/data/framestercore/SubjectiveInfluence">
+        <rdfs:comment xml:lang="en">An Agent, Situation or Entity has an influence on a Cognizer. The influence may be general; or it may be manifested in the Cognizer&apos;s engaging in an Action as a consequence of the influence; or the Cognizer may be influenced in how they carry out a Behavior that they are engaged in already. Alternatively, a Product may be specified whose production or design was influenced by the Cognizer&apos;s experience of the Situation or Entity. The mediation of the Cognizer&apos;s psyche distinguishes this frame from the Objective_influence frame, where dependent events occur automatically given the appropriate kind of influencing force. In this frame, by contrast, a Cognizer may perceive an influence yet not respond to it in any way. These works had a profound effect and influenced her in the creation of a successful series capturing this sun-drenched region. I&apos;m sure if I asked Mattel what inspired this car I would be told it&apos;s an original design, and not supposed to represent any actual car.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/framester/data/framestercore/SubjectiveInfluence</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">SubjectiveInfluence</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+
