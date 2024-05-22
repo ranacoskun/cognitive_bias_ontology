@@ -15,9 +15,9 @@
      xmlns:parameter="http://ontologydesignpatterns.org/cp/owl/parameter.owl"
      xmlns:classification="http://www.ontologydesignpatterns.org/cp/owl/classification.owl#">
     <owl:Ontology rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology#">
-        <dc:creator>Rana Coskun</dc:creator>
+        <dc:creator xml:lang="en">Rana Coskun</dc:creator>
         <rdfs:comment xml:lang="en">The base rate fallacy is a cognitive error whereby people incorrectly judge the likelihood of an event due to ignoring or underestimating the base rate (i.e., the overall rate at which an event occurs) and overemphasizing specific information. This fallacy can occur in various contexts, such as assessing risks, making medical diagnoses, and evaluating probabilities in legal and everyday situations.</rdfs:comment>
-        <rdfs:isDefinedBy xml:lang="en">https://github.com/ranacoskun/cognitive_bias_ontology/tree/main/BaseRateFallacy</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy xml:lang="en">https://github.com/ranacoskun/cognitive_bias_ontology#BaseRateFallacy</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Base Rate Fallacy</rdfs:label>
         <rdfs:seeAlso xml:lang="en">https://en.wikipedia.org/wiki/Base_rate_fallacy</rdfs:seeAlso>
         <rdfs:seeAlso xml:lang="en">https://thedecisionlab.com/biases/base-rate-fallacy</rdfs:seeAlso>
