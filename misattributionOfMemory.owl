@@ -7,7 +7,7 @@ Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
 Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 
-Ontology(<https://github.com/ranacoskun/cognitive_bias_ontology>
+Ontology(<https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/misattributionOfMemory.owl>
 
 Declaration(Class(<http://etna.istc.cnr.it/framester2/data/framestercore/Event>))
 Declaration(Class(<http://etna.istc.cnr.it/framester2/data/framestercore/Memorization>))

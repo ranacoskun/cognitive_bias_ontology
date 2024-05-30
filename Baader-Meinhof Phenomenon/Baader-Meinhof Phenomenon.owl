@@ -20,7 +20,7 @@
      xmlns:parameter="http://www.ontologydesignpatterns.org/cp/owl/parameter.owl#"
      xmlns:situation="http://www.ontologydesignpatterns.org/cp/owl/situation.owl#"
      xmlns:classification="http://www.ontologydesignpatterns.org/cp/owl/classification.owl#">
-    <owl:Ontology rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology#">
+    <owl:Ontology rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/Baader-Meinhof%20Phenomenon/Baader-Meinhof%20Phenomenon.owl">
         <rdfs:comment xml:lang="en">The Baader-Meinhof phenomenon, also known as the Frequency Illusion, is a cognitive bias in which after noticing something for the first time, there is a tendency to notice it more frequently thereafter, leading one to believe that it has an increased frequency of occurrence. This perception is not due to the actual increase in frequency but rather due to the new awareness of the item, event, or term.
 
 In essence, while the Baader-Meinhof Phenomenon often refers to more distinctive or unusual observations, the frequency illusion can apply to any information, whether common or rare. Both terms describe the same underlying cognitive bias of increased awareness and selective attention, but the Baader-Meinhof Phenomenon has a flavor of novelty and rarity attached to it.</rdfs:comment>
@@ -37,7 +37,7 @@ In essence, while the Baader-Meinhof Phenomenon often refers to more distinctive
         <hasComponent>https://www.cidoc-crm.org/html/cidoc_crm_v7.1.3.html</hasComponent>
         <hasComponent>https://www.w3.org/TR/skos-reference/</hasComponent>
         <hasComponent>smiy.sourceforge.net/cco/spec/cognitivecharacteristics.html</hasComponent>
-        <userStory xml:lang="en">After learning the word 'solipsism' in a philosophy class, Jamie began to encounter it everywhere: in a psychology book, during a podcast, and even in a news article about perception. This amusing frequency of a once unfamiliar term led Jamie to appreciate how new knowledge can suddenly resonate across different mediums, enhancing awareness and deepening their engagement with ongoing learning.</userStory>
+        <userStory xml:lang="en">After learning the word &apos;solipsism&apos; in a philosophy class, Jamie began to encounter it everywhere: in a psychology book, during a podcast, and even in a news article about perception. This amusing frequency of a once unfamiliar term led Jamie to appreciate how new knowledge can suddenly resonate across different mediums, enhancing awareness and deepening their engagement with ongoing learning.</userStory>
         <terms:created>18/5/2024</terms:created>
         <terms:creator xml:lang="en">Evgeniia Vdovichenko</terms:creator>
         <terms:description xml:lang="en">Baader-Meinhof Phenomenon specification of Cognitive Bias Ontology</terms:description>
@@ -123,22 +123,9 @@ In essence, while the Baader-Meinhof Phenomenon often refers to more distinctive
         <rdfs:domain rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology#FrequencyIllusion"/>
         <rdfs:range rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology#CognitiveBias"/>
         <rdfs:range rdf:resource="https://w3id.org/framester/data/framestercore/People"/>
-        <rdfs:seeAlso>http://ontologydesignpatterns.org/wiki/Submissions:Classification</rdfs:seeAlso>
         <rdfs:label xml:lang="en">isClassifiedBy</rdfs:label>
+        <rdfs:seeAlso>http://ontologydesignpatterns.org/wiki/Submissions:Classification</rdfs:seeAlso>
         <terms:description xml:lang="en">To represent the relations between concepts (roles, task, parameters) and entities (person, events, values), which concepts can be assigned to. To formalize the application (e.g. tagging) of informal knowledge organization systems such as lexica, thesauri, subject directories, folksonomies, etc., where concepts are first-order elements.</terms:description>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.ontologydesignpatterns.org/cp/owl/parameter.owl#isParameterFor -->
-
-    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/cp/owl/parameter.owl#isParameterFor">
-        <owl:inverseOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/parameter.owl# hasParameter"/>
-        <rdfs:domain rdf:resource="https://w3id.org/framester/data/framestercore/Frequency"/>
-        <rdfs:range rdf:resource="https://w3id.org/framester/data/framestercore/PerceptionExperience"/>
-        <rdf:about>http://ontologydesignpatterns.org/wiki/Submissions:Parameter</rdf:about>
-        <rdfs:label xml:lang="en">isParameterFor</rdfs:label>
-        <terms:description xml:lang="en">A Concept can have a Parameter that constrains the attributes that a classified Entity can have in a certain Situation, e.g. a 4WheelDriver Role definedIn the ItalianTrafficLaw has a MinimumAge parameter on the Amount 16</terms:description>
     </owl:ObjectProperty>
     
 
@@ -148,22 +135,29 @@ In essence, while the Baader-Meinhof Phenomenon often refers to more distinctive
     <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/cp/owl/parameter.owl#hasParameter">
         <rdfs:domain rdf:resource="https://w3id.org/framester/data/framestercore/PerceptionExperience"/>
         <rdfs:range rdf:resource="https://w3id.org/framester/data/framestercore/Frequency"/>
-        <rdfs:seeAlso>http://ontologydesignpatterns.org/wiki/Submissions:Parameter</rdfs:seeAlso>
         <rdfs:label xml:lang="en">hasParameter</rdfs:label>
+        <rdfs:seeAlso>http://ontologydesignpatterns.org/wiki/Submissions:Parameter</rdfs:seeAlso>
         <terms:description xml:lang="en">A Concept can have a Parameter that constrains the attributes that a classified Entity can have in a certain Situation, e.g. a 4WheelDriver Role definedIn the ItalianTrafficLaw has a MinimumAge parameter on the Amount 16.</terms:description>
     </owl:ObjectProperty>
     
 
-    <!-- http://www.ontologydesignpatterns.org/cp/owl/reaction.owl.v0.1#isOutcomeOf -->
 
-    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/cp/owl/reaction.owl.v0.1#isOutcomeOf">
-        <owl:inverseOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/reaction.owl.v0.1# hasOutcome"/>
-        <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Knowledge"/>
-        <rdfs:range rdf:resource="https://w3id.org/framester/data/framestercore/BecomingAware"/>
-        <rdfs:seeAlso>http://ontologydesignpatterns.org/wiki/Submissions:Reaction</rdfs:seeAlso>
-        <rdfs:label xml:lang="en">isOutcomeOf</rdfs:label>
-        <terms:description xml:lang="en">Is also true that some outcome follows some action</terms:description>
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/parameter.owl#isParameterFor -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/cp/owl/parameter.owl#isParameterFor">
+        <owl:inverseOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/parameter.owl#%20hasParameter"/>
+        <rdfs:domain rdf:resource="https://w3id.org/framester/data/framestercore/Frequency"/>
+        <rdfs:range rdf:resource="https://w3id.org/framester/data/framestercore/PerceptionExperience"/>
+        <rdf:about>http://ontologydesignpatterns.org/wiki/Submissions:Parameter</rdf:about>
+        <rdfs:label xml:lang="en">isParameterFor</rdfs:label>
+        <terms:description xml:lang="en">A Concept can have a Parameter that constrains the attributes that a classified Entity can have in a certain Situation, e.g. a 4WheelDriver Role definedIn the ItalianTrafficLaw has a MinimumAge parameter on the Amount 16</terms:description>
     </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/parameter.owl#%20hasParameter -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/cp/owl/parameter.owl#%20hasParameter"/>
     
 
 
@@ -172,10 +166,29 @@ In essence, while the Baader-Meinhof Phenomenon often refers to more distinctive
     <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/cp/owl/reaction.owl.v0.1#hasOutcome">
         <rdfs:domain rdf:resource="https://w3id.org/framester/data/framestercore/BecomingAware"/>
         <rdfs:range rdf:resource="http://dbpedia.org/ontology/Knowledge"/>
-        <rdfs:seeAlso>http://ontologydesignpatterns.org/wiki/Submissions:Reaction</rdfs:seeAlso>
         <rdfs:label xml:lang="en">hasOutcome</rdfs:label>
+        <rdfs:seeAlso>http://ontologydesignpatterns.org/wiki/Submissions:Reaction</rdfs:seeAlso>
         <terms:description xml:lang="en">Is also true that some action directly preceeds its outcome</terms:description>
     </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/reaction.owl.v0.1#isOutcomeOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/cp/owl/reaction.owl.v0.1#isOutcomeOf">
+        <owl:inverseOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/reaction.owl.v0.1#%20hasOutcome"/>
+        <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Knowledge"/>
+        <rdfs:range rdf:resource="https://w3id.org/framester/data/framestercore/BecomingAware"/>
+        <rdfs:label xml:lang="en">isOutcomeOf</rdfs:label>
+        <rdfs:seeAlso>http://ontologydesignpatterns.org/wiki/Submissions:Reaction</rdfs:seeAlso>
+        <terms:description xml:lang="en">Is also true that some outcome follows some action</terms:description>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/reaction.owl.v0.1#%20hasOutcome -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/cp/owl/reaction.owl.v0.1#%20hasOutcome"/>
     
 
 
@@ -184,8 +197,8 @@ In essence, while the Baader-Meinhof Phenomenon often refers to more distinctive
     <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#precedes">
         <rdfs:domain rdf:resource="https://w3id.org/framester/data/framestercore/BecomingAware"/>
         <rdfs:range rdf:resource="https://w3id.org/framester/data/framestercore/PerceptionExperience"/>
-        <rdfs:seeAlso>http://ontologydesignpatterns.org/wiki/Submissions:Sequence</rdfs:seeAlso>
         <rdfs:label xml:lang="en">precedes</rdfs:label>
+        <rdfs:seeAlso>http://ontologydesignpatterns.org/wiki/Submissions:Sequence</rdfs:seeAlso>
         <terms:description xml:lang="en">A relation between entities, expressing a sequence schema.</terms:description>
     </owl:ObjectProperty>
     
@@ -197,9 +210,9 @@ In essence, while the Baader-Meinhof Phenomenon often refers to more distinctive
         <owl:inverseOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/situation.owl#isSettingFor"/>
         <rdfs:domain rdf:resource="https://w3id.org/framester/data/framestercore/PerceptionExperience"/>
         <rdfs:range rdf:resource="http://dbpedia.org/ontology/Concept"/>
-        <rdfs:seeAlso>http://ontologydesignpatterns.org/wiki/Submissions:Situation</rdfs:seeAlso>
         <rdfs:label xml:lang="en">hasSetting</rdfs:label>
-        <terms:description xml:lang="en">A relation between entities and situations, e.g. this morning I've prepared my coffee with a new fantastic Arabica&apos; (i.e.: (an amount of) a new fantastic Arabica hasSetting the preparation of my coffee this morning).</terms:description>
+        <rdfs:seeAlso>http://ontologydesignpatterns.org/wiki/Submissions:Situation</rdfs:seeAlso>
+        <terms:description xml:lang="en">A relation between entities and situations, e.g. this morning I&apos;ve prepared my coffee with a new fantastic Arabica&apos; (i.e.: (an amount of) a new fantastic Arabica hasSetting the preparation of my coffee this morning).</terms:description>
     </owl:ObjectProperty>
     
 
@@ -209,8 +222,8 @@ In essence, while the Baader-Meinhof Phenomenon often refers to more distinctive
     <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/cp/owl/situation.owl#isSettingFor">
         <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Concept"/>
         <rdfs:range rdf:resource="https://w3id.org/framester/data/framestercore/PerceptionExperience"/>
-        <rdfs:seeAlso>http://ontologydesignpatterns.org/wiki/Submissions:Situation</rdfs:seeAlso>
         <rdfs:label xml:lang="en">isSettingFor</rdfs:label>
+        <rdfs:seeAlso>http://ontologydesignpatterns.org/wiki/Submissions:Situation</rdfs:seeAlso>
     </owl:ObjectProperty>
     
 
@@ -241,6 +254,17 @@ In essence, while the Baader-Meinhof Phenomenon often refers to more distinctive
     
 
 
+    <!-- https://github.com/ranacoskun/smiy.sourceforge.net/cco/spec/cognitivecharacteristics.html#belief -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/ranacoskun/smiy.sourceforge.net/cco/spec/cognitivecharacteristics.html#belief">
+        <rdfs:domain rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology#BiasedAgent"/>
+        <rdfs:range rdf:resource="https://w3id.org/framester/data/framestersyn/Belief"/>
+        <rdfs:label xml:lang="en">belief</rdfs:label>
+        <terms:description xml:lang="en">Property which means that a person has belief - an uncertain relation for competence representation. That means beliefs, persuasions or opinions, which can also be misconceptions.</terms:description>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://www.cidoc-crm.org/html/cidoc_crm_v7.1.3.html#isAbout -->
 
     <owl:ObjectProperty rdf:about="https://www.cidoc-crm.org/html/cidoc_crm_v7.1.3.html#isAbout">
@@ -255,17 +279,6 @@ In essence, while the Baader-Meinhof Phenomenon often refers to more distinctive
     
 
 
-    <!-- smiy.sourceforge.net/cco/spec/cognitivecharacteristics.html#belief -->
-
-    <owl:ObjectProperty rdf:about="smiy.sourceforge.net/cco/spec/cognitivecharacteristics.html#belief">
-        <rdfs:domain rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology#BiasedAgent"/>
-        <rdfs:range rdf:resource="https://w3id.org/framester/data/framestersyn/Belief"/>
-        <rdfs:label xml:lang="en">belief</rdfs:label>
-        <terms:description xml:lang="en">Property which means that a person has belief - an uncertain relation for competence representation. That means beliefs, persuasions or opinions, which can also be misconceptions.</terms:description>
-    </owl:ObjectProperty>
-    
-
-
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -273,6 +286,8 @@ In essence, while the Baader-Meinhof Phenomenon often refers to more distinctive
     //
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
+
+    
 
 
     <!-- http://www.ontologydesignpatterns.org/cp/owl/parameter.owl#hasParameterDataValue -->
@@ -283,9 +298,9 @@ In essence, while the Baader-Meinhof Phenomenon often refers to more distinctive
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:label xml:lang="en">hasParameterDataValue</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://ontologydesignpatterns.org/wiki/Submissions:Parameter"/>
-        <terms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Parametrizes values from a datatype. For example, a Parameter AgeForDriving hasParameterDataValue 18 on datatype xsd:int, in the Italian traffic code. In this example, AgeForDriving isDefinedIn the Norm ItalianTrafficCodeAgeDriving.</terms:description>
+        <terms:description>Parametrizes values from a datatype. For example, a Parameter AgeForDriving hasParameterDataValue 18 on datatype xsd:int, in the Italian traffic code. In this example, AgeForDriving isDefinedIn the Norm ItalianTrafficCodeAgeDriving.</terms:description>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- 
@@ -340,21 +355,21 @@ In essence, while the Baader-Meinhof Phenomenon often refers to more distinctive
     
 
 
+    <!-- https://github.com/ranacoskun/cognitive_bias_ontology#CognitiveBias -->
+
+    <owl:Class rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology#CognitiveBias">
+        <rdfs:label xml:lang="en">CognitiveBias</rdfs:label>
+        <terms:description xml:lang="en">Represents the overarching concept of cognitive biases.</terms:description>
+    </owl:Class>
+    
+
+
     <!-- https://github.com/ranacoskun/cognitive_bias_ontology#FrequencyIllusion -->
 
     <owl:Class rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology#FrequencyIllusion">
         <rdfs:subClassOf rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology#CognitiveBias"/>
         <rdfs:label xml:lang="en">FrequencyIllusion</rdfs:label>
         <terms:description xml:lang="en">A cognitive bias where a person believes a recently noticed item or concept has suddenly become prevalent.</terms:description>
-    </owl:Class>
-    
-
-
-    <!-- https://github.com/ranacoskun/cognitive_bias_ontology#CognitiveBias -->
-
-    <owl:Class rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology#CognitiveBias">
-        <rdfs:label xml:lang="en">CognitiveBias</rdfs:label>
-        <terms:description xml:lang="en">Represents the overarching concept of cognitive biases.</terms:description>
     </owl:Class>
     
 
@@ -369,12 +384,6 @@ In essence, while the Baader-Meinhof Phenomenon often refers to more distinctive
 
 
     <!-- https://w3id.org/framester/data/framestercore/Frequency -->
-
-    <owl:Class rdf:about="https://w3id.org/framester/data/framestercore/Frequency">
-        <rdfs:label xml:lang="en">Frequency</rdfs:label>
-        <terms:description xml:lang="en">Represents the frequency of perception experience of a particular concept, which seem to happen more often under the influence of bias.</terms:description>
-    </owl:Class>
-
 
     <owl:Class rdf:about="https://w3id.org/framester/data/framestercore/Frequency">
         <rdfs:subClassOf>
@@ -417,6 +426,7 @@ In essence, while the Baader-Meinhof Phenomenon often refers to more distinctive
 Неre we used it to show that the BiasedAgent has the biased opinion (belief) to express that it is only opinion but not the real state of things.</terms:description>
     </owl:Class>
     
+
 
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////

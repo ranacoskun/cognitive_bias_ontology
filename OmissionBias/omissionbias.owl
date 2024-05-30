@@ -13,7 +13,7 @@
      xmlns:actspec="http://ontology.eil.utoronto.ca/icity/ActivitySpecification/"
      xmlns:reaction="http://www.ontologydesignpatterns.org/cp/owl/reaction.owl.v0.1#"
      xmlns:classification="http://www.ontologydesignpatterns.org/cp/owl/classification.owl#">
-    <owl:Ontology rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology#">
+    <owl:Ontology rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/OmissionBias/omissionbias.owl">
         <dc:creator xml:lang="en">Rana Coskun</dc:creator>
         <rdfs:comment xml:lang="en">Omission bias is a cognitive bias that describes the tendency of people to judge harmful actions (commissions) as worse, or less moral, than equally harmful inactions (omissions), even if the outcomes are the same or similar. This bias can affect decision-making processes in various contexts, including moral and ethical judgments, health decisions, and legal interpretations. Essentially, individuals might perceive the act of not doing something as more acceptable or less blameworthy than actively doing something that leads to a similar negative outcome. This can lead to situations where passive decisions are favored over active ones, even if the active decision would result in a better outcome or prevent harm.</rdfs:comment>
         <rdfs:isDefinedBy>https://github.com/ranacoskun/cognitive_bias_ontology/tree/main/OmissionBias</rdfs:isDefinedBy>

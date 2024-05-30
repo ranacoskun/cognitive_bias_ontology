@@ -13,7 +13,7 @@
      xmlns:parameter="http://ontologydesignpatterns.org/cp/owl/parameter.owl"
      xmlns:participation="http://ontologydesignpatterns.org/cp/owl/participation.owl"
      xmlns:classification="http://www.ontologydesignpatterns.org/cp/owl/classification.owl">
-    <Ontology rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology/"/>
+    <Ontology rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/MereExposureEffect/Mere_Exposure_Effect.owl"/>
     
 
 

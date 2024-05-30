@@ -15,7 +15,7 @@
      xmlns:reaction="http://www.ontologydesignpatterns.org/cp/owl/reaction.owl.v0.1#"
      xmlns:parameter="http://ontologydesignpatterns.org/cp/owl/parameter.owl"
      xmlns:classification="http://www.ontologydesignpatterns.org/cp/owl/classification.owl#">
-    <owl:Ontology rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology#">
+    <owl:Ontology rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/Suggestibility/suggestibility.owl">
         <dc:creator xml:lang="en">Rana Coskun</dc:creator>
         <rdfs:comment xml:lang="en">Suggestibility refers to the degree to which a person&apos;s thoughts, feelings, or actions are influenced by cues or suggestions from others. It involves the likelihood of accepting and acting upon the suggestions of others. Suggestibility can vary greatly among individuals and can depend on various factors, including the person&apos;s state of mind, trust in the source of the suggestion, and susceptibility to social influence. In psychological contexts, suggestibility is often studied in relation to memory, hypnosis, and social influence, exploring how external suggestions can modify a person&apos;s perceptions, memories, and behaviors.</rdfs:comment>
         <rdfs:isDefinedBy xml:lang="en">https://github.com/ranacoskun/cognitive_bias_ontology#Suggestibility</rdfs:isDefinedBy>

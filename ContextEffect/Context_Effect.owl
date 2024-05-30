@@ -12,7 +12,7 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:emotion="http://ns.inria.fr/emoca/"
      xmlns:classification="http://www.ontologydesignpatterns.org/cp/owl/classification.owl">
-    <Ontology rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology/"/>
+    <Ontology rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/ContextEffect/Context_Effect.owl"/>
     
 
 
