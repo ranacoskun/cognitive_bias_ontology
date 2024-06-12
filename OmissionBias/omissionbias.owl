@@ -1,25 +1,24 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="https://github.com/ranacoskun/cognitive_bias_ontology#"
-     xml:base="https://github.com/ranacoskun/cognitive_bias_ontology"
+<rdf:RDF xmlns="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/OmissionBias/omissionbias.owl#"
+     xml:base="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/OmissionBias/omissionbias.owl"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:fs="https://w3id.org/framester/data/framestercore/"
-     xmlns:cbi="https://github.com/ranacoskun/cognitive_bias_ontology#"
+     xmlns:cbi="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#"
+     xmlns:omb="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/OmissionBias/omissionbias.owl#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:exob="http://ontologydesignpatterns.org/wiki/Submissions:Experience_%26_Observation#"
+     xmlns:exob="https://modellingdh.github.io/ont/odp/term/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:actspec="http://ontology.eil.utoronto.ca/icity/ActivitySpecification/"
-     xmlns:reaction="http://www.ontologydesignpatterns.org/cp/owl/reaction.owl.v0.1#"
-     xmlns:classification="http://www.ontologydesignpatterns.org/cp/owl/classification.owl#">
-    <owl:Ontology rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/OmissionBias/omissionbias.owl">
+     xmlns:reaction="http://www.ontologydesignpatterns.org/cp/owl/reaction.owl.v0.1#">
+    <owl:Ontology rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/OmissionBias/omissionbias.owl#">
         <dc:creator xml:lang="en">Rana Coskun</dc:creator>
         <rdfs:comment xml:lang="en">Omission bias is a cognitive bias that describes the tendency of people to judge harmful actions (commissions) as worse, or less moral, than equally harmful inactions (omissions), even if the outcomes are the same or similar. This bias can affect decision-making processes in various contexts, including moral and ethical judgments, health decisions, and legal interpretations. Essentially, individuals might perceive the act of not doing something as more acceptable or less blameworthy than actively doing something that leads to a similar negative outcome. This can lead to situations where passive decisions are favored over active ones, even if the active decision would result in a better outcome or prevent harm.</rdfs:comment>
-        <rdfs:isDefinedBy>https://github.com/ranacoskun/cognitive_bias_ontology/tree/main/OmissionBias</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Omission Bias</rdfs:label>
-        <rdfs:seeAlso xml:lang="en">https://en.wikipedia.org/wiki/Omission_bias</rdfs:seeAlso>
-        <rdfs:seeAlso xml:lang="en">https://thedecisionlab.com/biases/omission-bias</rdfs:seeAlso>
+        <rdfs:seeAlso xml:lang="en">http://ontologydesignpatterns.org/wiki/Submissions:Reaction</rdfs:seeAlso>
+        <rdfs:seeAlso xml:lang="en">http://www.ontologydesignpatterns.org/cp/owl/reaction.owl.v0.1#</rdfs:seeAlso>
     </owl:Ontology>
     
 
@@ -52,75 +51,34 @@
     
 
 
-    <!-- http://ontologydesignpatterns.org/wiki/Submissions:Experience_%26_Observation#inActivity -->
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/reaction.owl.v0.1#isPerformedBy -->
 
-    <owl:ObjectProperty rdf:about="http://ontologydesignpatterns.org/wiki/Submissions:Experience_%26_Observation#inActivity">
-        <rdfs:domain rdf:resource="http://etna.istc.cnr.it/framester2/data/framestercore/Deciding"/>
-        <rdfs:range rdf:resource="http://ontology.eil.utoronto.ca/icity/ActivitySpecification/Activity"/>
-        <rdfs:comment xml:lang="en">what activity/ies are affecting or affected by a certain engagement</rdfs:comment>
-        <rdfs:isDefinedBy xml:lang="en">http://ontologydesignpatterns.org/wiki/Submissions:Experience_%26_Observation#</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">inActivity</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://ontologydesignpatterns.org/wiki/Submissions:Experience_%26_Observation#includes -->
-
-    <owl:ObjectProperty rdf:about="http://ontologydesignpatterns.org/wiki/Submissions:Experience_%26_Observation#includes">
-        <rdfs:domain rdf:resource="http://ontology.eil.utoronto.ca/icity/ActivitySpecification/Activity"/>
-        <rdfs:range rdf:resource="http://ontologydesignpatterns.org/wiki/Submissions:Experience_%26_Observation#Observation"/>
-        <rdfs:comment xml:lang="en">A relation of mereological nature that connects a given observation with the activity that originates them: it strengthens the argument that observations are always active processes from a cognitive standpoint, regardless of how conscious they may be. A standard mereological property from another content pattern may be used in lieu of this one and therefore aligned with it.</rdfs:comment>
-        <rdfs:isDefinedBy xml:lang="en">http://ontologydesignpatterns.org/wiki/Submissions:Experience_%26_Observation#</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">includes</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://ontologydesignpatterns.org/wiki/Submissions:Experience_%26_Observation#isEngagedIn -->
-
-    <owl:ObjectProperty rdf:about="http://ontologydesignpatterns.org/wiki/Submissions:Experience_%26_Observation#isEngagedIn">
-        <rdfs:domain rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology#BiasedAgent"/>
-        <rdfs:range rdf:resource="http://etna.istc.cnr.it/framester2/data/framestercore/Deciding"/>
-        <rdfs:comment xml:lang="en">Because an activity may engage other participants than the one performing it, engagements are in general considered individual rather than collective, therefore each participants has their own engagement and only some of them will be conscious and/or documented.</rdfs:comment>
-        <rdfs:isDefinedBy xml:lang="en">http://ontologydesignpatterns.org/wiki/Submissions:Experience_%26_Observation</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">isEngagedIn</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://ontologydesignpatterns.org/wiki/Submissions:Experience_%26_Observation#isReflectionOn -->
-
-    <owl:ObjectProperty rdf:about="http://ontologydesignpatterns.org/wiki/Submissions:Experience_%26_Observation#isReflectionOn">
-        <rdfs:domain rdf:resource="http://ontologydesignpatterns.org/wiki/Submissions:Experience_%26_Observation#Observation"/>
-        <rdfs:range rdf:resource="http://etna.istc.cnr.it/framester2/data/framestercore/Deciding"/>
-        <rdfs:comment xml:lang="en">Used to connect the subjective elements of an experience with the corresponding observation, which is extrapolated from the content being interacted with and in itself may not be including a critique.</rdfs:comment>
-        <rdfs:isDefinedBy>http://ontologydesignpatterns.org/wiki/Submissions:Experience_%26_Observation</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">isReflectionOn</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.ontologydesignpatterns.org/cp/owl/classification.owl#isClassifiedBy -->
-
-    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/cp/owl/classification.owl#isClassifiedBy">
-        <rdfs:domain rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology#BiasedAgent"/>
-        <rdfs:range rdf:resource="https://w3id.org/framester/data/framestercore/People"/>
-        <rdfs:comment xml:lang="en">A relation between a Concept and an Entity</rdfs:comment>
-        <rdfs:isDefinedBy xml:lang="en">http://www.ontologydesignpatterns.org/cp/owl/classification.owl#</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">isClassifiedBy</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.ontologydesignpatterns.org/cp/owl/reaction.owl.v0.1#hasOutcome -->
-
-    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/cp/owl/reaction.owl.v0.1#hasOutcome">
-        <rdfs:domain rdf:resource="http://ontologydesignpatterns.org/wiki/Submissions:Reaction#Action"/>
-        <rdfs:range rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology#Comission"/>
-        <rdfs:range rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology#Omission"/>
-        <rdfs:comment xml:lang="en">Is also true that some action directly preceeds its outcome</rdfs:comment>
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/cp/owl/reaction.owl.v0.1#isPerformedBy">
+        <owl:inverseOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/reaction.owl.v0.1#performs"/>
         <rdfs:isDefinedBy xml:lang="en">http://www.ontologydesignpatterns.org/cp/owl/reaction.owl.v0.1#</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">hasOutcome</rdfs:label>
+        <rdfs:label xml:lang="en">isPerformedBy</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/reaction.owl.v0.1#isRaisedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/cp/owl/reaction.owl.v0.1#isRaisedBy">
+        <owl:inverseOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/reaction.owl.v0.1#raise"/>
+        <rdfs:comment xml:lang="en">Inverse of raise.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">http://www.ontologydesignpatterns.org/cp/owl/reaction.owl.v0.1#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">isRaisedBy</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/reaction.owl.v0.1#performs -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/cp/owl/reaction.owl.v0.1#performs">
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#BiasedAgent"/>
+        <rdfs:range rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/reaction.owl.v0.1#Action"/>
+        <rdfs:isDefinedBy xml:lang="en">http://www.ontologydesignpatterns.org/cp/owl/reaction.owl.v0.1#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">performs</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -129,34 +87,103 @@
 
     <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/cp/owl/reaction.owl.v0.1#raise">
         <rdfs:domain rdf:resource="http://etna.istc.cnr.it/framester2/data/framestercore/Deciding"/>
-        <rdfs:range rdf:resource="http://ontologydesignpatterns.org/wiki/Submissions:Reaction#Action"/>
-        <rdfs:isDefinedBy>An event raises an action</rdfs:isDefinedBy>
+        <rdfs:range rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/reaction.owl.v0.1#Action"/>
+        <rdfs:comment xml:lang="en">An activity raises an action</rdfs:comment>
         <rdfs:isDefinedBy>http://www.ontologydesignpatterns.org/cp/owl/reaction.owl.v0.1#</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">raise</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.w3.org/2000/01/rdf-schema#subClassOf -->
+    <!-- https://modellingdh.github.io/ont/odp/term/hasEngagement -->
 
-    <owl:ObjectProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#subClassOf">
-        <rdfs:domain rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology#OmissionBias"/>
-        <rdfs:range rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology#CognitiveBias"/>
-        <rdfs:comment xml:lang="en">The subject is a subclass of a class</rdfs:comment>
-        <rdfs:isDefinedBy xml:lang="en">http://www.w3.org/2000/01/rdf-schema#subClassOf</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">subClassOf</rdfs:label>
+    <owl:ObjectProperty rdf:about="https://modellingdh.github.io/ont/odp/term/hasEngagement">
+        <owl:inverseOf rdf:resource="https://modellingdh.github.io/ont/odp/term/inActivity"/>
+        <rdfs:comment xml:lang="en">Inverse of inActivity.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://modellingdh.github.io/ont/odp/term/</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">hasEngagement</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://github.com/ranacoskun/cognitive_bias_ontology#affectedBy -->
+    <!-- https://modellingdh.github.io/ont/odp/term/inActivity -->
 
-    <owl:ObjectProperty rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology#affectedBy">
-        <rdfs:domain rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology#BiasedAgent"/>
-        <rdfs:range rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology#OmissionBias"/>
+    <owl:ObjectProperty rdf:about="https://modellingdh.github.io/ont/odp/term/inActivity">
+        <rdfs:domain rdf:resource="https://modellingdh.github.io/ont/odp/term/Engagement"/>
+        <rdfs:range rdf:resource="http://etna.istc.cnr.it/framester2/data/framestercore/Deciding"/>
+        <rdfs:comment xml:lang="en">what activity/ies are affecting or affected by a certain engagement</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://modellingdh.github.io/ont/odp/term/</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">inActivity</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://modellingdh.github.io/ont/odp/term/includes -->
+
+    <owl:ObjectProperty rdf:about="https://modellingdh.github.io/ont/odp/term/includes">
+        <rdfs:domain rdf:resource="http://etna.istc.cnr.it/framester2/data/framestercore/Deciding"/>
+        <rdfs:range rdf:resource="https://modellingdh.github.io/ont/odp/term/Observation"/>
+        <rdfs:comment xml:lang="en">A relation of mereological nature that connects a given observation with the activity that originates them: it strengthens the argument that observations are always active processes from a cognitive standpoint, regardless of how conscious they may be. A standard mereological property from another content pattern may be used in lieu of this one and therefore aligned with it.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://modellingdh.github.io/ont/odp/term/</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">includes</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://modellingdh.github.io/ont/odp/term/isEngagedIn -->
+
+    <owl:ObjectProperty rdf:about="https://modellingdh.github.io/ont/odp/term/isEngagedIn">
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#BiasedAgent"/>
+        <rdfs:range rdf:resource="https://modellingdh.github.io/ont/odp/term/Engagement"/>
+        <rdfs:comment xml:lang="en">Because an activity may engage other participants than the one performing it, engagements are in general considered individual rather than collective, therefore each participants has their own engagement and only some of them will be conscious and/or documented.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://modellingdh.github.io/ont/odp/term/</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">isEngagedIn</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://modellingdh.github.io/ont/odp/term/isReflectedUponIn -->
+
+    <owl:ObjectProperty rdf:about="https://modellingdh.github.io/ont/odp/term/isReflectedUponIn">
+        <owl:inverseOf rdf:resource="https://modellingdh.github.io/ont/odp/term/isReflectionOn"/>
+        <rdfs:comment xml:lang="en">Inverse of isReflectionOn.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://modellingdh.github.io/ont/odp/term/</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">isReflectedUponIn</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://modellingdh.github.io/ont/odp/term/isReflectionOn -->
+
+    <owl:ObjectProperty rdf:about="https://modellingdh.github.io/ont/odp/term/isReflectionOn">
+        <rdfs:domain rdf:resource="https://modellingdh.github.io/ont/odp/term/Observation"/>
+        <rdfs:range rdf:resource="https://modellingdh.github.io/ont/odp/term/Engagement"/>
+        <rdfs:comment xml:lang="en">Used to connect the subjective elements of an experience with the corresponding observation, which is extrapolated from the content being interacted with and in itself may not be including a critique.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://modellingdh.github.io/ont/odp/term/</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">isReflectionOn</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#affects -->
+
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#affects">
+        <owl:inverseOf rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#isAffectedBy"/>
+        <rdfs:comment xml:lang="en">Inverse of isAffectedBy.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#affects</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">affects</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#isAffectedBy -->
+
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#isAffectedBy">
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#BiasedAgent"/>
+        <rdfs:range rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#OmissionBias"/>
         <rdfs:comment xml:lang="en">Indicates the influence of the cognitive bias to the individual whose perception is influenced by or belief which is influenced by the perception experience.</rdfs:comment>
-        <rdfs:isDefinedBy xml:lang="en">https://github.com/ranacoskun/cognitive_bias_ontology#affectedBy</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">affectedBy</rdfs:label>
+        <rdfs:isDefinedBy xml:lang="en">https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#isAffectedBy</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">isAffectedBy</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -182,83 +209,86 @@
     
 
 
-    <!-- http://ontology.eil.utoronto.ca/icity/ActivitySpecification/Activity -->
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/reaction.owl.v0.1#Action -->
 
-    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/icity/ActivitySpecification/Activity">
-        <rdfs:comment xml:lang="en">The activity represents the personal act of the agent that arises from interaction with the environment and generates personal reflection.</rdfs:comment>
-        <rdfs:isDefinedBy xml:lang="en">http://ontology.eil.utoronto.ca/icity/ActivitySpecification/</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">Activity</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://ontologydesignpatterns.org/wiki/Submissions:Experience_%26_Observation#Observation -->
-
-    <owl:Class rdf:about="http://ontologydesignpatterns.org/wiki/Submissions:Experience_%26_Observation#Observation">
-        <rdfs:comment xml:lang="en">The product of an act of scrutiny which may or may not have been performed with a critical disposition</rdfs:comment>
-        <rdfs:isDefinedBy xml:lang="en">http://ontologydesignpatterns.org/wiki/Submissions:Experience_%26_Observation</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">Observation</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://ontologydesignpatterns.org/wiki/Submissions:Reaction#Action -->
-
-    <owl:Class rdf:about="http://ontologydesignpatterns.org/wiki/Submissions:Reaction#Action">
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/cp/owl/reaction.owl.v0.1#Action">
         <rdfs:comment xml:lang="en">Action can produce more than a single event. Mutiple events can share the same position in the sequence</rdfs:comment>
-        <rdfs:isDefinedBy xml:lang="en">http://ontologydesignpatterns.org/wiki/Submissions:Reaction</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy xml:lang="en">http://www.ontologydesignpatterns.org/cp/owl/reaction.owl.v0.1#</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Action</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://github.com/ranacoskun/cognitive_bias_ontology#BiasedAgent -->
+    <!-- https://modellingdh.github.io/ont/odp/term/Engagement -->
 
-    <owl:Class rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology#BiasedAgent">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/framester/data/framestercore/People"/>
-        <rdfs:comment xml:lang="en">Represents an entity that experiences the bias.</rdfs:comment>
-        <rdfs:isDefinedBy xml:lang="en">https://github.com/ranacoskun/cognitive_bias_ontology#BiasedAgent</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">BiasedAgent</rdfs:label>
+    <owl:Class rdf:about="https://modellingdh.github.io/ont/odp/term/Engagement">
+        <rdfs:comment xml:lang="en">The product of a reflection upon an observation, which embodies subjective traits of an experience.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://modellingdh.github.io/ont/odp/term/</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Engagement</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://github.com/ranacoskun/cognitive_bias_ontology#CognitiveBias -->
+    <!-- https://modellingdh.github.io/ont/odp/term/Observation -->
 
-    <owl:Class rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology#CognitiveBias">
-        <rdfs:comment xml:lang="en">Represents the overarching concept of cognitive biases.</rdfs:comment>
-        <rdfs:isDefinedBy xml:lang="en">https://github.com/ranacoskun/cognitive_bias_ontology#CognitiveBias</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">CognitiveBias</rdfs:label>
+    <owl:Class rdf:about="https://modellingdh.github.io/ont/odp/term/Observation">
+        <rdfs:comment xml:lang="en">The product of an act of scrutiny which may or may not have been performed with a critical disposition</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://modellingdh.github.io/ont/odp/term/</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Observation</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://github.com/ranacoskun/cognitive_bias_ontology#Comission -->
+    <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/OmissionBias/omissionbias.owl#Comission -->
 
-    <owl:Class rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology#Comission">
+    <owl:Class rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/OmissionBias/omissionbias.owl#Comission">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/reaction.owl.v0.1#Action"/>
+        <owl:disjointWith rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/OmissionBias/omissionbias.owl#Omission"/>
         <rdfs:comment xml:lang="en">Comission is defined as action with physical movement in psychology.</rdfs:comment>
-        <rdfs:isDefinedBy xml:lang="en">https://github.com/ranacoskun/cognitive_bias_ontology#Comission</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy xml:lang="en">https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/OmissionBias/omissionbias.owl#Comission</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Comission</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://github.com/ranacoskun/cognitive_bias_ontology#Omission -->
+    <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/OmissionBias/omissionbias.owl#Omission -->
 
-    <owl:Class rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology#Omission">
+    <owl:Class rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/OmissionBias/omissionbias.owl#Omission">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/reaction.owl.v0.1#Action"/>
         <rdfs:comment xml:lang="en">Omission is defined as inaction in psychology.</rdfs:comment>
-        <rdfs:isDefinedBy xml:lang="en">https://github.com/ranacoskun/cognitive_bias_ontology#Omission</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy xml:lang="en">https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/OmissionBias/omissionbias.owl#Omission</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Omission</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://github.com/ranacoskun/cognitive_bias_ontology#OmissionBias -->
+    <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#BiasedAgent -->
 
-    <owl:Class rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology#OmissionBias">
-        <rdfs:subClassOf rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology#CognitiveBias"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#BiasedAgent">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/framester/data/framestercore/People"/>
+        <rdfs:comment xml:lang="en">Represents an entity that experiences the bias.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#BiasedAgent</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">BiasedAgent</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#CognitiveBias -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#CognitiveBias">
+        <rdfs:comment xml:lang="en">Represents the overarching concept of cognitive biases.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#CognitiveBias</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">CognitiveBias</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#OmissionBias -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#OmissionBias">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#CognitiveBias"/>
         <rdfs:comment xml:lang="en">Omission bias is a cognitive bias that describes the tendency of people to judge commissions as less moral than equally harmful inactions omissions.</rdfs:comment>
-        <rdfs:isDefinedBy xml:lang="en">https://github.com/ranacoskun/cognitive_bias_ontology#OmissionBias</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy xml:lang="en">https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#OmissionBias</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">OmissionBias</rdfs:label>
     </owl:Class>
     
@@ -271,6 +301,41 @@
         <rdfs:isDefinedBy xml:lang="en">https://w3id.org/framester/data/framestercore/People</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">People</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/OmissionBias/omissionbias.owl#Bob -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/OmissionBias/omissionbias.owl#Bob">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#BiasedAgent"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/OmissionBias/omissionbias.owl#Not_pulling_is_less_harmful -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/OmissionBias/omissionbias.owl#Not_pulling_is_less_harmful">
+        <rdf:type rdf:resource="https://modellingdh.github.io/ont/odp/term/Observation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/OmissionBias/omissionbias.owl#Trolley_lever_conflict -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/OmissionBias/omissionbias.owl#Trolley_lever_conflict">
+        <rdf:type rdf:resource="https://modellingdh.github.io/ont/odp/term/Engagement"/>
+    </owl:NamedIndividual>
 </rdf:RDF>
 
 
