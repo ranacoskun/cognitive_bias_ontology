@@ -9,6 +9,9 @@ Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 
 Ontology(<https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/misattributionOfMemory.owl>
+Annotation(<http://purl.org/dc/elements/1.1/creator> "Francesco Alaimo")
+Annotation(<http://purl.org/dc/elements/1.1/title> "Misattribution of memory")
+Annotation(rdfs:comment "This is an ontology that describes the behaviour of a person affected by the Misattribution of memory bias.")
 
 Declaration(Class(<http://etna.istc.cnr.it/framester2/data/framestercore/Event>))
 Declaration(Class(<http://etna.istc.cnr.it/framester2/data/framestercore/Memorization>))
@@ -29,15 +32,16 @@ Declaration(Class(<https://raw.githubusercontent.com/ranacoskun/cognitive_bias_o
 Declaration(Class(<https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/misattributionOfMemory.owl#Prevention>))
 Declaration(Class(<https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/misattributionOfMemory.owl#RecalledIdea>))
 Declaration(Class(<https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/misattributionOfMemory.owl#SourceConfusion>))
+Declaration(ObjectProperty(<https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/misattributionOfMemory.owl#affects>))
 Declaration(ObjectProperty(<https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/misattributionOfMemory.owl#canBeCorrectedBy>))
 Declaration(ObjectProperty(<https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/misattributionOfMemory.owl#canBePreventedBy>))
 Declaration(ObjectProperty(<https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/misattributionOfMemory.owl#creates>))
 Declaration(ObjectProperty(<https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/misattributionOfMemory.owl#forgets>))
 Declaration(ObjectProperty(<https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/misattributionOfMemory.owl#generatedBy>))
-Declaration(ObjectProperty(<https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/misattributionOfMemory.owl#hasBias>))
 Declaration(ObjectProperty(<https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/misattributionOfMemory.owl#hasCause>))
 Declaration(ObjectProperty(<https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/misattributionOfMemory.owl#hasEffect>))
 Declaration(ObjectProperty(<https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/misattributionOfMemory.owl#hasParticipant>))
+Declaration(ObjectProperty(<https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/misattributionOfMemory.owl#isAffectedBy>))
 Declaration(ObjectProperty(<https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/misattributionOfMemory.owl#isAssessedBy>))
 Declaration(ObjectProperty(<https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/misattributionOfMemory.owl#isDerivedFrom>))
 Declaration(ObjectProperty(<https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/misattributionOfMemory.owl#isRecalledIn>))
@@ -52,10 +56,22 @@ Declaration(NamedIndividual(<https://raw.githubusercontent.com/ranacoskun/cognit
 Declaration(NamedIndividual(<https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/misattributionOfMemory.owl#reenactment>))
 Declaration(NamedIndividual(<https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/misattributionOfMemory.owl#suggestive_questioning>))
 Declaration(NamedIndividual(<https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/misattributionOfMemory.owl#wrongful_detention>))
+Declaration(AnnotationProperty(<http://purl.org/dc/elements/1.1/creator>))
+Declaration(AnnotationProperty(<http://purl.org/dc/elements/1.1/title>))
+Declaration(AnnotationProperty(rdfs:label))
 
 ############################
 #   Object Properties
 ############################
+
+# Object Property: <https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/misattributionOfMemory.owl#affects> (<https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/misattributionOfMemory.owl#affects>)
+
+SubObjectPropertyOf(<https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/misattributionOfMemory.owl#affects> owl:topObjectProperty)
+InverseObjectProperties(<https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/misattributionOfMemory.owl#affects> <https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/misattributionOfMemory.owl#isAffectedBy>)
+ObjectPropertyDomain(<https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/misattributionOfMemory.owl#affects> <https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/misattributionOfMemory.owl#Cryptomnesia>)
+ObjectPropertyDomain(<https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/misattributionOfMemory.owl#affects> <https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/misattributionOfMemory.owl#FalseMemory>)
+ObjectPropertyDomain(<https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/misattributionOfMemory.owl#affects> <https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/misattributionOfMemory.owl#SourceConfusion>)
+ObjectPropertyRange(<https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/misattributionOfMemory.owl#affects> <https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#BiasedAgent>)
 
 # Object Property: <https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/misattributionOfMemory.owl#canBeCorrectedBy> (<https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/misattributionOfMemory.owl#canBeCorrectedBy>)
 
@@ -79,24 +95,14 @@ ObjectPropertyRange(<https://raw.githubusercontent.com/ranacoskun/cognitive_bias
 
 AnnotationAssertion(rdfs:comment <https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/misattributionOfMemory.owl#forgets> "Describes the lost of memory from the biased agents towards the Original Source")
 ObjectPropertyDomain(<https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/misattributionOfMemory.owl#forgets> <http://etna.istc.cnr.it/framester2/data/framestercore/People>)
-ObjectPropertyDomain(<https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/misattributionOfMemory.owl#forgets> <https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/misattributionOfMemory.owl#SourceConfusion>)
 ObjectPropertyRange(<https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/misattributionOfMemory.owl#forgets> <https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/misattributionOfMemory.owl#OriginalSource>)
 
 # Object Property: <https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/misattributionOfMemory.owl#generatedBy> (<https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/misattributionOfMemory.owl#generatedBy>)
 
 AnnotationAssertion(rdfs:comment <https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/misattributionOfMemory.owl#generatedBy> "Describes the relation between a bias and the source from which it starts or come from")
-ObjectPropertyDomain(<https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/misattributionOfMemory.owl#generatedBy> <http://etna.istc.cnr.it/framester2/data/framestercore/Memorization>)
-ObjectPropertyDomain(<https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/misattributionOfMemory.owl#generatedBy> <https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/misattributionOfMemory.owl#SourceConfusion>)
+ObjectPropertyDomain(<https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/misattributionOfMemory.owl#generatedBy> ObjectUnionOf(<http://etna.istc.cnr.it/framester2/data/framestercore/Memorization> <https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/misattributionOfMemory.owl#SourceConfusion>))
 ObjectPropertyRange(<https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/misattributionOfMemory.owl#generatedBy> <http://etna.istc.cnr.it/framester2/data/framestercore/Event>)
 ObjectPropertyRange(<https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/misattributionOfMemory.owl#generatedBy> <https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/misattributionOfMemory.owl#OriginalSource>)
-
-# Object Property: <https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/misattributionOfMemory.owl#hasBias> (<https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/misattributionOfMemory.owl#hasBias>)
-
-AnnotationAssertion(rdfs:comment <https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/misattributionOfMemory.owl#hasBias> "Describes the relationship between Biased Agent and Bias")
-ObjectPropertyDomain(<https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/misattributionOfMemory.owl#hasBias> <http://etna.istc.cnr.it/framester2/data/framestercore/People>)
-ObjectPropertyRange(<https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/misattributionOfMemory.owl#hasBias> <https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/misattributionOfMemory.owl#Cryptomnesia>)
-ObjectPropertyRange(<https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/misattributionOfMemory.owl#hasBias> <https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/misattributionOfMemory.owl#FalseMemory>)
-ObjectPropertyRange(<https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/misattributionOfMemory.owl#hasBias> <https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/misattributionOfMemory.owl#SourceConfusion>)
 
 # Object Property: <https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/misattributionOfMemory.owl#hasCause> (<https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/misattributionOfMemory.owl#hasCause>)
 
@@ -116,6 +122,14 @@ AnnotationAssertion(rdfs:comment <https://raw.githubusercontent.com/ranacoskun/c
 ObjectPropertyDomain(<https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/misattributionOfMemory.owl#hasParticipant> <http://etna.istc.cnr.it/framester2/data/framestercore/Event>)
 ObjectPropertyDomain(<https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/misattributionOfMemory.owl#hasParticipant> <https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/misattributionOfMemory.owl#CognitiveError>)
 ObjectPropertyRange(<https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/misattributionOfMemory.owl#hasParticipant> <http://etna.istc.cnr.it/framester2/data/framestercore/People>)
+
+# Object Property: <https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/misattributionOfMemory.owl#isAffectedBy> (<https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/misattributionOfMemory.owl#isAffectedBy>)
+
+AnnotationAssertion(rdfs:comment <https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/misattributionOfMemory.owl#isAffectedBy> "Describes the relationship between Biased Agent and Bias")
+ObjectPropertyDomain(<https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/misattributionOfMemory.owl#isAffectedBy> <https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#BiasedAgent>)
+ObjectPropertyRange(<https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/misattributionOfMemory.owl#isAffectedBy> <https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/misattributionOfMemory.owl#Cryptomnesia>)
+ObjectPropertyRange(<https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/misattributionOfMemory.owl#isAffectedBy> <https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/misattributionOfMemory.owl#FalseMemory>)
+ObjectPropertyRange(<https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/misattributionOfMemory.owl#isAffectedBy> <https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/misattributionOfMemory.owl#SourceConfusion>)
 
 # Object Property: <https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/misattributionOfMemory.owl#isAssessedBy> (<https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/misattributionOfMemory.owl#isAssessedBy>)
 
@@ -216,6 +230,7 @@ SubClassOf(<https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology
 # Class: <https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/misattributionOfMemory.owl#OriginalSource> (<https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/misattributionOfMemory.owl#OriginalSource>)
 
 AnnotationAssertion(rdfs:comment <https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/misattributionOfMemory.owl#OriginalSource> "Describes the Original Source that causes the true instantiation of a memory")
+DisjointClasses(<https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/misattributionOfMemory.owl#OriginalSource> <https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/misattributionOfMemory.owl#SourceConfusion>)
 
 # Class: <https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/misattributionOfMemory.owl#Prevention> (<https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/misattributionOfMemory.owl#Prevention>)
 
