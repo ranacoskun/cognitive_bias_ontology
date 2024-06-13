@@ -181,7 +181,7 @@
     <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#isAffectedBy">
         <rdfs:domain rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#BiasedAgent"/>
         <rdfs:range rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#OmissionBias"/>
-        <rdfs:comment xml:lang="en">Indicates the influence of the cognitive bias to the individual whose perception is influenced by or belief which is influenced by the perception experience.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Describes the relationship between a cognitive bias and an individual on the base of influence.</rdfs:comment>
         <rdfs:isDefinedBy xml:lang="en">https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#isAffectedBy</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">isAffectedBy</rdfs:label>
     </owl:ObjectProperty>

@@ -152,7 +152,7 @@
     <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/BaseRateFallacy/baseratefallacy.owl#isBasedOn">
         <rdfs:domain rdf:resource="https://w3id.org/framester/data/framestercore/Deciding"/>
         <rdfs:range rdf:resource="https://w3id.org/framester/data/framestercore/Information"/>
-        <rdfs:comment xml:lang="en">Describes the relationship between an event and the information that individuals rely on.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Links a decision-making activity to the information from which it is derived or based.</rdfs:comment>
         <rdfs:isDefinedBy xml:lang="en">https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/BaseRateFallacy/baseratefallacy.owl#isBasedOn</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">isBasedOn</rdfs:label>
     </owl:ObjectProperty>
@@ -175,7 +175,7 @@
     <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#isAffectedBy">
         <rdfs:domain rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#BiasedAgent"/>
         <rdfs:range rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#BaseRateFallacy"/>
-        <rdfs:comment xml:lang="en">Describes a relationship between two entities on the base of influence.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Describes the relationship between a cognitive bias and an individual on the base of influence.</rdfs:comment>
         <rdfs:isDefinedBy xml:lang="en">https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#isAffectedBy</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">isAffectedBy</rdfs:label>
     </owl:ObjectProperty>
