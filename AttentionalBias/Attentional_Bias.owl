@@ -1,19 +1,43 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
      xml:base="http://www.w3.org/2002/07/owl"
-     xmlns:fs="https://w3id.org/framester/data/framestercore"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:fs="https://w3id.org/framester/data/framestercore/"
      xmlns:tb="https://tobiasgrubenmann.github.io/Ontologies/Timebank/0.2/index.html#"
-     xmlns:cbi="https://github.com/ranacoskun/cognitive_bias_ontology/"
-     xmlns:crm="https://www.cidoc-crm.org/html/cidoc_crm_v7.1.3.html"
+     xmlns:cbi="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#"
+     xmlns:crm="https://www.cidoc-crm.org/html/cidoc_crm_v7.1.3.html/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:attb="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/AttentionalBias/Attentional_Bias.owl#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:rsctx="http://softeng.polito.it/rsctx/"
      xmlns:emotion="http://ns.inria.fr/emoca/"
-     xmlns:classification="http://www.ontologydesignpatterns.org/cp/owl/classification.owl">
-    <Ontology rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/AttentionalBias/Attentional_Bias.owl"/>
+     xmlns:classification="http://www.ontologydesignpatterns.org/cp/owl/classification.owl/">
+    <Ontology rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/AttentionalBias/Attentional_Bias.owl#">
+        <dc:creator>Irem Atmar</dc:creator>
+        <rdfs:comment>&quot;Attentional bias&quot; refers to the tendency of our perception to be affected by our recurring thoughts at the expense of other stimuli. Essentially, it&apos;s when a person&apos;s focus is more readily drawn to certain types of information or stimuli over others, depending on what is currently occupying their mind. This can manifest in various contexts, such as someone who has a fear of spiders being more likely to notice spiders or spider-like objects in their environment compared to someone without such a fear.</rdfs:comment>
+        <rdfs:isDefinedBy>https://github.com/ranacoskun/cognitive_bias_ontology/tree/main/AttentionalBias</rdfs:isDefinedBy>
+        <rdfs:label>Attentional Bias</rdfs:label>
+    </Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
     
 
 
@@ -28,63 +52,61 @@
     
 
 
-    <!-- http://www.ontologydesignpatterns.org/cp/owl/classification.owlisClassifiedBy -->
+    <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/AttentionalBias/Attentional_Bias.owl#hasTrigger -->
 
-    <ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/cp/owl/classification.owlisClassifiedBy">
-        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/AttentionalBias/Attentional_Bias.owl/BiasedAgent"/>
-        <rdfs:range rdf:resource="https://w3id.org/framester/data/framestercorePeople"/>
-        <rdfs:comment>To represent the relations between concepts (roles, task, parameters) and entities (person, events, values), which concepts can be assigned to. To formalize the application (e.g. tagging) of informal knowledge organization systems such as lexica, thesauri, subject directories, folksonomies, etc., where concepts are first-order elements.</rdfs:comment>
-    </ObjectProperty>
-    
-
-
-    <!-- http://www.w3.org/2000/01/rdf-schema#subClassOf -->
-
-    <ObjectProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#subClassOf">
-        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/AttentionalBias/Attentional_Bias.owl#cbi:AttentionalBias"/>
-        <rdfs:range rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/AttentionalBias/Attentional_Bias.owl#cbi:CognitiveBias"/>
-        <rdfs:comment>The subject is a subclass of a class.</rdfs:comment>
-    </ObjectProperty>
-    
-
-
-    <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/AttentionalBias/Attentional_Bias.owl#cbi:affectedBy -->
-
-    <ObjectProperty rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/AttentionalBias/Attentional_Bias.owl#cbi:affectedBy">
-        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/AttentionalBias/Attentional_Bias.owl#cbi:CognitiveProcess"/>
-        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/AttentionalBias/Attentional_Bias.owl/BiasedAgent"/>
-        <rdfs:range rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/AttentionalBias/Attentional_Bias.owl#cbi:AttentionalBias"/>
-        <rdfs:comment>Describes a relationship between to entities on the base of influence.</rdfs:comment>
-    </ObjectProperty>
-    
-
-
-    <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/AttentionalBias/Attentional_Bias.owl#cbi:affects -->
-
-    <ObjectProperty rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/AttentionalBias/Attentional_Bias.owl#cbi:affects">
-        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/AttentionalBias/Attentional_Bias.owl#rsctx:EmotionalState"/>
-        <rdfs:range rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/AttentionalBias/Attentional_Bias.owl#cbi:AttentionalBias"/>
-        <rdfs:comment>Describes an affect of an entity on the other.</rdfs:comment>
-    </ObjectProperty>
-    
-
-
-    <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/AttentionalBias/Attentional_Bias.owl#cbi:hasTrigger -->
-
-    <ObjectProperty rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/AttentionalBias/Attentional_Bias.owl#cbi:hasTrigger">
-        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/AttentionalBias/Attentional_Bias.owl#cbi:AttentionalBias"/>
-        <rdfs:range rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/AttentionalBias/Attentional_Bias.owl#emotion:Stimulus"/>
+    <ObjectProperty rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/AttentionalBias/Attentional_Bias.owl#hasTrigger">
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#AttentionalBias"/>
+        <rdfs:range rdf:resource="http://ns.inria.fr/emoca/Stimulus"/>
         <rdfs:comment>Signifies the stimuli, conditions, or events that initiate or activate a specific cognitive process.</rdfs:comment>
+        <rdfs:isDefinedBy>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/AttentionalBias/Attentional_Bias.owl#hasTrigger</rdfs:isDefinedBy>
+        <rdfs:label>hasTrigger</rdfs:label>
     </ObjectProperty>
     
 
 
-    <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/AttentionalBias/Attentional_Bias.owl#crm:P69_is_associated_with -->
+    <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/AttentionalBias/Attentional_Bias.owl#influences -->
 
-    <ObjectProperty rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/AttentionalBias/Attentional_Bias.owl#crm:P69_is_associated_with">
-        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/AttentionalBias/Attentional_Bias.owl#cbi:AttentionalBias"/>
-        <rdfs:range rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/AttentionalBias/Attentional_Bias.owl#tb:MentalDisorder"/>
+    <ObjectProperty rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/AttentionalBias/Attentional_Bias.owl#influences">
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#AttentionalBias"/>
+        <rdfs:range rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/AttentionalBias/Attentional_Bias.owl#MentalState"/>
+        <rdfs:comment>An entity having and effect on the other entity</rdfs:comment>
+        <rdfs:isDefinedBy>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/AttentionalBias/Attentional_Bias.owl#influences</rdfs:isDefinedBy>
+        <rdfs:label>influences</rdfs:label>
+    </ObjectProperty>
+    
+
+
+    <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#affects -->
+
+    <ObjectProperty rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#affects">
+        <inverseOf rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#isAffectedBy"/>
+        <rdfs:comment>Describes the relationship between a cognitive bias and an individual on the base of influence.</rdfs:comment>
+        <rdfs:isDefinedBy>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#affects</rdfs:isDefinedBy>
+        <rdfs:label>affects</rdfs:label>
+    </ObjectProperty>
+    
+
+
+    <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#isAffectedBy -->
+
+    <ObjectProperty rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#isAffectedBy">
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#BiasedAgent"/>
+        <rdfs:range rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#AttentionalBias"/>
+        <rdfs:comment>Describes a relationship between the entities on the base of influence.</rdfs:comment>
+        <rdfs:isDefinedBy>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#isAffectedBy</rdfs:isDefinedBy>
+        <rdfs:label>is affected by</rdfs:label>
+    </ObjectProperty>
+    
+
+
+    <!-- https://www.cidoc-crm.org/html/cidoc_crm_v7.1.3.html/P69_is_associated_with -->
+
+    <ObjectProperty rdf:about="https://www.cidoc-crm.org/html/cidoc_crm_v7.1.3.html/P69_is_associated_with">
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#AttentionalBias"/>
+        <rdfs:range rdf:resource="https://tobiasgrubenmann.github.io/Ontologies/Timebank/0.2/index.html#MentalDisorder"/>
         <rdfs:comment>This property generalises relationships like whole-part, sequence, prerequisite or inspired by between instances of E29 Design or Procedure. Any instance of E29 Design or Procedure may be associated with other designs or procedures. The property is considered to be symmetrical unless otherwise indicated by P69.1 has type. The property is not transitive.</rdfs:comment>
+        <rdfs:isDefinedBy>https://www.cidoc-crm.org/html/cidoc_crm_v7.1.3.html/P69_is_associated_with</rdfs:isDefinedBy>
+        <rdfs:label>is associated with</rdfs:label>
     </ObjectProperty>
     
 
@@ -100,67 +122,140 @@
     
 
 
-    <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/AttentionalBias/Attentional_Bias.owl#cbi:AttentionalBias -->
+    <!-- http://ns.inria.fr/emoca/Stimulus -->
 
-    <Class rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/AttentionalBias/Attentional_Bias.owl#cbi:AttentionalBias">
-        <rdfs:comment>Subclass of Bias, specifically representing attentional bias.</rdfs:comment>
-    </Class>
-    
-
-
-    <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/AttentionalBias/Attentional_Bias.owl#cbi:CognitiveBias -->
-
-    <Class rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/AttentionalBias/Attentional_Bias.owl#cbi:CognitiveBias">
-        <rdfs:comment>Represents the overarching concept of cognitive biases.</rdfs:comment>
-    </Class>
-    
-
-
-    <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/AttentionalBias/Attentional_Bias.owl#cbi:CognitiveProcess -->
-
-    <Class rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/AttentionalBias/Attentional_Bias.owl#cbi:CognitiveProcess">
-        <rdfs:comment>Represents the general process of cognition.</rdfs:comment>
-    </Class>
-    
-
-
-    <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/AttentionalBias/Attentional_Bias.owl#emotion:Stimulus -->
-
-    <Class rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/AttentionalBias/Attentional_Bias.owl#emotion:Stimulus">
+    <Class rdf:about="http://ns.inria.fr/emoca/Stimulus">
         <rdfs:comment>The Stimulus class representing any object shown to the user.</rdfs:comment>
+        <rdfs:isDefinedBy>http://ns.inria.fr/emoca/Stimulus</rdfs:isDefinedBy>
+        <rdfs:label>Stimulus</rdfs:label>
     </Class>
     
 
 
-    <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/AttentionalBias/Attentional_Bias.owl#rsctx:EmotionalState -->
+    <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/AttentionalBias/Attentional_Bias.owl#MentalState -->
 
-    <Class rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/AttentionalBias/Attentional_Bias.owl#rsctx:EmotionalState">
-        <rdfs:comment>The state of a person&apos;s emotions (especially with regard to pleasure or dejection).</rdfs:comment>
+    <Class rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/AttentionalBias/Attentional_Bias.owl#MentalState">
+        <rdfs:comment>A mental status of an agent such as cognitive process or emotional state.</rdfs:comment>
+        <rdfs:isDefinedBy>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/AttentionalBias/Attentional_Bias.owl#MentalState</rdfs:isDefinedBy>
+        <rdfs:label>Mental State</rdfs:label>
     </Class>
     
 
 
-    <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/AttentionalBias/Attentional_Bias.owl#tb:MentalDisorder -->
+    <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#AttentionalBias -->
 
-    <Class rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/AttentionalBias/Attentional_Bias.owl#tb:MentalDisorder">
-        <rdfs:comment>Disorders that affect the mental states of a person.</rdfs:comment>
+    <Class rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#AttentionalBias">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owll#CognitiveBias"/>
+        <rdfs:comment>Subclass of Bias, specifically representing attentional bias.</rdfs:comment>
+        <rdfs:isDefinedBy>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#AttentionalBias</rdfs:isDefinedBy>
+        <rdfs:label>Attentional Bias</rdfs:label>
     </Class>
     
 
 
-    <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/AttentionalBias/Attentional_Bias.owl/BiasedAgent -->
+    <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#BiasedAgent -->
 
-    <Class rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/AttentionalBias/Attentional_Bias.owl/BiasedAgent">
+    <Class rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#BiasedAgent">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/framester/data/People"/>
         <rdfs:comment>Represents an entity that experiences the bias.</rdfs:comment>
+        <rdfs:isDefinedBy>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#BiasedAgent</rdfs:isDefinedBy>
+        <rdfs:label>Biased Agent</rdfs:label>
     </Class>
     
 
 
-    <!-- https://w3id.org/framester/data/framestercorePeople -->
+    <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owll#CognitiveBias -->
 
-    <Class rdf:about="https://w3id.org/framester/data/framestercorePeople">
-        <rdfs:comment>This frame contains general words for Individuals, i.e. humans. The Person is conceived of as independent of other specific individuals with whom they have relationships and independent of their participation in any particular activity. They may have an Age, Descriptor, Origin, Persistent_characteristic, or Ethnicity. A man from Phoenix was shot yesterday. She gave birth to a screaming baby yesterday. I study 16-year-old female adolescents. I am dating an African-American man. She comforted the terrified child. I always thought of him as a stupid man.</rdfs:comment>
+    <Class rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owll#CognitiveBias">
+        <rdfs:comment>Represents the overarching concept of cognitive biases.</rdfs:comment>
+        <rdfs:isDefinedBy>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owll#CognitiveBias</rdfs:isDefinedBy>
+        <rdfs:label>Cognitive Bias</rdfs:label>
     </Class>
+    
+
+
+    <!-- https://tobiasgrubenmann.github.io/Ontologies/Timebank/0.2/index.html#MentalDisorder -->
+
+    <Class rdf:about="https://tobiasgrubenmann.github.io/Ontologies/Timebank/0.2/index.html#MentalDisorder">
+        <rdfs:comment>Disorders that affect the mental states of a person.</rdfs:comment>
+        <rdfs:isDefinedBy>https://tobiasgrubenmann.github.io/Ontologies/Timebank/0.2/index.html#MentalDisorder</rdfs:isDefinedBy>
+        <rdfs:label>Mental Disorder</rdfs:label>
+    </Class>
+    
+
+
+    <!-- https://w3id.org/framester/data/People -->
+
+    <Class rdf:about="https://w3id.org/framester/data/People">
+        <rdfs:comment>This frame contains general words for Individuals, i.e. humans. The Person is conceived of as independent of other specific individuals with whom they have relationships and independent of their participation in any particular activity. They may have an Age, Descriptor, Origin, Persistent_characteristic, or Ethnicity. A man from Phoenix was shot yesterday. She gave birth to a screaming baby yesterday. I study 16-year-old female adolescents. I am dating an African-American man. She comforted the terrified child. I always thought of him as a stupid man.</rdfs:comment>
+        <rdfs:isDefinedBy>https://w3id.org/framester/data/People</rdfs:isDefinedBy>
+        <rdfs:label>People</rdfs:label>
+    </Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/AttentionalBias/Attentional_Bias.owl#AnxietyDisorder -->
+
+    <NamedIndividual rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/AttentionalBias/Attentional_Bias.owl#AnxietyDisorder">
+        <rdf:type rdf:resource="https://tobiasgrubenmann.github.io/Ontologies/Timebank/0.2/index.html#MentalDisorder"/>
+        <crm:P69_is_associated_with rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/AttentionalBias/Attentional_Bias.owl#AttentionalBiasInstance"/>
+        <rdfs:comment>Emma’s social anxiety disorder, which exacerbates her attentional bias towards perceived negative judgments.</rdfs:comment>
+        <rdfs:label>Anxiety Disorder</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/AttentionalBias/Attentional_Bias.owl#AttentionalBiasInstance -->
+
+    <NamedIndividual rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/AttentionalBias/Attentional_Bias.owl#AttentionalBiasInstance">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#AttentionalBias"/>
+        <attb:influences rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/AttentionalBias/Attentional_Bias.owl#SocialAnxiety"/>
+        <rdfs:comment>Represents Emma&apos;s tendency to focus on perceived negative social cues, such as the group whispering, at the expense of positive stimuli like welcoming smiles.</rdfs:comment>
+        <rdfs:label>Attentional Bias Instance</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/AttentionalBias/Attentional_Bias.owl#Emma -->
+
+    <NamedIndividual rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/AttentionalBias/Attentional_Bias.owl#Emma">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#BiasedAgent"/>
+        <cbi:isAffectedBy rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/AttentionalBias/Attentional_Bias.owl#AttentionalBiasInstance"/>
+        <rdfs:comment>Represents the individual experiencing the attentional bias at the coworker birthday party. Emma feels anxious and perceives negative social cues due to her social anxiety.</rdfs:comment>
+        <rdfs:label>Emma</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/AttentionalBias/Attentional_Bias.owl#GroupWhispering -->
+
+    <NamedIndividual rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/AttentionalBias/Attentional_Bias.owl#GroupWhispering">
+        <rdf:type rdf:resource="http://ns.inria.fr/emoca/Stimulus"/>
+        <attb:hasTrigger rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/AttentionalBias/Attentional_Bias.owl#AttentionalBiasInstance"/>
+        <rdfs:comment>The specific stimulus that triggers Emma&apos;s attentional bias. Emma interprets the whispering group in a birthday party as a negative social cue, reinforcing her anxiety.</rdfs:comment>
+        <rdfs:label>Group Whispering</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/AttentionalBias/Attentional_Bias.owl#SocialAnxiety -->
+
+    <NamedIndividual rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/AttentionalBias/Attentional_Bias.owl#SocialAnxiety">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/AttentionalBias/Attentional_Bias.owl#MentalState"/>
+        <rdfs:comment>The mental state that influences Emma&apos;s attentional bias. It is characterized by Emma&apos;s fear of being judged and evaluated negatively by others at social gatherings.</rdfs:comment>
+        <rdfs:label>Social Anxiety</rdfs:label>
+    </NamedIndividual>
 </rdf:RDF>
 
 

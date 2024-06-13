@@ -1,186 +1,545 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
-     xml:base="http://www.w3.org/2002/07/owl"
-     xmlns:fs="https://w3id.org/framester/data/framestercore/"
-     xmlns:cbi="https://github.com/ranacoskun/cognitive_bias_ontology/"
-     xmlns:owl="http://www.w3.org/2002/07/owl#"
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/MereExposureEffect/Mere_Exposure_Effect.owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:emotion="http://ns.inria.fr/emoca/"
-     xmlns:reaction="http://www.ontologydesignpatterns.org/cp/owl/reaction.owl"
-     xmlns:parameter="http://ontologydesignpatterns.org/cp/owl/parameter.owl"
-     xmlns:participation="http://ontologydesignpatterns.org/cp/owl/participation.owl"
-     xmlns:classification="http://www.ontologydesignpatterns.org/cp/owl/classification.owl">
-    <Ontology rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/MereExposureEffect/Mere_Exposure_Effect.owl"/>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Object Properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://www.w3.org/2000/01/rdf-schema#subClassOf -->
-
-    <ObjectProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#subClassOf">
-        <rdfs:domain rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:MereExposureEffect"/>
-        <rdfs:range rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:CognitiveBias"/>
-        <rdfs:comment>The subject is a subclass of a class.</rdfs:comment>
-    </ObjectProperty>
-    
-
-
-    <!-- https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:affectedBy -->
-
-    <ObjectProperty rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:affectedBy">
-        <rdfs:domain rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:BiasedAgent"/>
-        <rdfs:domain rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/#fs:Preference"/>
-        <rdfs:range rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:InfluencingFactors"/>
-        <rdfs:range rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:MereExposureEffect"/>
-        <rdfs:comment>Describes a relationship between to entities on the base of influence.</rdfs:comment>
-    </ObjectProperty>
-    
-
-
-    <!-- https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:changes -->
-
-    <ObjectProperty rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:changes">
-        <rdfs:domain rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:ExposureContext"/>
-        <rdfs:range rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/#fs:Preference"/>
-        <rdfs:comment>Describes an altering.</rdfs:comment>
-    </ObjectProperty>
-    
-
-
-    <!-- https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:hasStimulus -->
-
-    <ObjectProperty rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:hasStimulus">
-        <rdfs:domain rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:MereExposureEffect"/>
-        <rdfs:range rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/#emotion:Stimulus"/>
-        <rdfs:comment>Describes the relationship between an individual and the stimulus they are exposed to.</rdfs:comment>
-    </ObjectProperty>
-    
-
-
-    <!-- https://github.com/ranacoskun/cognitive_bias_ontology/#classification:isClassifiedBy -->
-
-    <ObjectProperty rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology/#classification:isClassifiedBy">
-        <rdfs:domain rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:BiasedAgent"/>
-        <rdfs:range rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/#fs:People"/>
-        <rdfs:comment>To represent the relations between concepts (roles, task, parameters) and entities (person, events, values), which concepts can be assigned to. To formalize the application (e.g. tagging) of informal knowledge organization systems such as lexica, thesauri, subject directories, folksonomies, etc., where concepts are first-order elements.</rdfs:comment>
-    </ObjectProperty>
-    
-
-
-    <!-- https://github.com/ranacoskun/cognitive_bias_ontology/#parameter:hasParameter -->
-
-    <ObjectProperty rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology/#parameter:hasParameter">
-        <rdfs:domain rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/#emotion:Stimulus"/>
-        <rdfs:range rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/#fs:Frequency"/>
-        <rdfs:comment>To represent parameters to be used for a certain concept.</rdfs:comment>
-    </ObjectProperty>
-    
-
-
-    <!-- https://github.com/ranacoskun/cognitive_bias_ontology/#reaction:hasOutcome -->
-
-    <ObjectProperty rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology/#reaction:hasOutcome">
-        <rdfs:domain rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:ExposureContext"/>
-        <rdfs:range rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:MereExposureEffect"/>
-        <rdfs:comment>To model dynamic situations, tracking agents and actions they produce, events that are results of some action(s), and consequences as new actions, i.e. reactions.</rdfs:comment>
-    </ObjectProperty>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Classes
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:BiasedAgent -->
-
-    <Class rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:BiasedAgent">
-        <rdfs:comment>Represents an entity that experiences the bias.</rdfs:comment>
-    </Class>
-    
-
-
-    <!-- https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:CognitiveBias -->
-
-    <Class rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:CognitiveBias">
-        <rdfs:comment>Represents the overarching concept of cognitive biases.</rdfs:comment>
-    </Class>
-    
-
-
-    <!-- https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:ExposureContext -->
-
-    <Class rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:ExposureContext">
-        <rdfs:comment>Represents the environment or situation in which exposure to the stimulus occurs.</rdfs:comment>
-    </Class>
-    
-
-
-    <!-- https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:InfluencingFactors -->
-
-    <Class rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:InfluencingFactors">
-        <rdfs:comment>The various internal and external elements that impact the process of cognition.</rdfs:comment>
-    </Class>
-    
-
-
-    <!-- https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:MereExposureEffect -->
-
-    <Class rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:MereExposureEffect">
-        <rdfs:comment>Subclass of Bias, specifically representing Mere Exposure Effect.</rdfs:comment>
-    </Class>
-    
-
-
-    <!-- https://github.com/ranacoskun/cognitive_bias_ontology/#emotion:Stimulus -->
-
-    <Class rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology/#emotion:Stimulus">
-        <rdfs:comment>The Stimulus class representing any object shown to the user.</rdfs:comment>
-    </Class>
-    
-
-
-    <!-- https://github.com/ranacoskun/cognitive_bias_ontology/#fs:Frequency -->
-
-    <Class rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology/#fs:Frequency">
-        <rdfs:comment>This frame has to do with the repetition (and especially the frequency of repetition) of an event. Many of the adjectives and adverbs in this frame are based on nouns in the Calendric_unit frame. China will have to face a high frequency of sand storms in the years to come.</rdfs:comment>
-    </Class>
-    
-
-
-    <!-- https://github.com/ranacoskun/cognitive_bias_ontology/#fs:People -->
-
-    <Class rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology/#fs:People">
-        <rdfs:comment>This frame contains general words for Individuals, i.e. humans. The Person is conceived of as independent of other specific individuals with whom they have relationships and independent of their participation in any particular activity. They may have an Age, Descriptor, Origin, Persistent_characteristic, or Ethnicity. A man from Phoenix was shot yesterday. She gave birth to a screaming baby yesterday. I study 16-year-old female adolescents. I am dating an African-</rdfs:comment>
-    </Class>
-    
-
-
-    <!-- https://github.com/ranacoskun/cognitive_bias_ontology/#fs:Preference -->
-
-    <Class rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology/#fs:Preference">
-        <rdfs:comment>An Experiencer has a greater desire to participate in some Event, as against another (contextually recoverable) event which exhibits a specific Contrast with the Event. Alternatively, the Experiencer may have a greater desire that some Focal_participant participate in the Event. The Location_of_Event may also be mentioned. Why do women prefer manly faces? I prefer open source programs over proprietary ones. Other customers prefer to send us an order together with a cheque. I prefer my tartar sauce on fish.</rdfs:comment>
-    </Class>
-</rdf:RDF>
+     ontologyIRI="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/MereExposureEffect/Mere_Exposure_Effect.owl#">
+    <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="dc" IRI="http://purl.org/dc/elements/1.1/"/>
+    <Prefix name="fs" IRI="https://w3id.org/framester/data/framestercore/"/>
+    <Prefix name="cbi" IRI="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#"/>
+    <Prefix name="mee" IRI="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/MereExposureEffect/Mere_Exposure_Effect.owl#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="emotion" IRI="http://ns.inria.fr/emoca/"/>
+    <Prefix name="reaction" IRI="http://www.ontologydesignpatterns.org/cp/owl/reaction.owl/"/>
+    <Prefix name="parameter" IRI="http://ontologydesignpatterns.org/cp/owl/parameter.owl/"/>
+    <Prefix name="participation" IRI="http://ontologydesignpatterns.org/cp/owl/participation.owl"/>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+        <Literal>Irem Atmar</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal>The mere-exposure effect is a psychological phenomenon where people tend to develop a preference for things they are repeatedly exposed to, even if they initially had no particular positive or negative feelings toward those things. In essence, familiarity breeds liking. This effect suggests that mere exposure to something can increase feelings of comfort, trust, or preference for it, without any conscious reasoning or decision-making involved. It has been observed in various contexts, including advertising, interpersonal attraction, and consumer behavior.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <Literal>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/MereExposureEffect/Mere_Exposure_Effect.owl/</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <Literal>Mere Exposure Effect</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <Literal>http://ontologydesignpatterns.org/wiki/Submissions:Parameter</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <Literal>http://ontologydesignpatterns.org/wiki/Submissions:Reaction</Literal>
+    </Annotation>
+    <Declaration>
+        <Class abbreviatedIRI="emotion:Stimulus"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="ExposureContext"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="InfluencingFactors"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="cbi:BiasedAgent"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="cbi:CognitiveBias"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="cbi:MereExposureEffect"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="fs:Frequency"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="fs:People"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="fs:Preference"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="parameter:hasParameter"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="reaction:hasOutcome"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="changes"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasStimulus"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="influences"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="cbi:affects"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owll#isAffectedBy"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Frequently"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="MereExposureEffectInstance"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Sarah"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="SeeingAnAccountFrequently"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="SeeingOnlinePosts"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="SocialMedia"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="TendencyToEngage"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+    </Declaration>
+    <SubClassOf>
+        <Class abbreviatedIRI="cbi:BiasedAgent"/>
+        <Class abbreviatedIRI="fs:People"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="cbi:MereExposureEffect"/>
+        <Class abbreviatedIRI="cbi:CognitiveBias"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class abbreviatedIRI="fs:Frequency"/>
+        <NamedIndividual IRI="Frequently"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="cbi:MereExposureEffect"/>
+        <NamedIndividual IRI="MereExposureEffectInstance"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="cbi:BiasedAgent"/>
+        <NamedIndividual IRI="Sarah"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="InfluencingFactors"/>
+        <NamedIndividual IRI="SeeingAnAccountFrequently"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="emotion:Stimulus"/>
+        <NamedIndividual IRI="SeeingOnlinePosts"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="ExposureContext"/>
+        <NamedIndividual IRI="SocialMedia"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="fs:Preference"/>
+        <NamedIndividual IRI="TendencyToEngage"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="hasStimulus"/>
+        <NamedIndividual IRI="MereExposureEffectInstance"/>
+        <NamedIndividual IRI="SeeingOnlinePosts"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owll#isAffectedBy"/>
+        <NamedIndividual IRI="Sarah"/>
+        <NamedIndividual IRI="MereExposureEffectInstance"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="influences"/>
+        <NamedIndividual IRI="SeeingAnAccountFrequently"/>
+        <NamedIndividual IRI="TendencyToEngage"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="parameter:hasParameter"/>
+        <NamedIndividual IRI="SeeingOnlinePosts"/>
+        <NamedIndividual IRI="Frequently"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="changes"/>
+        <NamedIndividual IRI="SocialMedia"/>
+        <NamedIndividual IRI="TendencyToEngage"/>
+    </ObjectPropertyAssertion>
+    <InverseObjectProperties>
+        <ObjectProperty abbreviatedIRI="cbi:affects"/>
+        <ObjectProperty IRI="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owll#isAffectedBy"/>
+    </InverseObjectProperties>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="parameter:hasParameter"/>
+        <Class abbreviatedIRI="emotion:Stimulus"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="reaction:hasOutcome"/>
+        <Class IRI="ExposureContext"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="changes"/>
+        <Class IRI="ExposureContext"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasStimulus"/>
+        <Class abbreviatedIRI="cbi:MereExposureEffect"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="influences"/>
+        <Class IRI="InfluencingFactors"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owll#isAffectedBy"/>
+        <Class abbreviatedIRI="cbi:BiasedAgent"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="parameter:hasParameter"/>
+        <Class abbreviatedIRI="fs:Frequency"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="reaction:hasOutcome"/>
+        <Class abbreviatedIRI="cbi:MereExposureEffect"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="changes"/>
+        <Class abbreviatedIRI="fs:Preference"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasStimulus"/>
+        <Class abbreviatedIRI="emotion:Stimulus"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="influences"/>
+        <Class abbreviatedIRI="fs:Preference"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owll#isAffectedBy"/>
+        <Class abbreviatedIRI="cbi:MereExposureEffect"/>
+    </ObjectPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>emotion:Stimulus</AbbreviatedIRI>
+        <Literal>The Stimulus class representing any object shown to the user.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>emotion:Stimulus</AbbreviatedIRI>
+        <Literal>http://ns.inria.fr/emoca/Stimulus</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>emotion:Stimulus</AbbreviatedIRI>
+        <Literal>Stimulus</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>parameter:hasParameter</AbbreviatedIRI>
+        <Literal>To represent parameters to be used for a certain concept.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>parameter:hasParameter</AbbreviatedIRI>
+        <Literal>http://ontologydesignpatterns.org/cp/owl/parameter.owl/</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>parameter:hasParameter</AbbreviatedIRI>
+        <Literal>has Parameter</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>reaction:hasOutcome</AbbreviatedIRI>
+        <Literal>Is also true that some action directly preceeds its outcome</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>reaction:hasOutcome</AbbreviatedIRI>
+        <Literal>To model dynamic situations, tracking agents and actions they produce, events that are results of some action(s), and consequences as new actions, i.e. reactions.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>reaction:hasOutcome</AbbreviatedIRI>
+        <Literal>http://www.ontologydesignpatterns.org/cp/owl/reaction.owl/</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>reaction:hasOutcome</AbbreviatedIRI>
+        <Literal>has outcome</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>ExposureContext</IRI>
+        <Literal>Represents the environment or situation in which exposure to the stimulus occurs.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>ExposureContext</IRI>
+        <Literal>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/MereExposureEffect/Mere_Exposure_Effect.owl#ExposureContext</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>ExposureContext</IRI>
+        <Literal>Exposure Context</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Frequently</IRI>
+        <Literal>The frequency of Sarah seeing the posts online.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Frequently</IRI>
+        <Literal>Frequently</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>InfluencingFactors</IRI>
+        <Literal>The various internal and external elements that impact the process of cognition.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>InfluencingFactors</IRI>
+        <Literal>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/MereExposureEffect/Mere_Exposure_Effect.owl#InfluencingFactors</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>InfluencingFactors</IRI>
+        <Literal>Influencing Factors</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>MereExposureEffectInstance</IRI>
+        <Literal>Mere Exposure Effect Instance</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Sarah</IRI>
+        <Literal>The individual Sarah who is experiencing the Mere Exposure Effect.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Sarah</IRI>
+        <Literal>Sarah</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>SeeingAnAccountFrequently</IRI>
+        <Literal>Sarah seeing an account online frequently as an influencing factor.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>SeeingAnAccountFrequently</IRI>
+        <Literal>Seeing an account frequently</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>SeeingOnlinePosts</IRI>
+        <Literal>Sarah having a stimulus as seeing online posts.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>SeeingOnlinePosts</IRI>
+        <Literal>Seeing online posts</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>SocialMedia</IRI>
+        <Literal>Social media is the exposure context in this instance.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>SocialMedia</IRI>
+        <Literal>Social Media</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>TendencyToEngage</IRI>
+        <Literal>Sarah having a preference as a tendency to engage with particular accounts.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>TendencyToEngage</IRI>
+        <Literal>Tendency to engage</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>changes</IRI>
+        <Literal>Describes an altering.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>changes</IRI>
+        <Literal>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/MereExposureEffect/Mere_Exposure_Effect.owl#changes</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>changes</IRI>
+        <Literal>changes</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasStimulus</IRI>
+        <Literal>Describes the relationship between an individual and the stimulus they are exposed to.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>hasStimulus</IRI>
+        <Literal>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/MereExposureEffect/Mere_Exposure_Effect.owl#hasStimulus</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasStimulus</IRI>
+        <Literal>has stimulus</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>influences</IRI>
+        <Literal>An entity having and effect on the other entity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>influences</IRI>
+        <Literal>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/MereExposureEffect/Mere_Exposure_Effect.owl#influences</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>influences</IRI>
+        <Literal>influences</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>cbi:BiasedAgent</AbbreviatedIRI>
+        <Literal>Represents an entity that experiences the bias.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>cbi:BiasedAgent</AbbreviatedIRI>
+        <Literal>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#BiasedAgent</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>cbi:BiasedAgent</AbbreviatedIRI>
+        <Literal>Biased Agent</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>cbi:CognitiveBias</AbbreviatedIRI>
+        <Literal>Represents the overarching concept of cognitive biases.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>cbi:CognitiveBias</AbbreviatedIRI>
+        <Literal>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#CognitiveBias</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>cbi:CognitiveBias</AbbreviatedIRI>
+        <Literal>Cognitive Bias</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>cbi:MereExposureEffect</AbbreviatedIRI>
+        <Literal>Subclass of Bias, specifically representing Mere Exposure Effect.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>cbi:MereExposureEffect</AbbreviatedIRI>
+        <Literal>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#MereExposureEffect</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>cbi:MereExposureEffect</AbbreviatedIRI>
+        <Literal>Mere Exposure Effect</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>cbi:affects</AbbreviatedIRI>
+        <Literal>Inverse of isAffectedBy.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>cbi:affects</AbbreviatedIRI>
+        <Literal>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#affects</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>cbi:affects</AbbreviatedIRI>
+        <Literal>affects</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owll#isAffectedBy</IRI>
+        <Literal>Describes the relationship between a cognitive bias and an individual on the base of influence.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owll#isAffectedBy</IRI>
+        <Literal>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owll#isAffectedBy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owll#isAffectedBy</IRI>
+        <Literal>is affected by</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>fs:Frequency</AbbreviatedIRI>
+        <Literal>This frame has to do with the repetition (and especially the frequency of repetition) of an event. Many of the adjectives and adverbs in this frame are based on nouns in the Calendric_unit frame. China will have to face a high frequency of sand storms in the years to come.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>fs:Frequency</AbbreviatedIRI>
+        <Literal>https://w3id.org/framester/data/framestercore/Frequency</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>fs:Frequency</AbbreviatedIRI>
+        <Literal>Frequency</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>fs:People</AbbreviatedIRI>
+        <Literal>This frame contains general words for Individuals, i.e. humans. The Person is conceived of as independent of other specific individuals with whom they have relationships and independent of their participation in any particular activity. They may have an Age, Descriptor, Origin, Persistent_characteristic, or Ethnicity. A man from Phoenix was shot yesterday. She gave birth to a screaming baby yesterday. I study 16-year-old female adolescents. I am dating an African-American man. She comforted the terrified child. I always thought of him as a stupid man.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>fs:People</AbbreviatedIRI>
+        <Literal>https://w3id.org/framester/data/framestercore/People</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>fs:People</AbbreviatedIRI>
+        <Literal>People</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>fs:Preference</AbbreviatedIRI>
+        <Literal>An Experiencer has a greater desire to participate in some Event, as against another (contextually recoverable) event which exhibits a specific Contrast with the Event. Alternatively, the Experiencer may have a greater desire that some Focal_participant participate in the Event. The Location_of_Event may also be mentioned. Why do women prefer manly faces? I prefer open source programs over proprietary ones. Other customers prefer to send us an order together with a cheque. I prefer my tartar sauce on fish.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>fs:Preference</AbbreviatedIRI>
+        <Literal>https://w3id.org/framester/data/framestercore/Preference</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>fs:Preference</AbbreviatedIRI>
+        <Literal>Preference</Literal>
+    </AnnotationAssertion>
+</Ontology>
 
 
 
