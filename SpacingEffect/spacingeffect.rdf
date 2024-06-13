@@ -93,6 +93,7 @@
     <!-- https://modellingdh.github.io/ont/odp/term/hasEngagement -->
 
     <owl:ObjectProperty rdf:about="https://modellingdh.github.io/ont/odp/term/hasEngagement">
+        <owl:inverseOf rdf:resource="https://modellingdh.github.io/ont/odp/term/inActivity"/>
         <rdfs:comment xml:lang="en">Inverse of inActivity.</rdfs:comment>
         <rdfs:isDefinedBy xml:lang="en">https://modellingdh.github.io/ont/odp/term/</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">hasEngagement</rdfs:label>
@@ -115,6 +116,8 @@
     <!-- https://modellingdh.github.io/ont/odp/term/includes -->
 
     <owl:ObjectProperty rdf:about="https://modellingdh.github.io/ont/odp/term/includes">
+        <rdfs:domain rdf:resource="http://ontology.eil.utoronto.ca/icity/ActivitySpecification/Activity"/>
+        <rdfs:range rdf:resource="https://modellingdh.github.io/ont/odp/term/Observation"/>
         <rdfs:comment xml:lang="en">A relation of mereological nature that connects a given observation with the activity that originates them: it strengthens the argument that observations are always active processes from a cognitive standpoint, regardless of how conscious they may be. A standard mereological property from another content pattern may be used in lieu of this one and therefore aligned with it.</rdfs:comment>
         <rdfs:isDefinedBy xml:lang="en">https://modellingdh.github.io/ont/odp/term/</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">includes</rdfs:label>
