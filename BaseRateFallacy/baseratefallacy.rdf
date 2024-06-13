@@ -14,11 +14,13 @@
      xmlns:actspec="http://ontology.eil.utoronto.ca/icity/ActivitySpecification/"
      xmlns:reaction="http://www.ontologydesignpatterns.org/cp/owl/reaction.owl.v0.1#"
      xmlns:parameter="http://ontologydesignpatterns.org/cp/owl/parameter.owl#"
-     xmlns:classification="http://www.ontologydesignpatterns.org/cp/owl/classification.owl#">
+     xmlns:parameter1="http://ontologydesignpatterns.org/cp/owl/parameter.owlhas#">
     <owl:Ontology rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/BaseRateFallacy/baseratefallacy.owl#">
         <dc:creator xml:lang="en">Rana Coskun</dc:creator>
         <rdfs:comment xml:lang="en">The base rate fallacy is a cognitive error whereby people incorrectly judge the likelihood of an event due to ignoring or underestimating the base rate (i.e., the overall rate at which an event occurs) and overemphasizing specific information. This fallacy can occur in various contexts, such as assessing risks, making medical diagnoses, and evaluating probabilities in legal and everyday situations.</rdfs:comment>
         <rdfs:label xml:lang="en">Base Rate Fallacy</rdfs:label>
+        <rdfs:seeAlso xml:lang="en">http://ontologydesignpatterns.org/wiki/Submissions:Experience_%26_Observation</rdfs:seeAlso>
+        <rdfs:seeAlso xml:lang="en">http://ontologydesignpatterns.org/wiki/Submissions:Parameter</rdfs:seeAlso>
     </owl:Ontology>
     
 
@@ -326,6 +328,107 @@
         <rdfs:isDefinedBy>https://w3id.org/framester/data/framestercore/People</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">People</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/BaseRateFallacy/baseratefallacy.owl#DiseaseBaseRateInformation -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/BaseRateFallacy/baseratefallacy.owl#DiseaseBaseRateInformation">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/BaseRateFallacy/baseratefallacy.owl#BaseRateInformation"/>
+        <parameter:hasParameter rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/BaseRateFallacy/baseratefallacy.owl#Rate"/>
+        <rdfs:comment xml:lang="en">Information regarding the prevalence of a specific disease within a population proving that the result might be a false positive, used as a base rate for evaluation purposes.</rdfs:comment>
+        <rdfs:label xml:lang="en">Disease Base Rate Information</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/BaseRateFallacy/baseratefallacy.owl#DrLee -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/BaseRateFallacy/baseratefallacy.owl#DrLee">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#BiasedAgent"/>
+        <exob:isEngagedIn rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/BaseRateFallacy/baseratefallacy.owl#EvaluatingLikelihoodOfDisease"/>
+        <rdfs:comment xml:lang="en">A physician involved in the assessment of disease likelihood, potentially affected by cognitive biases such as the base rate fallacy</rdfs:comment>
+        <rdfs:label xml:lang="en">Dr Lee</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/BaseRateFallacy/baseratefallacy.owl#EvaluatingLikelihoodOfDisease -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/BaseRateFallacy/baseratefallacy.owl#EvaluatingLikelihoodOfDisease">
+        <rdf:type rdf:resource="https://w3id.org/framester/data/framestercore/Assessing"/>
+        <exob:inActivity rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/BaseRateFallacy/baseratefallacy.owl#MakingDiagnosis"/>
+        <exob:isReflectedUponIn rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/BaseRateFallacy/baseratefallacy.owl#TruePositiveObservation"/>
+        <rdfs:comment xml:lang="en">The process of determining the probability that a patient has a specific disease based true positive observation.</rdfs:comment>
+        <rdfs:label xml:lang="en">Evaluating Likelihood Of Disease</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/BaseRateFallacy/baseratefallacy.owl#InformationRegardingDisease -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/BaseRateFallacy/baseratefallacy.owl#InformationRegardingDisease">
+        <rdf:type rdf:resource="https://w3id.org/framester/data/framestercore/Information"/>
+        <rdfs:comment xml:lang="en">General information about a disease, which includes statistical data and base rates pertinent to its occurrence in a population.</rdfs:comment>
+        <rdfs:label xml:lang="en">Information Regarding Disease</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/BaseRateFallacy/baseratefallacy.owl#MakingDiagnosis -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/BaseRateFallacy/baseratefallacy.owl#MakingDiagnosis">
+        <rdf:type rdf:resource="https://w3id.org/framester/data/framestercore/Deciding"/>
+        <exob:hasEngagement rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/BaseRateFallacy/baseratefallacy.owl#EvaluatingLikelihoodOfDisease"/>
+        <exob:includes rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/BaseRateFallacy/baseratefallacy.owl#TruePositiveObservation"/>
+        <isBasedOn rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/BaseRateFallacy/baseratefallacy.owl#InformationRegardingDisease"/>
+        <rdfs:comment xml:lang="en">The decision-making process involved in diagnosing a patient, which considers both base rate information and specific case details.</rdfs:comment>
+        <rdfs:label xml:lang="en">Making Diagnosis</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/BaseRateFallacy/baseratefallacy.owl#Rate -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/BaseRateFallacy/baseratefallacy.owl#Rate">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/BaseRateFallacy/baseratefallacy.owl#BaseRate"/>
+        <parameter1:ParameterDataValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.002</parameter1:ParameterDataValue>
+        <rdfs:comment xml:lang="en">Rate of disease within the population</rdfs:comment>
+        <rdfs:label xml:lang="en">Rate</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/BaseRateFallacy/baseratefallacy.owl#TestResult -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/BaseRateFallacy/baseratefallacy.owl#TestResult">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/BaseRateFallacy/baseratefallacy.owl#SpecificInformation"/>
+        <exob:producesObservation rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/BaseRateFallacy/baseratefallacy.owl#TruePositiveObservation"/>
+        <rdfs:comment xml:lang="en">The information regarding that test result is positive and highly accurate, with a 99% chance of a positive result if you have the disease.</rdfs:comment>
+        <rdfs:label xml:lang="en">Test Result</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/BaseRateFallacy/baseratefallacy.owl#TruePositiveObservation -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/BaseRateFallacy/baseratefallacy.owl#TruePositiveObservation">
+        <rdf:type rdf:resource="https://modellingdh.github.io/ont/odp/term/Observation"/>
+        <exob:isReflectionOn rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/BaseRateFallacy/baseratefallacy.owl#EvaluatingLikelihoodOfDisease"/>
+        <rdfs:comment xml:lang="en">The observation that the test is a true positive based on the test result (specific information), often reflecting on the evaluation of the disease likelihood.</rdfs:comment>
+        <rdfs:label xml:lang="en">True Positive Observation</rdfs:label>
+    </owl:NamedIndividual>
 </rdf:RDF>
 
 

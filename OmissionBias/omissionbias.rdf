@@ -17,7 +17,7 @@
         <dc:creator xml:lang="en">Rana Coskun</dc:creator>
         <rdfs:comment xml:lang="en">Omission bias is a cognitive bias that describes the tendency of people to judge harmful actions (commissions) as worse, or less moral, than equally harmful inactions (omissions), even if the outcomes are the same or similar. This bias can affect decision-making processes in various contexts, including moral and ethical judgments, health decisions, and legal interpretations. Essentially, individuals might perceive the act of not doing something as more acceptable or less blameworthy than actively doing something that leads to a similar negative outcome. This can lead to situations where passive decisions are favored over active ones, even if the active decision would result in a better outcome or prevent harm.</rdfs:comment>
         <rdfs:label xml:lang="en">Omission Bias</rdfs:label>
-        <rdfs:seeAlso xml:lang="en">http://ontologydesignpatterns.org/wiki/Submissions:Reaction</rdfs:seeAlso>
+        <rdfs:seeAlso xml:lang="en">http://ontologydesignpatterns.org/wiki/Submissions:Experience_%26_Observation</rdfs:seeAlso>
         <rdfs:seeAlso xml:lang="en">http://www.ontologydesignpatterns.org/cp/owl/reaction.owl.v0.1#</rdfs:seeAlso>
     </owl:Ontology>
     
@@ -76,7 +76,7 @@
 
     <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/cp/owl/reaction.owl.v0.1#performs">
         <rdfs:domain rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#BiasedAgent"/>
-        <rdfs:range rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/reaction.owl.v0.1#Action"/>
+        <rdfs:range rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/OmissionBias/omissionbias.owl#Omission"/>
         <rdfs:isDefinedBy xml:lang="en">http://www.ontologydesignpatterns.org/cp/owl/reaction.owl.v0.1#</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">performs</rdfs:label>
     </owl:ObjectProperty>
@@ -268,7 +268,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/framester/data/framestercore/People"/>
         <rdfs:comment xml:lang="en">Represents an entity that experiences the bias.</rdfs:comment>
         <rdfs:isDefinedBy xml:lang="en">https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#BiasedAgent</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">BiasedAgent</rdfs:label>
+        <rdfs:label xml:lang="en">Biased Agent</rdfs:label>
     </owl:Class>
     
 
@@ -278,7 +278,7 @@
     <owl:Class rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#CognitiveBias">
         <rdfs:comment xml:lang="en">Represents the overarching concept of cognitive biases.</rdfs:comment>
         <rdfs:isDefinedBy xml:lang="en">https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#CognitiveBias</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">CognitiveBias</rdfs:label>
+        <rdfs:label xml:lang="en">Cognitive Bias</rdfs:label>
     </owl:Class>
     
 
@@ -289,7 +289,7 @@
         <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#CognitiveBias"/>
         <rdfs:comment xml:lang="en">Omission bias is a cognitive bias that describes the tendency of people to judge commissions as less moral than equally harmful inactions omissions.</rdfs:comment>
         <rdfs:isDefinedBy xml:lang="en">https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#OmissionBias</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">OmissionBias</rdfs:label>
+        <rdfs:label xml:lang="en">Omission Bias</rdfs:label>
     </owl:Class>
     
 
@@ -315,26 +315,81 @@
     
 
 
+    <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/OmissionBias/omissionbias.owl#BeliefNotPullingLessHarmful -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/OmissionBias/omissionbias.owl#BeliefNotPullingLessHarmful">
+        <rdf:type rdf:resource="https://modellingdh.github.io/ont/odp/term/Observation"/>
+        <exob:isReflectionOn rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/OmissionBias/omissionbias.owl#TrolleyLeverConflict"/>
+        <rdfs:comment xml:lang="en">The belief that not pulling the lever is less harmful in the trolley lever conflict, reflecting the omission bias in decision-making</rdfs:comment>
+        <rdfs:label xml:lang="en">Belief Not Pulling Less Harmful</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/OmissionBias/omissionbias.owl#Bob -->
 
     <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/OmissionBias/omissionbias.owl#Bob">
         <rdf:type rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#BiasedAgent"/>
+        <reaction:performs rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/OmissionBias/omissionbias.owl#NotPullingTheLever"/>
+        <exob:isEngagedIn rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/OmissionBias/omissionbias.owl#TrolleyLeverConflict"/>
+        <rdfs:comment xml:lang="en">A biased agent involved in the trolley lever conflict, demonstrating omission bias.</rdfs:comment>
+        <rdfs:label xml:lang="en">Bob</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/OmissionBias/omissionbias.owl#Not_pulling_is_less_harmful -->
+    <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/OmissionBias/omissionbias.owl#NotPullingTheLever -->
 
-    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/OmissionBias/omissionbias.owl#Not_pulling_is_less_harmful">
-        <rdf:type rdf:resource="https://modellingdh.github.io/ont/odp/term/Observation"/>
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/OmissionBias/omissionbias.owl#NotPullingTheLever">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/OmissionBias/omissionbias.owl#Omission"/>
+        <reaction:isPerformedBy rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/OmissionBias/omissionbias.owl#Bob"/>
+        <rdfs:comment xml:lang="en">An instance of omission where Bob decides not to pull the lever in the trolley conflict scenario.</rdfs:comment>
+        <rdfs:label xml:lang="en">Not Pulling The Lever</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/OmissionBias/omissionbias.owl#Trolley_lever_conflict -->
+    <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/OmissionBias/omissionbias.owl#PullingAction -->
 
-    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/OmissionBias/omissionbias.owl#Trolley_lever_conflict">
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/OmissionBias/omissionbias.owl#PullingAction">
+        <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/reaction.owl.v0.1#Action"/>
+        <reaction:isRaisedBy rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/OmissionBias/omissionbias.owl#ToPullOrNotToPull"/>
+        <rdfs:comment xml:lang="en">The action must be taken in the trolley lever conflict, raising a moral decision-making scenario.</rdfs:comment>
+        <rdfs:label xml:lang="en">Pulling Action</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/OmissionBias/omissionbias.owl#PullingTheLever -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/OmissionBias/omissionbias.owl#PullingTheLever">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/OmissionBias/omissionbias.owl#Comission"/>
+        <rdfs:comment xml:lang="en">The action of pulling the lever, raising a moral decision-making scenario.</rdfs:comment>
+        <rdfs:label xml:lang="en">Pulling The Lever</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/OmissionBias/omissionbias.owl#ToPullOrNotToPull -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/OmissionBias/omissionbias.owl#ToPullOrNotToPull">
+        <rdf:type rdf:resource="http://etna.istc.cnr.it/framester2/data/framestercore/Deciding"/>
+        <reaction:raise rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/OmissionBias/omissionbias.owl#PullingAction"/>
+        <exob:hasEngagement rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/OmissionBias/omissionbias.owl#TrolleyLeverConflict"/>
+        <exob:includes rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/OmissionBias/omissionbias.owl#BeliefNotPullingLessHarmful"/>
+        <rdfs:comment xml:lang="en">A decision-making scenario where the choice to pull or not pull the lever reflects omission bias.</rdfs:comment>
+        <rdfs:label xml:lang="en">To Pull Or Not To Pull</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/OmissionBias/omissionbias.owl#TrolleyLeverConflict -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/OmissionBias/omissionbias.owl#TrolleyLeverConflict">
         <rdf:type rdf:resource="https://modellingdh.github.io/ont/odp/term/Engagement"/>
+        <exob:inActivity rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/OmissionBias/omissionbias.owl#ToPullOrNotToPull"/>
+        <exob:isReflectedUponIn rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/OmissionBias/omissionbias.owl#BeliefNotPullingLessHarmful"/>
+        <rdfs:label xml:lang="en">Trolley Lever Conflict</rdfs:label>
     </owl:NamedIndividual>
 </rdf:RDF>
 

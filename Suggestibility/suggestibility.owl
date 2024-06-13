@@ -235,7 +235,7 @@
         <owl:disjointWith rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#BiasedAgent"/>
         <rdfs:comment xml:lang="en">Describes the source of suggestion that affects biased agent, can be an individual,organization or media.</rdfs:comment>
         <rdfs:isDefinedBy xml:lang="en">https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/Suggestibility/suggestibility.owl#SuggestionSource</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">SuggestionSource</rdfs:label>
+        <rdfs:label xml:lang="en">Suggestion Source</rdfs:label>
     </owl:Class>
     
 
@@ -246,7 +246,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/framester/data/framestercore/People"/>
         <rdfs:comment xml:lang="en">Represents an entity that experiences the bias.</rdfs:comment>
         <rdfs:isDefinedBy xml:lang="en">https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#BiasedAgent</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">BiasedAgent</rdfs:label>
+        <rdfs:label xml:lang="en">Biased Agent</rdfs:label>
     </owl:Class>
     
 
@@ -256,7 +256,7 @@
     <owl:Class rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#CognitiveBias">
         <rdfs:comment xml:lang="en">Represents the overarching concept of cognitive biases.</rdfs:comment>
         <rdfs:isDefinedBy xml:lang="en">https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#CognitiveBias</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">CognitiveBias</rdfs:label>
+        <rdfs:label xml:lang="en">Cognitive Bias</rdfs:label>
     </owl:Class>
     
 
@@ -297,8 +297,89 @@
     <owl:Class rdf:about="https://w3id.org/framester/data/framestercore/SubjectiveInfluence">
         <rdfs:comment xml:lang="en">An Agent, Situation or Entity has an influence on a Cognizer. The influence may be general; or it may be manifested in the Cognizer&apos;s engaging in an Action as a consequence of the influence; or the Cognizer may be influenced in how they carry out a Behavior that they are engaged in already. Alternatively, a Product may be specified whose production or design was influenced by the Cognizer&apos;s experience of the Situation or Entity. The mediation of the Cognizer&apos;s psyche distinguishes this frame from the Objective_influence frame, where dependent events occur automatically given the appropriate kind of influencing force. In this frame, by contrast, a Cognizer may perceive an influence yet not respond to it in any way. These works had a profound effect and influenced her in the creation of a successful series capturing this sun-drenched region. I&apos;m sure if I asked Mattel what inspired this car I would be told it&apos;s an original design, and not supposed to represent any actual car.</rdfs:comment>
         <rdfs:isDefinedBy xml:lang="en">https://w3id.org/framester/data/framestercore/SubjectiveInfluence</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">SubjectiveInfluence</rdfs:label>
+        <rdfs:label xml:lang="en">Subjective Influence</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/Suggestibility/suggestibility.owl#HypnosisTherapist -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/Suggestibility/suggestibility.owl#HypnosisTherapist">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/Suggestibility/suggestibility.owl#SuggestionSource"/>
+        <reaction:raise rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/Suggestibility/suggestibility.owl#YouShouldStopSmoking"/>
+        <rdfs:comment xml:lang="en">The professional conducting the hypnosis therapy session.</rdfs:comment>
+        <rdfs:label xml:lang="en">Hypnosis Therapist</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/Suggestibility/suggestibility.owl#IShouldStopSmoking -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/Suggestibility/suggestibility.owl#IShouldStopSmoking">
+        <rdf:type rdf:resource="https://w3id.org/framester/data/framestercore/SubjectiveInfluence"/>
+        <exob:isReflectionOn rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/Suggestibility/suggestibility.owl#QuitSmoking"/>
+        <rdfs:comment xml:lang="en">The subjective influence on the smoker when engaged with quit smoking</rdfs:comment>
+        <rdfs:label xml:lang="en">I Should Stop Smoking</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/Suggestibility/suggestibility.owl#QuitSmoking -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/Suggestibility/suggestibility.owl#QuitSmoking">
+        <rdf:type rdf:resource="https://modellingdh.github.io/ont/odp/term/Engagement"/>
+        <exob:isReflectedUponIn rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/Suggestibility/suggestibility.owl#IShouldStopSmoking"/>
+        <rdfs:comment xml:lang="en">The engagement of quitting smoking when the smoker receives suggestion.</rdfs:comment>
+        <rdfs:label xml:lang="en">Quit Smoking</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/Suggestibility/suggestibility.owl#Smoker -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/Suggestibility/suggestibility.owl#Smoker">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#BiasedAgent"/>
+        <participation:isParticipantIn rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/Suggestibility/suggestibility.owl#TherapySession"/>
+        <exob:isEngagedIn rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/Suggestibility/suggestibility.owl#QuitSmoking"/>
+        <receivesSuggestion rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/Suggestibility/suggestibility.owl#YouShouldStopSmoking"/>
+        <rdfs:comment xml:lang="en">The individual receiving the hypnosis suggestion to quit smoking.</rdfs:comment>
+        <rdfs:label xml:lang="en">Smoker</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/Suggestibility/suggestibility.owl#TherapySession -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/Suggestibility/suggestibility.owl#TherapySession">
+        <rdf:type rdf:resource="https://w3id.org/framester/data/framestercore/Event"/>
+        <participation:hasParticipant rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/Suggestibility/suggestibility.owl#Smoker"/>
+        <reaction:hasConsequence rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/Suggestibility/suggestibility.owl#YouShouldStopSmoking"/>
+        <rdfs:comment xml:lang="en">Hypnosis session that the smoker participates.</rdfs:comment>
+        <rdfs:label xml:lang="en">Therapy Session</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/Suggestibility/suggestibility.owl#YouShouldStopSmoking -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/Suggestibility/suggestibility.owl#YouShouldStopSmoking">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/Suggestibility/suggestibility.owl#Suggestion"/>
+        <reaction:isConsequenceOf rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/Suggestibility/suggestibility.owl#TherapySession"/>
+        <exob:producesObservation rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/Suggestibility/suggestibility.owl#IShouldStopSmoking"/>
+        <rdfs:comment>Suggestion received by the smoker when engaged with quit smoking</rdfs:comment>
+        <rdfs:label xml:lang="en">You Should Stop Smoking</rdfs:label>
+    </owl:NamedIndividual>
 </rdf:RDF>
 
 

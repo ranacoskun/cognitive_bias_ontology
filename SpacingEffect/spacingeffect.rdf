@@ -9,6 +9,7 @@
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:exob="https://modellingdh.github.io/ont/odp/term/"
+     xmlns:owl1="http://ontologydesignpatterns.org/cp/owl/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:spef="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/SpacingEffect/spacingeffect.owl#"
      xmlns:actspec="http://ontology.eil.utoronto.ca/icity/ActivitySpecification/"
@@ -19,6 +20,9 @@
         <dc:creator xml:lang="en">Rana Coskun</dc:creator>
         <rdfs:comment xml:lang="en">The &quot;Spacing Effect&quot; is a phenomenon observed in psychology and education, referring to the improved ability to remember information or perform a skill when study or practice sessions are spaced out over time, rather than concentrated in a short period. This effect suggests that distributed practice, involving intervals between learning sessions, enhances long-term memory retention more effectively than massed practice, where learning sessions are crammed together.</rdfs:comment>
         <rdfs:label xml:lang="en">Spacing Effect</rdfs:label>
+        <rdfs:seeAlso xml:lang="en">http://ontologydesignpatterns.org/wiki/Submissions:Experience_%26_Observation</rdfs:seeAlso>
+        <rdfs:seeAlso xml:lang="en">http://ontologydesignpatterns.org/wiki/Submissions:Parameter</rdfs:seeAlso>
+        <rdfs:seeAlso xml:lang="en">http://ontologydesignpatterns.org/wiki/Submissions:Sequence</rdfs:seeAlso>
     </owl:Ontology>
     
 
@@ -51,13 +55,13 @@
     
 
 
-    <!-- http://ontology.eil.utoronto.ca/icity/ActivitySpecification/hasSubActivity -->
+    <!-- http://ontology.eil.utoronto.ca/icity/ActivitySpecification/hasSubactivity -->
 
-    <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/icity/ActivitySpecification/hasSubActivity">
+    <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/icity/ActivitySpecification/hasSubactivity">
         <rdfs:domain rdf:resource="http://ontology.eil.utoronto.ca/icity/ActivitySpecification/Activity"/>
         <rdfs:range rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/SpacingEffect/spacingeffect.owl#Repetition"/>
         <rdfs:isDefinedBy xml:lang="en">http://ontology.eil.utoronto.ca/icity/ActivitySpecification/</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">hasSubActivity</rdfs:label>
+        <rdfs:label xml:lang="en">hasSubactivity</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -136,7 +140,7 @@
         <owl:inverseOf rdf:resource="https://modellingdh.github.io/ont/odp/term/isReflectionOn"/>
         <rdfs:comment xml:lang="en">Inverse of isReflectionOn</rdfs:comment>
         <rdfs:isDefinedBy xml:lang="en">https://modellingdh.github.io/ont/odp/term/</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">isRefledtedUponIn</rdfs:label>
+        <rdfs:label xml:lang="en">isReflectedUponIn</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -321,6 +325,98 @@
         <rdfs:isDefinedBy xml:lang="en">https://w3id.org/framester/data/framestercore/People</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">People</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/SpacingEffect/spacingeffect.owl#BetterPerformanceWhenRepeated -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/SpacingEffect/spacingeffect.owl#BetterPerformanceWhenRepeated">
+        <rdf:type rdf:resource="https://modellingdh.github.io/ont/odp/term/Observation"/>
+        <exob:isReflectionOn rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/SpacingEffect/spacingeffect.owl#Learning"/>
+        <rdfs:comment xml:lang="en">Observation that memorization performance improves with repeated practice, a key aspect of the spacing effect.</rdfs:comment>
+        <rdfs:label xml:lang="en">Better performance when repeated</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/SpacingEffect/spacingeffect.owl#LanguageLearning -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/SpacingEffect/spacingeffect.owl#LanguageLearning">
+        <rdf:type rdf:resource="http://ontology.eil.utoronto.ca/icity/ActivitySpecification/Activity"/>
+        <actspec:hasSubactivity rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/SpacingEffect/spacingeffect.owl#RepeatingVocabularies"/>
+        <exob:hasEngagement rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/SpacingEffect/spacingeffect.owl#Learning"/>
+        <exob:includes rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/SpacingEffect/spacingeffect.owl#BetterPerformanceWhenRepeated"/>
+        <rdfs:comment xml:lang="en">Activity involving the acquisition of a new language, benefiting from spaced repetition.</rdfs:comment>
+        <rdfs:label xml:lang="en">Language learning</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/SpacingEffect/spacingeffect.owl#Learning -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/SpacingEffect/spacingeffect.owl#Learning">
+        <rdf:type rdf:resource="https://modellingdh.github.io/ont/odp/term/Engagement"/>
+        <exob:inActivity rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/SpacingEffect/spacingeffect.owl#LanguageLearning"/>
+        <exob:isReflectedUponIn rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/SpacingEffect/spacingeffect.owl#BetterPerformanceWhenRepeated"/>
+        <rdfs:comment xml:lang="en">Engagement in the process of acquiring knowledge or skills through study, experience, or teaching.</rdfs:comment>
+        <rdfs:label xml:lang="en">Learning</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/SpacingEffect/spacingeffect.owl#MemorizingVocabularies -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/SpacingEffect/spacingeffect.owl#MemorizingVocabularies">
+        <rdf:type rdf:resource="https://w3id.org/framester/data/framestercore/Memorization"/>
+        <exob:producesObservation rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/SpacingEffect/spacingeffect.owl#BetterPerformanceWhenRepeated"/>
+        <rdfs:comment xml:lang="en">Memorization of vocabulary words, an activity enhanced by spaced repetition for better retention.</rdfs:comment>
+        <rdfs:label xml:lang="en">Memorizing Vocabularies</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/SpacingEffect/spacingeffect.owl#RepeatingVocabularies -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/SpacingEffect/spacingeffect.owl#RepeatingVocabularies">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/SpacingEffect/spacingeffect.owl#Repetition"/>
+        <parameter:hasParameter rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/SpacingEffect/spacingeffect.owl#WeeklyRepetitionFrequency"/>
+        <sequence:precedes rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/SpacingEffect/spacingeffect.owl#MemorizingVocabularies"/>
+        <rdfs:comment xml:lang="en">Activity of repeatedly going over vocabulary words to aid memorization and learning.</rdfs:comment>
+        <rdfs:label xml:lang="en">Repeating Vocabularies</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/SpacingEffect/spacingeffect.owl#Student -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/SpacingEffect/spacingeffect.owl#Student">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#BiasedAgent"/>
+        <exob:isEngagedIn rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/SpacingEffect/spacingeffect.owl#Learning"/>
+        <rdfs:comment xml:lang="en">A person engaged in learning, whose performance can be influenced by the spacing effect.</rdfs:comment>
+        <rdfs:label xml:lang="en">Student</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/SpacingEffect/spacingeffect.owl#WeeklyRepetitionFrequency -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/SpacingEffect/spacingeffect.owl#WeeklyRepetitionFrequency">
+        <rdf:type rdf:resource="https://w3id.org/framester/data/framestercore/Frequency"/>
+        <owl1:parameter.owlhasParameterDataValue rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</owl1:parameter.owlhasParameterDataValue>
+        <rdfs:comment xml:lang="en">Represents the frequency of repetitions in the context of spaced learning.</rdfs:comment>
+        <rdfs:label xml:lang="en">Weekly Repetition Frequency</rdfs:label>
+    </owl:NamedIndividual>
 </rdf:RDF>
 
 
