@@ -1,175 +1,513 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
-     xml:base="http://www.w3.org/2002/07/owl"
-     xmlns:fs="https://w3id.org/framester/data/framestercore/"
-     xmlns:cbi="https://github.com/ranacoskun/cognitive_bias_ontology/"
-     xmlns:owl="http://www.w3.org/2002/07/owl#"
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/AvailabilityBias/Availability_Bias.owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:sql="http://ns.inria.fr/ast/sql"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:observation="http://modellingdh.github.io/ont/odp/term/"
-     xmlns:classification="http://www.ontologydesignpatterns.org/cp/owl/classification.owl">
-    <Ontology rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/AvailabilityBias/Availability_Bias.owl"/>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Object Properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://www.w3.org/2000/01/rdf-schema#subClassOf -->
-
-    <ObjectProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#subClassOf">
-        <rdfs:domain rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:AvailabilityBias"/>
-        <rdfs:range rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:CognitiveBias"/>
-        <rdfs:comment>The subject is a subclass of a class.</rdfs:comment>
-    </ObjectProperty>
-    
-
-
-    <!-- https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:affects -->
-
-    <ObjectProperty rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:affects">
-        <rdfs:domain rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:AvailabilityBias"/>
-        <rdfs:range rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:CognitiveProcess"/>
-        <rdfs:comment>Describes an affect of an entity on the other.</rdfs:comment>
-    </ObjectProperty>
-    
-
-
-    <!-- https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:isBasedOn -->
-
-    <ObjectProperty rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:isBasedOn">
-        <rdfs:domain rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:AvailabilityBias"/>
-        <rdfs:range rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/#fs:Information"/>
-        <rdfs:comment>Describes the relationship between availability bias and the information that individuals rely on.</rdfs:comment>
-    </ObjectProperty>
-    
-
-
-    <!-- https://github.com/ranacoskun/cognitive_bias_ontology/#classification:isClassifiedBy -->
-
-    <ObjectProperty rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology/#classification:isClassifiedBy">
-        <rdfs:domain rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:BiasedAgent"/>
-        <rdfs:range rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/#fs:People"/>
-        <rdfs:comment>To represent the relations between concepts (roles, task, parameters) and entities (person, events, values), which concepts can be assigned to. To formalize the application (e.g. tagging) of informal knowledge organization systems such as lexica, thesauri, subject directories, folksonomies, etc., where concepts are first-order elements.</rdfs:comment>
-    </ObjectProperty>
-    
-
-
-    <!-- https://github.com/ranacoskun/cognitive_bias_ontology/#observation:hasObservation -->
-
-    <ObjectProperty rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology/#observation:hasObservation">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdfs:domain rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/#fs:People"/>
-        <rdfs:range rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/#observation:Observation"/>
-        <rdfs:comment>To represent the epistemological &quot;missing link&quot; between a cognitive activity, e.g. the interaction with a cultural object, and any evidence of the effects this activity has on the individuals that are engaged with it; what can collectively be considered as an experience.</rdfs:comment>
-    </ObjectProperty>
-    
-
-
-    <!-- https://github.com/ranacoskun/cognitive_bias_ontology/#sql:from -->
-
-    <ObjectProperty rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology/#sql:from">
-        <rdfs:domain rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/#observation:Observation"/>
-        <rdfs:range rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/#fs:Event"/>
-        <rdfs:comment>The SQL clause that specifies the target sources (tables, views, subqueries) of a SELECT statement.</rdfs:comment>
-    </ObjectProperty>
-    
-
-
-    <!-- https://github.com/ranacoskun/cognitive_bias_ontology//affectedBy -->
-
-    <ObjectProperty rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology//affectedBy">
-        <rdfs:domain rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:BiasedAgent"/>
-        <rdfs:range rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:AvailabilityBias"/>
-        <rdfs:comment>Describes a relationship between to entities on the base of influence.</rdfs:comment>
-    </ObjectProperty>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Classes
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:AvailabilityBias -->
-
-    <Class rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:AvailabilityBias">
-        <rdfs:comment>Subclass of Bias, specifically representing availability bias.</rdfs:comment>
-    </Class>
-    
-
-
-    <!-- https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:BiasedAgent -->
-
-    <Class rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:BiasedAgent">
-        <rdfs:comment>Represents an entity that experiences the bias.</rdfs:comment>
-    </Class>
-    
-
-
-    <!-- https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:CognitiveBias -->
-
-    <Class rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:CognitiveBias">
-        <rdfs:comment>Represents the overarching concept of cognitive biases.</rdfs:comment>
-    </Class>
-    
-
-
-    <!-- https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:CognitiveProcess -->
-
-    <Class rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:CognitiveProcess">
-        <rdfs:comment>Represents the general process of cognition.</rdfs:comment>
-    </Class>
-    
-
-
-    <!-- https://github.com/ranacoskun/cognitive_bias_ontology/#fs:Event -->
-
-    <Class rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology/#fs:Event">
-        <rdfs:comment>An Event takes place at a Place and Time. Big earthquakes only happen along plate boundaries. INI The party will take place on Sunday in the all-you-can-eat buffet.</rdfs:comment>
-    </Class>
-    
-
-
-    <!-- https://github.com/ranacoskun/cognitive_bias_ontology/#fs:Information -->
-
-    <Class rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology/#fs:Information">
-        <rdfs:comment>A Cognizer knows or comes to know some piece of Information about a Topic. In this frame, many LUs encode a specific Means_of_Gathering and/or Source, but these may also be expressed separately. Also, the big problem is that our intel about WMD&apos;s has many times been wrong. Anyone got the straight dope on this? Get the inside scoop on sprint football player Austin Wilson. CNI I know him pretty well and I have a lot of dirt on him so I can always hold him over a barrel. What&apos;s the info about the new scanner chip?</rdfs:comment>
-    </Class>
-    
-
-
-    <!-- https://github.com/ranacoskun/cognitive_bias_ontology/#fs:People -->
-
-    <Class rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology/#fs:People">
-        <rdfs:comment>This frame contains general words for Individuals, i.e. humans. The Person is conceived of as independent of other specific individuals with whom they have relationships and independent of their participation in any particular activity. They may have an Age, Descriptor, Origin, Persistent_characteristic, or Ethnicity. A man from Phoenix was shot yesterday. She gave birth to a screaming baby yesterday. I study 16-year-old female adolescents. I am dating an African-American man. She comforted the terrified child. I always thought of him as a stupid man.</rdfs:comment>
-    </Class>
-    
-
-
-    <!-- https://github.com/ranacoskun/cognitive_bias_ontology/#observation:Observation -->
-
-    <Class rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology/#observation:Observation">
-        <rdfs:comment>To represent the epistemological &quot;missing link&quot; between a cognitive activity, e.g. the interaction with a cultural object, and any evidence of the effects this activity has on the individuals that are engaged with it; what can collectively be considered as an experience.</rdfs:comment>
-    </Class>
-</rdf:RDF>
+     ontologyIRI="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/AvailabilityBias/Availability_Bias.owl#">
+    <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="dc" IRI="http://purl.org/dc/elements/1.1/"/>
+    <Prefix name="fs" IRI="https://w3id.org/framester/data/framestercore/"/>
+    <Prefix name="avb" IRI="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/AvailabilityBias/Availability_Bias.owl#"/>
+    <Prefix name="cbi" IRI="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="sql" IRI="http://ns.inria.fr/ast/sql/"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="observation" IRI="http://modellingdh.github.io/ont/odp/term/"/>
+    <Prefix name="classification" IRI="http://www.ontologydesignpatterns.org/cp/owl/classification.owl/"/>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+        <Literal>Irem Atmar</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal>Availability bias is a cognitive bias that occurs when people rely on information that is readily available to them, rather than considering all relevant information when making decisions or judgments. This bias can lead individuals to overestimate the likelihood of events or scenarios that easily come to mind due to their recent occurrence, vividness, or salience in memory, while underestimating the probability of less memorable events. Availability bias can skew perceptions and lead to faulty decision-making by placing undue weight on easily recalled information, regardless of its actual statistical significance or relevance to the situation at hand.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <Literal>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/AvailabilityBias/Availability_Bias.owl#</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <Literal>Availability Bias</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <Literal>http://ontologydesignpatterns.org/wiki/Submissions:Experience_%26_Observation</Literal>
+    </Annotation>
+    <Declaration>
+        <Class abbreviatedIRI="observation:Observation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Action"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="CognitiveProcess"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Emotion"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="cbi:AvailabilityBias"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="cbi:BiasedAgent"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="cbi:CognitiveBias"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="fs:Information"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="fs:People"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="observation:producedObservation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="creates"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="influences"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="isBasedOn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="leadsTo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="cbi:affects"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="cbi:isAffectedBy"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Anxiety"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="AvailabilityBiasInstance"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="DecisionMaking"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Hyper-Vigilance"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="NewsReport"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Parent"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+    </Declaration>
+    <SubClassOf>
+        <Class abbreviatedIRI="cbi:AvailabilityBias"/>
+        <Class abbreviatedIRI="cbi:CognitiveBias"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="cbi:BiasedAgent"/>
+        <Class abbreviatedIRI="fs:People"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="Emotion"/>
+        <NamedIndividual IRI="Anxiety"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="cbi:AvailabilityBias"/>
+        <NamedIndividual IRI="AvailabilityBiasInstance"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="CognitiveProcess"/>
+        <NamedIndividual IRI="DecisionMaking"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Action"/>
+        <NamedIndividual IRI="Hyper-Vigilance"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="fs:Information"/>
+        <NamedIndividual IRI="NewsReport"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="cbi:BiasedAgent"/>
+        <NamedIndividual IRI="Parent"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="leadsTo"/>
+        <NamedIndividual IRI="Anxiety"/>
+        <NamedIndividual IRI="Hyper-Vigilance"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="leadsTo"/>
+        <NamedIndividual IRI="AvailabilityBiasInstance"/>
+        <NamedIndividual IRI="Anxiety"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="influences"/>
+        <NamedIndividual IRI="DecisionMaking"/>
+        <NamedIndividual IRI="AvailabilityBiasInstance"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="isBasedOn"/>
+        <NamedIndividual IRI="DecisionMaking"/>
+        <NamedIndividual IRI="NewsReport"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="cbi:isAffectedBy"/>
+        <NamedIndividual IRI="Parent"/>
+        <NamedIndividual IRI="AvailabilityBiasInstance"/>
+    </ObjectPropertyAssertion>
+    <InverseObjectProperties>
+        <ObjectProperty abbreviatedIRI="cbi:affects"/>
+        <ObjectProperty abbreviatedIRI="cbi:isAffectedBy"/>
+    </InverseObjectProperties>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="observation:producedObservation"/>
+        <Class abbreviatedIRI="cbi:BiasedAgent"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="creates"/>
+        <Class abbreviatedIRI="observation:Observation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="influences"/>
+        <Class abbreviatedIRI="cbi:AvailabilityBias"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="isBasedOn"/>
+        <Class abbreviatedIRI="cbi:AvailabilityBias"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="leadsTo"/>
+        <Class IRI="Emotion"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="cbi:isAffectedBy"/>
+        <Class abbreviatedIRI="cbi:BiasedAgent"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="observation:producedObservation"/>
+        <Class abbreviatedIRI="observation:Observation"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="creates"/>
+        <Class IRI="Emotion"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="influences"/>
+        <Class IRI="CognitiveProcess"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="isBasedOn"/>
+        <Class abbreviatedIRI="fs:Information"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="leadsTo"/>
+        <Class IRI="Action"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="cbi:isAffectedBy"/>
+        <Class abbreviatedIRI="cbi:AvailabilityBias"/>
+    </ObjectPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>observation:Observation</AbbreviatedIRI>
+        <Literal>To represent the epistemological &quot;missing link&quot; between a cognitive activity, e.g. the interaction with a cultural object, and any evidence of the effects this activity has on the individuals that are engaged with it; what can collectively be considered as an experience.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>observation:Observation</AbbreviatedIRI>
+        <Literal>http://modellingdh.github.io/ont/odp/term/</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>observation:Observation</AbbreviatedIRI>
+        <Literal>Observation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>observation:producedObservation</AbbreviatedIRI>
+        <Literal>To represent the epistemological &quot;missing link&quot; between a cognitive activity, e.g. the interaction with a cultural object, and any evidence of the effects this activity has on the individuals that are engaged with it; what can collectively be considered as an experience.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>observation:producedObservation</AbbreviatedIRI>
+        <Literal>http://modellingdh.github.io/ont/odp/term/</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>observation:producedObservation</AbbreviatedIRI>
+        <Literal>produced observation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Action</IRI>
+        <Literal>A behaviour outcome as a consequence of a decision in cognitive process.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>Action</IRI>
+        <Literal>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/AvailabilityBias/Availability_Bias.owl#Action</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Action</IRI>
+        <Literal>Action</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Anxiety</IRI>
+        <Literal>Anxiety</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>AvailabilityBiasInstance</IRI>
+        <Literal>Overestimation of the likelihood of a burglary due to vivid media coverage.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>AvailabilityBiasInstance</IRI>
+        <Literal>Availability Bias Instance</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>CognitiveProcess</IRI>
+        <Literal>Represents the general process of cognition.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>CognitiveProcess</IRI>
+        <Literal>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/AvailabilityBias/Availability_Bias.owl#CognitiveProcess</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>CognitiveProcess</IRI>
+        <Literal>Cognitive Process</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>DecisionMaking</IRI>
+        <Literal>Decision-making process influenced by vivid media coverage.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>DecisionMaking</IRI>
+        <Literal>Decision Making</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Emotion</IRI>
+        <Literal>Felt emotion, sensation by an agent</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>Emotion</IRI>
+        <Literal>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/AvailabilityBias/Availability_Bias.owl#Emotion</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Emotion</IRI>
+        <Literal>Emotion</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Hyper-Vigilance</IRI>
+        <Literal>Constantly checking doors and windows, insisting on installing expensive security measures.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Hyper-Vigilance</IRI>
+        <Literal>Hyper-Vigilance</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>NewsReport</IRI>
+        <Literal>Extensive coverage of a burglary in the neighborhood, highlighting the rise in break-ins.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>NewsReport</IRI>
+        <Literal>News Report</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Parent</IRI>
+        <Literal>Parent</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>creates</IRI>
+        <Literal>Affiliates observartion and the outcome of this observation action</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>creates</IRI>
+        <Literal>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/AvailabilityBias/Availability_Bias.owl#creates</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>creates</IRI>
+        <Literal>creates</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>influences</IRI>
+        <Literal>An entity having and effect on the other entity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>influences</IRI>
+        <Literal>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/AvailabilityBias/Availability_Bias.owl#influences</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>influences</IRI>
+        <Literal>influences</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>isBasedOn</IRI>
+        <Literal>Describes the relationship between availability bias and the information that individuals rely on.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>isBasedOn</IRI>
+        <Literal>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/AvailabilityBias/Availability_Bias.owl#isBasedOn</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>isBasedOn</IRI>
+        <Literal>is based on</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>leadsTo</IRI>
+        <Literal>Connects emotion to the leaded action</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>leadsTo</IRI>
+        <Literal>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/AvailabilityBias/Availability_Bias.owl#leadsTo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>leadsTo</IRI>
+        <Literal>leads to</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>cbi:AvailabilityBias</AbbreviatedIRI>
+        <Literal>Subclass of Bias, specifically representing availability bias.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>cbi:AvailabilityBias</AbbreviatedIRI>
+        <Literal>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#AvailabilityBias</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>cbi:AvailabilityBias</AbbreviatedIRI>
+        <Literal>Availability Bias</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>cbi:BiasedAgent</AbbreviatedIRI>
+        <Literal>Represents an entity that experiences the bias.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>cbi:BiasedAgent</AbbreviatedIRI>
+        <Literal>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#BiasedAgent</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>cbi:BiasedAgent</AbbreviatedIRI>
+        <Literal>Biased Agent</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>cbi:CognitiveBias</AbbreviatedIRI>
+        <Literal>Represents the overarching concept of cognitive biases.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>cbi:CognitiveBias</AbbreviatedIRI>
+        <Literal>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#CognitiveBias</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>cbi:CognitiveBias</AbbreviatedIRI>
+        <Literal>Cognitive Bias</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>cbi:affects</AbbreviatedIRI>
+        <Literal>Describes a relationship between the entities on the base of influence.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>cbi:affects</AbbreviatedIRI>
+        <Literal>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#affects</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>cbi:affects</AbbreviatedIRI>
+        <Literal>affects</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>cbi:isAffectedBy</AbbreviatedIRI>
+        <Literal>Describes the relationship between a cognitive bias and an individual on the base of influence.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>cbi:isAffectedBy</AbbreviatedIRI>
+        <Literal>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#isAffectedBy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>cbi:isAffectedBy</AbbreviatedIRI>
+        <Literal>is affected by</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>fs:Information</AbbreviatedIRI>
+        <Literal>A Cognizer knows or comes to know some piece of Information about a Topic. In this frame, many LUs encode a specific Means_of_Gathering and/or Source, but these may also be expressed separately. Also, the big problem is that our intel about WMD&apos;s has many times been wrong. Anyone got the straight dope on this? Get the inside scoop on sprint football player Austin Wilson. CNI I know him pretty well and I have a lot of dirt on him so I can always hold him over a barrel. What&apos;s the info about the new scanner chip?</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>fs:Information</AbbreviatedIRI>
+        <Literal>https://w3id.org/framester/data/framestercore/Information</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>fs:Information</AbbreviatedIRI>
+        <Literal>Information</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>fs:People</AbbreviatedIRI>
+        <Literal>This frame contains general words for Individuals, i.e. humans. The Person is conceived of as independent of other specific individuals with whom they have relationships and independent of their participation in any particular activity. They may have an Age, Descriptor, Origin, Persistent_characteristic, or Ethnicity. A man from Phoenix was shot yesterday. She gave birth to a screaming baby yesterday. I study 16-year-old female adolescents. I am dating an African-American man. She comforted the terrified child. I always thought of him as a stupid man.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>fs:People</AbbreviatedIRI>
+        <Literal>https://w3id.org/framester/data/framestercore/People</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>fs:People</AbbreviatedIRI>
+        <Literal>People</Literal>
+    </AnnotationAssertion>
+</Ontology>
 
 
 
