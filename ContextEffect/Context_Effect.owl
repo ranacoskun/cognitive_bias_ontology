@@ -1,193 +1,631 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
-     xml:base="http://www.w3.org/2002/07/owl"
-     xmlns:fs="https://w3id.org/framester/data/framestercore"
-     xmlns:cbi="https://github.com/ranacoskun/cognitive_bias_ontology/"
-     xmlns:dul="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#"
-     xmlns:owl="http://www.w3.org/2002/07/owl#"
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/ContextEffect/Context_Effect.owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:cbcm="http://w3id.org/um/cbcm/eu-cm-ontology#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:emotion="http://ns.inria.fr/emoca/"
-     xmlns:classification="http://www.ontologydesignpatterns.org/cp/owl/classification.owl">
-    <Ontology rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/ContextEffect/Context_Effect.owl"/>
-    
+     ontologyIRI="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/ContextEffect/Context_Effect.owl#">
+    <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="dc" IRI="http://purl.org/dc/elements/1.1/"/>
+    <Prefix name="fs" IRI="https://w3id.org/framester/data/framestercore/"/>
+    <Prefix name="cbi" IRI="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#"/>
+    <Prefix name="coe" IRI="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/ContextEffect/Context_Effect.owl#"/>
+    <Prefix name="dul" IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="cbcm" IRI="http://w3id.org/um/cbcm/eu-cm-ontology#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="emotion" IRI="http://ns.inria.fr/emoca/"/>
+    <Prefix name="reaction" IRI="http://www.ontologydesignpatterns.org/cp/owl/reaction.owl/"/>
+    <Prefix name="classification" IRI="http://www.ontologydesignpatterns.org/cp/owl/classification.owl"/>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+        <Literal>Irem Atmar</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal>A context effect refers to the influence that the surrounding environment or circumstances have on perception, cognition, decision-making, or behavior. This effect suggests that how something is perceived or understood can be significantly impacted by the context in which it is presented or experienced. Context effects can manifest in various ways, such as priming, framing, or situational cues, and they play a crucial role in shaping human experiences and responses to stimuli.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <Literal>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/ContextEffect/Context_Effect.owl/</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <Literal>Context Effect</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <Literal>http://ontologydesignpatterns.org/wiki/Submissions:Reaction</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <Literal>http://www.ontologydesignpatterns.org/ont/dul/DUL.owl</Literal>
+    </Annotation>
+    <Declaration>
+        <Class abbreviatedIRI="emotion:Stimulus"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="cbcm:Behaviour"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="dul:Situation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Context"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Perception"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="cbi:BiasedAgent"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="cbi:CognitiveBias"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="cbi:ContextEffect"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="fs:Deciding"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="fs:People"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="emotion:pertainsTo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="reaction:hasOutcome"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasStimulus"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="influences"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="isBoundTo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="cbi:affects"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="cbi:isAffectedBy"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="ContextEffectInstance"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="DinerDecision"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="ElegantDecor"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="HigherPrices"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="JaneDoe"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="MealOrder"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="NearbyRestaurant"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="UpscaleAmbiance"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+    </Declaration>
+    <SubClassOf>
+        <Class abbreviatedIRI="cbi:BiasedAgent"/>
+        <Class abbreviatedIRI="fs:People"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="cbi:ContextEffect"/>
+        <Class abbreviatedIRI="cbi:CognitiveBias"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class abbreviatedIRI="cbi:ContextEffect"/>
+        <NamedIndividual IRI="ContextEffectInstance"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="fs:Deciding"/>
+        <NamedIndividual IRI="DinerDecision"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="emotion:Stimulus"/>
+        <NamedIndividual IRI="ElegantDecor"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="emotion:Stimulus"/>
+        <NamedIndividual IRI="HigherPrices"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="cbi:BiasedAgent"/>
+        <NamedIndividual IRI="JaneDoe"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="cbcm:Behaviour"/>
+        <NamedIndividual IRI="MealOrder"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Context"/>
+        <NamedIndividual IRI="NearbyRestaurant"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="dul:Situation"/>
+        <NamedIndividual IRI="UpscaleAmbiance"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="reaction:hasOutcome"/>
+        <NamedIndividual IRI="DinerDecision"/>
+        <NamedIndividual IRI="MealOrder"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="influences"/>
+        <NamedIndividual IRI="ElegantDecor"/>
+        <NamedIndividual IRI="DinerDecision"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="influences"/>
+        <NamedIndividual IRI="HigherPrices"/>
+        <NamedIndividual IRI="DinerDecision"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="cbi:isAffectedBy"/>
+        <NamedIndividual IRI="JaneDoe"/>
+        <NamedIndividual IRI="ContextEffectInstance"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="hasStimulus"/>
+        <NamedIndividual IRI="MealOrder"/>
+        <NamedIndividual IRI="HigherPrices"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="isBoundTo"/>
+        <NamedIndividual IRI="NearbyRestaurant"/>
+        <NamedIndividual IRI="ContextEffectInstance"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="influences"/>
+        <NamedIndividual IRI="UpscaleAmbiance"/>
+        <NamedIndividual IRI="DinerDecision"/>
+    </ObjectPropertyAssertion>
+    <InverseObjectProperties>
+        <ObjectProperty abbreviatedIRI="cbi:affects"/>
+        <ObjectProperty abbreviatedIRI="cbi:isAffectedBy"/>
+    </InverseObjectProperties>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="emotion:pertainsTo"/>
+        <Class abbreviatedIRI="dul:Situation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="reaction:hasOutcome"/>
+        <Class abbreviatedIRI="fs:Deciding"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasStimulus"/>
+        <Class abbreviatedIRI="dul:Situation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="influences"/>
+        <Class IRI="Context"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="isBoundTo"/>
+        <Class abbreviatedIRI="cbi:ContextEffect"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="cbi:isAffectedBy"/>
+        <Class abbreviatedIRI="cbi:BiasedAgent"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="emotion:pertainsTo"/>
+        <Class IRI="Context"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="reaction:hasOutcome"/>
+        <Class abbreviatedIRI="cbcm:Behaviour"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasStimulus"/>
+        <Class abbreviatedIRI="emotion:Stimulus"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="influences"/>
+        <ObjectUnionOf>
+            <Class IRI="Perception"/>
+            <Class abbreviatedIRI="fs:Deciding"/>
+        </ObjectUnionOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="isBoundTo"/>
+        <Class IRI="Context"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="cbi:isAffectedBy"/>
+        <Class abbreviatedIRI="cbi:ContextEffect"/>
+    </ObjectPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>emotion:Stimulus</AbbreviatedIRI>
+        <Literal>The Stimulus class representing any object shown to the user.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>emotion:Stimulus</AbbreviatedIRI>
+        <Literal>http://ns.inria.fr/emoca/Stimulus</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>emotion:Stimulus</AbbreviatedIRI>
+        <Literal>Stimulus</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>emotion:pertainsTo</AbbreviatedIRI>
+        <Literal>The property associates an impact to a component.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>emotion:pertainsTo</AbbreviatedIRI>
+        <Literal>http://ns.inria.fr/emoca/pertainsTo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>emotion:pertainsTo</AbbreviatedIRI>
+        <Literal>pertains to</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>cbcm:Behaviour</AbbreviatedIRI>
+        <Literal>Behaviour is the set of actions and mannerisms made by systems (biological or otherwise) in response to stimuli or inputs, whether internal or external, conscious or subconscious, overt or covert, and voluntary or involuntary.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>cbcm:Behaviour</AbbreviatedIRI>
+        <Literal>http://w3id.org/um/cbcm/eu-cm-ontology#Behaviour</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>cbcm:Behaviour</AbbreviatedIRI>
+        <Literal>Behaviour</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>reaction:hasOutcome</AbbreviatedIRI>
+        <Literal>To model dynamic situations, tracking agents and actions they produce, events that are results of some action(s), and consequences as new actions, i.e. reactions.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>reaction:hasOutcome</AbbreviatedIRI>
+        <Literal>http://www.ontologydesignpatterns.org/cp/owl/reaction.owl/</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>reaction:hasOutcome</AbbreviatedIRI>
+        <Literal>has outcome</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>dul:Situation</AbbreviatedIRI>
+        <Literal>To provide a set of upper level concepts that can be the basis for easier interoperability among many middle and lower level ontologies.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>dul:Situation</AbbreviatedIRI>
+        <Literal>http://www.ontologydesignpatterns.org/ont/dul/DUL.owl</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>dul:Situation</AbbreviatedIRI>
+        <Literal>Situation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Context</IRI>
+        <Literal>Represents the environment or situation.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>Context</IRI>
+        <Literal>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/ContextEffect/Context_Effect.owl#Context</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Context</IRI>
+        <Literal>Context</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>ContextEffectInstance</IRI>
+        <Literal>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/ContextEffect/Context_Effect.owl#ContextEffectInstance</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>ContextEffectInstance</IRI>
+        <Literal>Context Effect Instance</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>DinerDecision</IRI>
+        <Literal>Represents the decision made by the diner (Jane Doe) to stay and order a meal.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>DinerDecision</IRI>
+        <Literal>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/ContextEffect/Context_Effect.owl#DinerDecision</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>DinerDecision</IRI>
+        <Literal>Diner Decision</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>ElegantDecor</IRI>
+        <Literal>Represents the elegant decor of the restaurant which influences the diner&apos;s perception and decision.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>ElegantDecor</IRI>
+        <Literal>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/ContextEffect/Context_Effect.owl#ElegantDecor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>ElegantDecor</IRI>
+        <Literal>Elegant Decor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>HigherPrices</IRI>
+        <Literal>Represents the prices which are slightly higher than expected for a casual dining experience.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>HigherPrices</IRI>
+        <Literal>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/ContextEffect/Context_Effect.owl#HigherPrices</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>HigherPrices</IRI>
+        <Literal>Higher Prices</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>JaneDoe</IRI>
+        <Literal>Represents the diner who is conscious about not overspending.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>JaneDoe</IRI>
+        <Literal>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/ContextEffect/Context_Effect.owl#JaneDoe</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>JaneDoe</IRI>
+        <Literal>Jane Doe</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>MealOrder</IRI>
+        <Literal>Represents the action of ordering a meal, influenced by the prices on the menu.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>MealOrder</IRI>
+        <Literal>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/ContextEffect/Context_Effect.owl#MealOrder</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>MealOrder</IRI>
+        <Literal>Meal Order</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>NearbyRestaurant</IRI>
+        <Literal>Represents the restaurant the diner (Jane Doe) decides to visit.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>NearbyRestaurant</IRI>
+        <Literal>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/ContextEffect/Context_Effect.owl#NearbyRestaurant</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>NearbyRestaurant</IRI>
+        <Literal>Nearby Restaurant</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Perception</IRI>
+        <Literal>The process by which individuals organize, interpret, and make sense of sensory information from the environment.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>Perception</IRI>
+        <Literal>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/ContextEffect/Context_Effect.owl#Perception</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Perception</IRI>
+        <Literal>Perception</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>UpscaleAmbiance</IRI>
+        <Literal>Represents the upscale ambiance of the restaurant which makes the diner (Jane Doe) hesitate.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>UpscaleAmbiance</IRI>
+        <Literal>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/ContextEffect/Context_Effect.owl#UpscaleAmbiance</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>UpscaleAmbiance</IRI>
+        <Literal>Upscale Ambaince</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasStimulus</IRI>
+        <Literal>Describes the relationship between an individual and the stimulus they are exposed to.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>hasStimulus</IRI>
+        <Literal>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/ContextEffect/Context_Effect.owl#hasStimulus</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasStimulus</IRI>
+        <Literal>has Stimulus</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>influences</IRI>
+        <Literal>An entity having and effect on the other entity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>influences</IRI>
+        <Literal>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/ContextEffect/Context_Effect.owl#influences</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>influences</IRI>
+        <Literal>influences</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>isBoundTo</IRI>
+        <Literal>Reflects the relationship between Context Effect and entity that it is bound to</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>isBoundTo</IRI>
+        <Literal>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/ContextEffect/Context_Effect.owl#isBoundTo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>isBoundTo</IRI>
+        <Literal>is bound to</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>cbi:BiasedAgent</AbbreviatedIRI>
+        <Literal>Represents an entity that experiences the bias.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>cbi:BiasedAgent</AbbreviatedIRI>
+        <Literal>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#BiasedAgent</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>cbi:BiasedAgent</AbbreviatedIRI>
+        <Literal>Biased Agent</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>cbi:CognitiveBias</AbbreviatedIRI>
+        <Literal>Represents the overarching concept of cognitive biases.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>cbi:CognitiveBias</AbbreviatedIRI>
+        <Literal>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#CognitiveBias</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>cbi:CognitiveBias</AbbreviatedIRI>
+        <Literal>Cognitive Bias</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>cbi:ContextEffect</AbbreviatedIRI>
+        <Literal>Subclass of Bias, specifically representing Context Effect.
 
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Object Properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://www.w3.org/2000/01/rdf-schema#subClassOf -->
-
-    <ObjectProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#subClassOf">
-        <rdfs:domain rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:ContextEffect"/>
-        <rdfs:range rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:CognitiveBias"/>
-        <rdfs:comment>The subject is a subclass of a class.</rdfs:comment>
-    </ObjectProperty>
-    
-
-
-    <!-- https://github.com/ranacoskun/cognitive_bias_ontology/affectedBy -->
-
-    <ObjectProperty rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology/affectedBy">
-        <rdfs:domain rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:BiasedAgent"/>
-        <rdfs:range rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:ContextEffect"/>
-        <rdfs:comment>Describes a relationship between to entities on the base of influence.</rdfs:comment>
-    </ObjectProperty>
-    
-
-
-    <!-- https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:affects -->
-
-    <ObjectProperty rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:affects">
-        <rdfs:domain rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:Context"/>
-        <rdfs:range rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:Perception"/>
-        <rdfs:range rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/#fs:Deciding"/>
-        <rdfs:comment>Describes an affect of an entity on the other.</rdfs:comment>
-    </ObjectProperty>
-    
-
-
-    <!-- https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:hasStimulus -->
-
-    <ObjectProperty rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:hasStimulus">
-        <rdfs:domain rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/#dul:Situation"/>
-        <rdfs:range rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/#emotion:Stimulus"/>
-        <rdfs:comment>Describes the relationship between an individual and the stimulus they are exposed to.</rdfs:comment>
-    </ObjectProperty>
-    
-
-
-    <!-- https://github.com/ranacoskun/cognitive_bias_ontology/#classification:isClassifiedBy -->
-
-    <ObjectProperty rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology/#classification:isClassifiedBy">
-        <rdfs:domain rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:BiasedAgent"/>
-        <rdfs:range rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/#fs:People"/>
-        <rdfs:comment>To represent the relations between concepts (roles, task, parameters) and entities (person, events, values), which concepts can be assigned to. To formalize the application (e.g. tagging) of informal knowledge organization systems such as lexica, thesauri, subject directories, folksonomies, etc., where concepts are first-order elements.</rdfs:comment>
-    </ObjectProperty>
-    
-
-
-    <!-- https://github.com/ranacoskun/cognitive_bias_ontology/#emotion:pertainsTo -->
-
-    <ObjectProperty rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology/#emotion:pertainsTo">
-        <rdfs:domain rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/#dul:Situation"/>
-        <rdfs:range rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:Context"/>
-        <rdfs:comment>The property associates an emoca:Impact to a emoca:Component</rdfs:comment>
-    </ObjectProperty>
-    
-
-
-    <!-- https://github.com/ranacoskun/cognitive_bias_ontology/#reaction:hasOutcome -->
-
-    <ObjectProperty rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology/#reaction:hasOutcome">
-        <rdfs:domain rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:ContextEffect"/>
-        <rdfs:domain rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/#fs:Deciding"/>
-        <rdfs:range rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/#cbcm:Behaviour"/>
-        <rdfs:comment>To model dynamic situations, tracking agents and actions they produce, events that are results of some action(s), and consequences as new actions, i.e. reactions.</rdfs:comment>
-    </ObjectProperty>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Classes
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- https://github.com/ranacoskun/cognitive_bias_ontology/#cbcm:Behaviour -->
-
-    <Class rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology/#cbcm:Behaviour">
-        <rdfs:comment>Behaviour is the set of actions and mannerisms made by systems (biological or otherwise) in response to stimuli or inputs, whether internal or external, conscious or subconscious, overt or covert, and voluntary or involuntary.</rdfs:comment>
-    </Class>
-    
-
-
-    <!-- https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:BiasedAgent -->
-
-    <Class rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:BiasedAgent">
-        <rdfs:comment>Represents an entity that experiences the bias.</rdfs:comment>
-    </Class>
-    
-
-
-    <!-- https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:CognitiveBias -->
-
-    <Class rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:CognitiveBias">
-        <rdfs:comment>Represents the overarching concept of cognitive biases.</rdfs:comment>
-    </Class>
-    
-
-
-    <!-- https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:Context -->
-
-    <Class rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:Context">
-        <rdfs:comment>Represents the environment or situation.</rdfs:comment>
-    </Class>
-    
-
-
-    <!-- https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:ContextEffect -->
-
-    <Class rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:ContextEffect">
-        <rdfs:comment>Subclass of Bias, specifically representing Context Effect.</rdfs:comment>
-    </Class>
-    
-
-
-    <!-- https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:Perception -->
-
-    <Class rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:Perception">
-        <rdfs:comment>The process by which individuals organize, interpret, and make sense of sensory information from the environment.</rdfs:comment>
-    </Class>
-    
-
-
-    <!-- https://github.com/ranacoskun/cognitive_bias_ontology/#dul:Situation -->
-
-    <Class rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology/#dul:Situation">
-        <rdfs:comment>To provide a set of upper level concepts that can be the basis for easier interoperability among many middle and lower level ontologies.</rdfs:comment>
-    </Class>
-    
-
-
-    <!-- https://github.com/ranacoskun/cognitive_bias_ontology/#emotion:Stimulus -->
-
-    <Class rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology/#emotion:Stimulus">
-        <rdfs:comment>The Stimulus class representing any object shown to the user.</rdfs:comment>
-    </Class>
-    
-
-
-    <!-- https://github.com/ranacoskun/cognitive_bias_ontology/#fs:Deciding -->
-
-    <Class rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology/#fs:Deciding">
-        <rdfs:comment xml:lang="en">A Cognizer makes a Decision, which may be about an entity or a course of action. How (and whether) this frame is distinct from Choosing is currently up for debate. Mo decided to quit the program.  </rdfs:comment>
-    </Class>
-    
-
-
-    <!-- https://github.com/ranacoskun/cognitive_bias_ontology/#fs:People -->
-
-    <Class rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology/#fs:People">
-        <rdfs:comment>This frame contains general words for Individuals, i.e. humans. The Person is conceived of as independent of other specific individuals with whom they have relationships and independent of their participation in any particular activity. They may have an Age, Descriptor, Origin, Persistent_characteristic, or Ethnicity. A man from Phoenix was shot yesterday. She gave birth to a screaming baby yesterday. I study 16-year-old female adolescents. I am dating an African-American man. She comforted the terrified child. I always thought of him as a stupid man.</rdfs:comment>
-    </Class>
-</rdf:RDF>
+A context effect refers to the influence that the surrounding environment or circumstances have on perception, cognition, decision-making, or behavior. This effect suggests that how something is perceived or understood can be significantly impacted by the context in which it is presented or experienced. Context effects can manifest in various ways, such as priming, framing, or situational cues, and they play a crucial role in shaping human experiences and responses to stimuli.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>cbi:ContextEffect</AbbreviatedIRI>
+        <Literal>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#ContextEffect</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>cbi:ContextEffect</AbbreviatedIRI>
+        <Literal>Context Effect</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>cbi:affects</AbbreviatedIRI>
+        <Literal>Inverse of isAffectedBy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>cbi:affects</AbbreviatedIRI>
+        <Literal>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#affects</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>cbi:affects</AbbreviatedIRI>
+        <Literal>affects</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>cbi:isAffectedBy</AbbreviatedIRI>
+        <Literal>Describes the relationship between a cognitive bias and an individual on the base of influence.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>cbi:isAffectedBy</AbbreviatedIRI>
+        <Literal>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#isAffectedBy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>cbi:isAffectedBy</AbbreviatedIRI>
+        <Literal>is affected by</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>fs:Deciding</AbbreviatedIRI>
+        <Literal>A Cognizer makes a Decision, which may be about an entity or a course of action. How (and whether) this frame is distinct from Choosing is currently up for debate. Mo decided to quit the program.  @en</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>fs:Deciding</AbbreviatedIRI>
+        <Literal>https://w3id.org/framester/data/framestercore/Deciding</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>fs:Deciding</AbbreviatedIRI>
+        <Literal>Deciding</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>fs:People</AbbreviatedIRI>
+        <Literal>This frame contains general words for Individuals, i.e. humans. The Person is conceived of as independent of other specific individuals with whom they have relationships and independent of their participation in any particular activity. They may have an Age, Descriptor, Origin, Persistent_characteristic, or Ethnicity. A man from Phoenix was shot yesterday. She gave birth to a screaming baby yesterday. I study 16-year-old female adolescents. I am dating an African-American man. She comforted the terrified child. I always thought of him as a stupid man.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>fs:People</AbbreviatedIRI>
+        <Literal>https://w3id.org/framester/data/framestercore/People</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>fs:People</AbbreviatedIRI>
+        <Literal>People</Literal>
+    </AnnotationAssertion>
+</Ontology>
 
 
 
