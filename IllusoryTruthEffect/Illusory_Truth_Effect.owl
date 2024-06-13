@@ -1,187 +1,483 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
-     xml:base="http://www.w3.org/2002/07/owl"
-     xmlns:fs="https://w3id.org/framester/data/framestercore"
-     xmlns:cbi="https://github.com/ranacoskun/cognitive_bias_ontology/"
-     xmlns:owl="http://www.w3.org/2002/07/owl#"
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/IllusoryTruthEffect/Illusory_Truth_Effect.owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:reaction="http://www.ontologydesignpatterns.org/cp/owl/reaction.owl"
-     xmlns:dbpedia-owl="http://dbpedia.org/ontology/"
-     xmlns:classification="http://www.ontologydesignpatterns.org/cp/owl/classification.owl">
-    <Ontology rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/IllusoryTruthEffect/Illusory_Truth_Effect.owl"/>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Object Properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://www.w3.org/2000/01/rdf-schema#subClassOf -->
-
-    <ObjectProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#subClassOf">
-        <rdfs:domain rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:IllusoryTruthEffect"/>
-        <rdfs:range rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:CognitiveBias"/>
-        <rdfs:comment>The subject is a subclass of a class.</rdfs:comment>
-    </ObjectProperty>
-    
-
-
-    <!-- https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:affectedBy -->
-
-    <ObjectProperty rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:affectedBy">
-        <rdfs:domain rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:BiasedAgent"/>
-        <rdfs:domain rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/#fs:People"/>
-        <rdfs:range rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:IllusoryTruthEffect"/>
-        <rdfs:range rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:Repetition"/>
-        <rdfs:comment>Describes a relationship between to entities on the base of influence.</rdfs:comment>
-    </ObjectProperty>
-    
-
-
-    <!-- https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:affects -->
-
-    <ObjectProperty rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:affects">
-        <rdfs:domain rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:BeliefFormation"/>
-        <rdfs:range rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/#fs:Information"/>
-        <rdfs:comment>Describes an affect of an entity on the other.</rdfs:comment>
-    </ObjectProperty>
-    
-
-
-    <!-- https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:disseminates -->
-
-    <ObjectProperty rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:disseminates">
-        <rdfs:domain rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:Medium"/>
-        <rdfs:range rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/#fs:Information"/>
-        <rdfs:comment>Signifies the spread or transmission of information.</rdfs:comment>
-    </ObjectProperty>
-    
-
-
-    <!-- https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:receives -->
-
-    <ObjectProperty rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:receives">
-        <rdfs:domain rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/#fs:People"/>
-        <rdfs:range rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/#fs:Information"/>
-        <rdfs:comment>Denotes the entity or entities that receive the effects, consequences, or outcomes associated.</rdfs:comment>
-    </ObjectProperty>
-    
-
-
-    <!-- https://github.com/ranacoskun/cognitive_bias_ontology/#classification:isClassifiedBy -->
-
-    <ObjectProperty rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology/#classification:isClassifiedBy">
-        <rdfs:domain rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:BiasedAgent"/>
-        <rdfs:range rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/#fs:People"/>
-        <rdfs:comment>To represent the relations between concepts (roles, task, parameters) and entities (person, events, values), which concepts can be assigned to. To formalize the application (e.g. tagging) of informal knowledge organization systems such as lexica, thesauri, subject directories, folksonomies, etc., where concepts are first-order elements.</rdfs:comment>
-    </ObjectProperty>
-    
-
-
-    <!-- https://github.com/ranacoskun/cognitive_bias_ontology/#dbpedia-owl:uses -->
-
-    <ObjectProperty rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology/#dbpedia-owl:uses">
-        <rdfs:domain rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:Repetition"/>
-        <rdfs:range rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:Medium"/>
-    </ObjectProperty>
-    
-
-
-    <!-- https://github.com/ranacoskun/cognitive_bias_ontology/#reaction:hasOutcome -->
-
-    <ObjectProperty rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology/#reaction:hasOutcome">
-        <rdfs:domain rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:BeliefFormation"/>
-        <rdfs:domain rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:IllusoryTruthEffect"/>
-        <rdfs:range rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:BeliefFormation"/>
-        <rdfs:range rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:Repetition"/>
-        <rdfs:comment>To model dynamic situations, tracking agents and actions they produce, events that are results of some action(s), and consequences as new actions, i.e. reactions.</rdfs:comment>
-    </ObjectProperty>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Classes
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:BeliefFormation -->
-
-    <Class rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:BeliefFormation">
-        <rdfs:comment>The process through which individuals develop and maintain their beliefs over time.</rdfs:comment>
-    </Class>
-    
-
-
-    <!-- https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:BiasedAgent -->
-
-    <Class rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:BiasedAgent">
-        <rdfs:comment>Represents the person affected by bias.</rdfs:comment>
-    </Class>
-    
-
-
-    <!-- https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:CognitiveBias -->
-
-    <Class rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:CognitiveBias">
-        <rdfs:comment>Represents the overarching concept of cognitive biases.</rdfs:comment>
-    </Class>
-    
-
-
-    <!-- https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:IllusoryTruthEffect -->
-
-    <Class rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:IllusoryTruthEffect">
-        <rdfs:comment>Subclass of Bias, specifically representing Illusory Truth Effect.</rdfs:comment>
-    </Class>
-    
-
-
-    <!-- https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:Medium -->
-
-    <Class rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:Medium">
-        <rdfs:comment>Represents the medium through which a statement is communicated.</rdfs:comment>
-    </Class>
-    
-
-
-    <!-- https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:Repetition -->
-
-    <Class rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology/#cbi:Repetition">
-        <rdfs:comment>The cognitive process of repeated exposure to information, stimuli, or experiences.</rdfs:comment>
-    </Class>
-    
-
-
-    <!-- https://github.com/ranacoskun/cognitive_bias_ontology/#fs:Information -->
-
-    <Class rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology/#fs:Information">
-        <rdfs:comment>A Cognizer knows or comes to know some piece of Information about a Topic. In this frame, many LUs encode a specific Means_of_Gathering and/or Source, but these may also be expressed separately. Also, the big problem is that our intel about WMD&apos;s has many times been wrong. Anyone got the straight dope on this? Get the inside scoop on sprint football player Austin Wilson. CNI I know him pretty well and I have a lot of dirt on him so I can always hold him over a barrel. What&apos;s the info about the new scanner chip?</rdfs:comment>
-    </Class>
-    
-
-
-    <!-- https://github.com/ranacoskun/cognitive_bias_ontology/#fs:People -->
-
-    <Class rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology/#fs:People">
-        <rdfs:comment>This frame contains general words for Individuals, i.e. humans. The Person is conceived of as independent of other specific individuals with whom they have relationships and independent of their participation in any particular activity. They may have an Age, Descriptor, Origin, Persistent_characteristic, or Ethnicity. A man from Phoenix was shot yesterday. She gave birth to a screaming baby yesterday. I study 16-year-old female adolescents. I am dating an African-American man. She comforted the terrified child. I always thought of him as a stupid man.</rdfs:comment>
-    </Class>
-</rdf:RDF>
+     ontologyIRI="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/IllusoryTruthEffect/Illusory_Truth_Effect.owl#">
+    <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="dc" IRI="http://purl.org/dc/elements/1.1/"/>
+    <Prefix name="fs" IRI="https://w3id.org/framester/data/framestercore/"/>
+    <Prefix name="cbi" IRI="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#"/>
+    <Prefix name="ite" IRI="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/IllusoryTruthEffect/Illusory_Truth_Effect.owl#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="reaction" IRI="http://www.ontologydesignpatterns.org/cp/owl/reaction.owl/"/>
+    <Prefix name="dbpedia-owl" IRI="http://dbpedia.org/ontology/"/>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal>Irem Atmar</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal>The illusory truth effect is a cognitive bias where people are more likely to believe that statements are true if they have heard them before, regardless of their actual veracity. This effect demonstrates how repetition can lead to increased belief in a statement, even if it is false or lacking in evidence. Essentially, familiarity breeds credibility in the minds of individuals, influencing their perception of truth.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <Literal>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/IllusoryTruthEffect/Illusory_Truth_Effect.owl/</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <Literal>Illusory Truth Effect</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <Literal>http://ontologydesignpatterns.org/wiki/Submissions:Reaction</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="BeliefFormation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Medium"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Repetition"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="cbi:BiasedAgent"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="cbi:CognitiveBias"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="cbi:IllusoryTruthEffect"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="fs:Information"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="fs:People"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="dbpedia-owl:uses"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="reaction:hasOutcome"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="disseminates"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="leadsTo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="receives"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="cbi:affects"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="cbi:isAffectedBy"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Affirmations"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="IncreasedConfidence"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Mirror"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Sarah"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="TellingAffirmationsDaily"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+    </Declaration>
+    <SubClassOf>
+        <Class abbreviatedIRI="cbi:BiasedAgent"/>
+        <Class abbreviatedIRI="fs:People"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="cbi:IllusoryTruthEffect"/>
+        <Class abbreviatedIRI="cbi:CognitiveBias"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class abbreviatedIRI="fs:Information"/>
+        <NamedIndividual IRI="Affirmations"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BeliefFormation"/>
+        <NamedIndividual IRI="IncreasedConfidence"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Medium"/>
+        <NamedIndividual IRI="Mirror"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="cbi:BiasedAgent"/>
+        <NamedIndividual IRI="Sarah"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Repetition"/>
+        <NamedIndividual IRI="TellingAffirmationsDaily"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="disseminates"/>
+        <NamedIndividual IRI="Mirror"/>
+        <NamedIndividual IRI="Affirmations"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="receives"/>
+        <NamedIndividual IRI="Sarah"/>
+        <NamedIndividual IRI="Affirmations"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="dbpedia-owl:uses"/>
+        <NamedIndividual IRI="TellingAffirmationsDaily"/>
+        <NamedIndividual IRI="Mirror"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="leadsTo"/>
+        <NamedIndividual IRI="TellingAffirmationsDaily"/>
+        <NamedIndividual IRI="IncreasedConfidence"/>
+    </ObjectPropertyAssertion>
+    <InverseObjectProperties>
+        <ObjectProperty abbreviatedIRI="cbi:affects"/>
+        <ObjectProperty abbreviatedIRI="cbi:isAffectedBy"/>
+    </InverseObjectProperties>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="dbpedia-owl:uses"/>
+        <Class IRI="Repetition"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="reaction:hasOutcome"/>
+        <Class abbreviatedIRI="cbi:IllusoryTruthEffect"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="disseminates"/>
+        <Class IRI="Medium"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="leadsTo"/>
+        <Class IRI="Repetition"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="receives"/>
+        <Class abbreviatedIRI="cbi:BiasedAgent"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="cbi:isAffectedBy"/>
+        <Class abbreviatedIRI="cbi:BiasedAgent"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="dbpedia-owl:uses"/>
+        <Class IRI="Medium"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="reaction:hasOutcome"/>
+        <Class IRI="BeliefFormation"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="disseminates"/>
+        <Class abbreviatedIRI="fs:Information"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="leadsTo"/>
+        <Class IRI="BeliefFormation"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="receives"/>
+        <Class abbreviatedIRI="fs:Information"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="cbi:isAffectedBy"/>
+        <Class abbreviatedIRI="cbi:IllusoryTruthEffect"/>
+    </ObjectPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>dbpedia-owl:uses</AbbreviatedIRI>
+        <Literal>http://dbpedia.org/ontology/uses</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>dbpedia-owl:uses</AbbreviatedIRI>
+        <Literal>uses</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>reaction:hasOutcome</AbbreviatedIRI>
+        <Literal>Is also true that some action directly preceeds its outcome</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>reaction:hasOutcome</AbbreviatedIRI>
+        <Literal>To model dynamic situations, tracking agents and actions they produce, events that are results of some action(s), and consequences as new actions, i.e. reactions.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>reaction:hasOutcome</AbbreviatedIRI>
+        <Literal>http://www.ontologydesignpatterns.org/cp/owl/reaction.owl/</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>reaction:hasOutcome</AbbreviatedIRI>
+        <Literal>has outcome</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Affirmations</IRI>
+        <Literal>The affirmation statement Sarah repeats to boost her confidence.
+&quot;I am confident and capable&quot;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Affirmations</IRI>
+        <Literal>Affirmations</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>BeliefFormation</IRI>
+        <Literal>The process through which individuals develop and maintain their beliefs over time.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>BeliefFormation</IRI>
+        <Literal>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/IllusoryTruthEffect/Illusory_Truth_Effect.owl#BeliefFormation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>BeliefFormation</IRI>
+        <Literal>Belief Formation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>IncreasedConfidence</IRI>
+        <Literal>The resulting belief formation where Sarah feels more confident in her abilities at work and social situations.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>IncreasedConfidence</IRI>
+        <Literal>Increased Confidence</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Medium</IRI>
+        <Literal>Represents the medium through which a statement is communicated.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>Medium</IRI>
+        <Literal>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/IllusoryTruthEffect/Illusory_Truth_Effect.owl#Medium</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Medium</IRI>
+        <Literal>Medium</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Mirror</IRI>
+        <Literal>The medium through which Sarah practices her daily affirmations.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Mirror</IRI>
+        <Literal>Mirror</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Repetition</IRI>
+        <Literal>The cognitive process of repeated exposure to information, stimuli, or experiences.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>Repetition</IRI>
+        <Literal>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/IllusoryTruthEffect/Illusory_Truth_Effect.owl#Repetition</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Repetition</IRI>
+        <Literal>Repetition</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Sarah</IRI>
+        <Literal>Sarah, the individual on a journey of self-improvement, practicing daily affirmations.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Sarah</IRI>
+        <Literal>Sarah</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>TellingAffirmationsDaily</IRI>
+        <Literal>The practice of Sarah repeating affirmations daily.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>TellingAffirmationsDaily</IRI>
+        <Literal>Telling Affirmations Daily</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>disseminates</IRI>
+        <Literal>Signifies the spread or transmission of information.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>disseminates</IRI>
+        <Literal>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/IllusoryTruthEffect/Illusory_Truth_Effect.owl#disseminates</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>disseminates</IRI>
+        <Literal>disseminates</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>leadsTo</IRI>
+        <Literal>Describes the relationship between the Class and the outcome it leads to</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>leadsTo</IRI>
+        <Literal>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/IllusoryTruthEffect/Illusory_Truth_Effect.owl#leadsTo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>leadsTo</IRI>
+        <Literal>leads to</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>receives</IRI>
+        <Literal>Denotes the entity or entities that receive the effects, consequences, or outcomes associated.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>receives</IRI>
+        <Literal>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/IllusoryTruthEffect/Illusory_Truth_Effect.owl#receives</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>receives</IRI>
+        <Literal>receives</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>cbi:BiasedAgent</AbbreviatedIRI>
+        <Literal>Represents the person affected by bias.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>cbi:BiasedAgent</AbbreviatedIRI>
+        <Literal>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#BiasedAgent</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>cbi:BiasedAgent</AbbreviatedIRI>
+        <Literal>Biased Agent</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>cbi:CognitiveBias</AbbreviatedIRI>
+        <Literal>Represents the overarching concept of cognitive biases.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>cbi:CognitiveBias</AbbreviatedIRI>
+        <Literal>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#CognitiveBias</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>cbi:CognitiveBias</AbbreviatedIRI>
+        <Literal>Cognitive Bias</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>cbi:IllusoryTruthEffect</AbbreviatedIRI>
+        <Literal>Subclass of Bias, specifically representing Illusory Truth Effect.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>cbi:IllusoryTruthEffect</AbbreviatedIRI>
+        <Literal>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#IllusoryTruthEffect</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>cbi:IllusoryTruthEffect</AbbreviatedIRI>
+        <Literal>Illusory Truth Effect</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>cbi:affects</AbbreviatedIRI>
+        <Literal>Inverse of isAffectedBy.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>cbi:affects</AbbreviatedIRI>
+        <Literal>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#affects</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>cbi:affects</AbbreviatedIRI>
+        <Literal>affects</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>cbi:isAffectedBy</AbbreviatedIRI>
+        <Literal>Describes the relationship between a cognitive bias and an individual on the base of influence.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>cbi:isAffectedBy</AbbreviatedIRI>
+        <Literal>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#isAffectedBy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>cbi:isAffectedBy</AbbreviatedIRI>
+        <Literal>is affected by</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>fs:Information</AbbreviatedIRI>
+        <Literal>A Cognizer knows or comes to know some piece of Information about a Topic. In this frame, many LUs encode a specific Means_of_Gathering and/or Source, but these may also be expressed separately. Also, the big problem is that our intel about WMD&apos;s has many times been wrong. Anyone got the straight dope on this? Get the inside scoop on sprint football player Austin Wilson. CNI I know him pretty well and I have a lot of dirt on him so I can always hold him over a barrel. What&apos;s the info about the new scanner chip?</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>fs:Information</AbbreviatedIRI>
+        <Literal>https://w3id.org/framester/data/framestercore/Information</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>fs:Information</AbbreviatedIRI>
+        <Literal>Information</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>fs:People</AbbreviatedIRI>
+        <Literal>This frame contains general words for Individuals, i.e. humans. The Person is conceived of as independent of other specific individuals with whom they have relationships and independent of their participation in any particular activity. They may have an Age, Descriptor, Origin, Persistent_characteristic, or Ethnicity. A man from Phoenix was shot yesterday. She gave birth to a screaming baby yesterday. I study 16-year-old female adolescents. I am dating an African-American man. She comforted the terrified child. I always thought of him as a stupid man.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>fs:People</AbbreviatedIRI>
+        <Literal>https://w3id.org/framester/data/framestercore/People</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>fs:People</AbbreviatedIRI>
+        <Literal>People</Literal>
+    </AnnotationAssertion>
+</Ontology>
 
 
 
