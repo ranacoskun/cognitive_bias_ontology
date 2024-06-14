@@ -84,10 +84,10 @@
         <ObjectProperty IRI="hasStimulus"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="influences"/>
+        <ObjectProperty abbreviatedIRI="cbi:affects"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty abbreviatedIRI="cbi:affects"/>
+        <ObjectProperty abbreviatedIRI="cbi:influences"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owll#isAffectedBy"/>
@@ -163,7 +163,7 @@
         <NamedIndividual IRI="MereExposureEffectInstance"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="influences"/>
+        <ObjectProperty abbreviatedIRI="cbi:influences"/>
         <NamedIndividual IRI="SeeingAnAccountFrequently"/>
         <NamedIndividual IRI="TendencyToEngage"/>
     </ObjectPropertyAssertion>
@@ -198,7 +198,7 @@
         <Class abbreviatedIRI="cbi:MereExposureEffect"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="influences"/>
+        <ObjectProperty abbreviatedIRI="cbi:influences"/>
         <Class IRI="InfluencingFactors"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
@@ -222,7 +222,7 @@
         <Class abbreviatedIRI="emotion:Stimulus"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="influences"/>
+        <ObjectProperty abbreviatedIRI="cbi:influences"/>
         <Class abbreviatedIRI="fs:Preference"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
@@ -406,21 +406,6 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>influences</IRI>
-        <Literal>An entity having and effect on the other entity</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
-        <IRI>influences</IRI>
-        <Literal>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/MereExposureEffect/Mere_Exposure_Effect.owl#influences</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>influences</IRI>
-        <Literal>influences</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>cbi:BiasedAgent</AbbreviatedIRI>
         <Literal>Represents an entity that experiences the bias.</Literal>
     </AnnotationAssertion>
@@ -478,6 +463,21 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>cbi:affects</AbbreviatedIRI>
         <Literal>affects</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>cbi:influences</AbbreviatedIRI>
+        <Literal>An entity having and effect on the other entity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>cbi:influences</AbbreviatedIRI>
+        <Literal>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#influences</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>cbi:influences</AbbreviatedIRI>
+        <Literal>influences</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
