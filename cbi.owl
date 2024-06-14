@@ -1,13 +1,16 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="urn:absolute:2/"
      xml:base="urn:absolute:2/"
+     xmlns:cbi="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-    <owl:Ontology rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl">
+    <owl:Ontology rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#">
         <rdfs:comment>General Ontology containing all the classes and properties used in the broader project dedicated to cognitive biases</rdfs:comment>
+        <rdfs:isDefinedBy>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#</rdfs:isDefinedBy>
+        <rdfs:label>CBI Ontology</rdfs:label>
     </owl:Ontology>
     
 
@@ -27,25 +30,40 @@
 
     <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#affects">
         <owl:inverseOf rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#isAffectedBy"/>
+        <rdfs:comment>inverse of isAffectedBy</rdfs:comment>
+        <rdfs:isDefinedBy>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#affects</rdfs:isDefinedBy>
+        <rdfs:label>affects</rdfs:label>
     </owl:ObjectProperty>
     
 
 
     <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#hasTrigger -->
 
-    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#hasTrigger"/>
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#hasTrigger">
+        <rdfs:comment>Signifies the stimuli, conditions, or events that initiate or activate a specific cognitive process.</rdfs:comment>
+        <rdfs:isDefinedBy>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#hasTrigger</rdfs:isDefinedBy>
+        <rdfs:label>has Trigger</rdfs:label>
+    </owl:ObjectProperty>
     
 
 
     <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#influences -->
 
-    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#influences"/>
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#influences">
+        <rdfs:comment>An entity having and effect on the other entity</rdfs:comment>
+        <rdfs:isDefinedBy>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#influences</rdfs:isDefinedBy>
+        <rdfs:label>influences</rdfs:label>
+    </owl:ObjectProperty>
     
 
 
     <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#isAffectedBy -->
 
-    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#isAffectedBy"/>
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#isAffectedBy">
+        <rdfs:comment>Describes the relationship between a cognitive bias and an individual on the base of influence.</rdfs:comment>
+        <rdfs:isDefinedBy>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#isAffectedBy</rdfs:isDefinedBy>
+        <rdfs:label>is affected by</rdfs:label>
+    </owl:ObjectProperty>
     
 
 
@@ -62,25 +80,47 @@
 
     <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#AttentionalBias -->
 
-    <owl:Class rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#AttentionalBias"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#AttentionalBias">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#CognitiveBias"/>
+        <rdfs:comment>&quot;Attentional bias&quot; refers to the tendency of our perception to be affected by our recurring thoughts at the expense of other stimuli. Essentially, it&amp;apos;s when a person&amp;apos;s focus is more readily drawn to certain types of information or stimuli over others, depending on what is currently occupying their mind. This can manifest in various contexts, such as someone who has a fear of spiders being more likely to notice spiders or spider-like objects in their environment compared to someone without such a fear.</rdfs:comment>
+        <rdfs:isDefinedBy>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#AttentionalBias</rdfs:isDefinedBy>
+        <rdfs:label>Attentional Bias</rdfs:label>
+    </owl:Class>
     
 
 
     <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#AvailabilityBias -->
 
-    <owl:Class rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#AvailabilityBias"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#AvailabilityBias">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#CognitiveBias"/>
+        <rdfs:comment>Availability bias is a cognitive bias that occurs when people rely on information that is readily available to them, rather than considering all relevant information when making decisions or judgments. This bias can lead individuals to overestimate the likelihood of events or scenarios that easily come to mind due to their recent occurrence, vividness, or salience in memory, while underestimating the probability of less memorable events. Availability bias can skew perceptions and lead to faulty decision-making by placing undue weight on easily recalled information, regardless of its actual statistical significance or relevance to the situation at hand.</rdfs:comment>
+        <rdfs:isDefinedBy>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#AvailabilityBias</rdfs:isDefinedBy>
+        <rdfs:label>Availability Bias</rdfs:label>
+    </owl:Class>
     
 
 
     <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#Baader-MeinhofPhenomenon -->
 
-    <owl:Class rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#Baader-MeinhofPhenomenon"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#Baader-MeinhofPhenomenon">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#CognitiveBias"/>
+        <rdfs:comment>The Baader-Meinhof phenomenon, also known as the Frequency Illusion, is a cognitive bias in which after noticing something for the first time, there is a tendency to notice it more frequently thereafter, leading one to believe that it has an increased frequency of occurrence. This perception is not due to the actual increase in frequency but rather due to the new awareness of the item, event, or term.
+
+In essence, while the Baader-Meinhof Phenomenon often refers to more distinctive or unusual observations, the frequency illusion can apply to any information, whether common or rare. Both terms describe the same underlying cognitive bias of increased awareness and selective attention, but the Baader-Meinhof Phenomenon has a flavor of novelty and rarity attached to it.</rdfs:comment>
+        <rdfs:isDefinedBy>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#Baader-MeinhofPhenomenon</rdfs:isDefinedBy>
+        <rdfs:label>Baader-Meinhof Phenomenon</rdfs:label>
+    </owl:Class>
     
 
 
     <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#BaseRateFallacy -->
 
-    <owl:Class rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#BaseRateFallacy"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#BaseRateFallacy">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#CognitiveBias"/>
+        <rdfs:comment>The base rate fallacy is a cognitive error whereby people incorrectly judge the likelihood of an event due to ignoring or underestimating the base rate (i.e., the overall rate at which an event occurs) and overemphasizing specific information. This fallacy can occur in various contexts, such as assessing risks, making medical diagnoses, and evaluating probabilities in legal and everyday situations.</rdfs:comment>
+        <rdfs:isDefinedBy>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#BaseRateFallacy</rdfs:isDefinedBy>
+        <rdfs:label>Base Rate Fallacy</rdfs:label>
+    </owl:Class>
     
 
 
@@ -88,6 +128,8 @@
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#BiasedAgent">
         <rdfs:comment>Represents an entity that experiences the bias.</rdfs:comment>
+        <rdfs:isDefinedBy>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#BiasedAgent</rdfs:isDefinedBy>
+        <rdfs:label>Biased Agent</rdfs:label>
     </owl:Class>
     
 
@@ -96,105 +138,162 @@
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#CognitiveBias">
         <rdfs:comment>Represents the overarching concept of cognitive biases.</rdfs:comment>
+        <rdfs:isDefinedBy>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#CognitiveBias</rdfs:isDefinedBy>
+        <rdfs:label>Cognitive Bias</rdfs:label>
     </owl:Class>
     
 
 
     <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#ContextEffect -->
 
-    <owl:Class rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#ContextEffect"/>
-    
-
-
-    <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#Cryptomnesia -->
-
-    <owl:Class rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#Cryptomnesia">
-        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#MisattributedMemory"/>
-        <rdfs:comment>Describes the occurence of the Cryptomnesia bias</rdfs:comment>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#ContextEffect">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#CognitiveBias"/>
+        <rdfs:comment>A context effect refers to the influence that the surrounding environment or circumstances have on perception, cognition, decision-making, or behavior. This effect suggests that how something is perceived or understood can be significantly impacted by the context in which it is presented or experienced. Context effects can manifest in various ways, such as priming, framing, or situational cues, and they play a crucial role in shaping human experiences and responses to stimuli.</rdfs:comment>
+        <rdfs:isDefinedBy>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#ContextEffect</rdfs:isDefinedBy>
+        <rdfs:label>Context Effect</rdfs:label>
     </owl:Class>
     
 
 
     <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#CueDependentForgetting -->
 
-    <owl:Class rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#CueDependentForgetting"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#CueDependentForgetting">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#CognitiveBias"/>
+        <rdfs:comment>Cue-dependent forgetting bias, also known as retrieval failure, is a phenomenon where the ability to recall information is hindered due to the absence of cues or triggers that were present at the time the memory was encoded. Memory recall is significantly improved by the context or cues that were associated with the initial encoding of the information. These cues can be environmental (such as the place where the learning occurred), emotional (the emotional state at the time of learning), or semantic (related to the meaning of the information).</rdfs:comment>
+        <rdfs:isDefinedBy>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#CueDependentForgetting</rdfs:isDefinedBy>
+        <rdfs:label>Cue-Dependent Forgetting</rdfs:label>
+    </owl:Class>
     
 
 
     <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#EmpathyGap -->
 
-    <owl:Class rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#EmpathyGap"/>
-    
-
-
-    <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#FalseMemory -->
-
-    <owl:Class rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#FalseMemory">
-        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#MisattributedMemory"/>
-        <rdfs:comment>Describes the False Memory bias occurrence</rdfs:comment>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#EmpathyGap">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#CognitiveBias"/>
+        <rdfs:comment>The &quot;empathy gap&quot;; refers to a cognitive bias where people underestimate the influences of visceral drives on their own attitudes, preferences, and behaviors. Typically, this gap manifests when a person is in one state (e.g., calm, content) and fails to accurately predict their behavior or decisions when in a different state (e.g., angry, hungry, in pain). This can also apply when judging others&amp;apos; actions without considering their emotional or physical state, leading to misunderstandings or misjudgments.</rdfs:comment>
+        <rdfs:isDefinedBy>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#EmpathyGap</rdfs:isDefinedBy>
+        <rdfs:label>Empathy Gap</rdfs:label>
     </owl:Class>
     
 
 
     <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#FrequencyIllusion -->
 
-    <owl:Class rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#FrequencyIllusion"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#FrequencyIllusion">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#CognitiveBias"/>
+        <rdfs:comment>The Frequency Illusion, also known as the Baader-Meinhof phenomenon, is a cognitive bias which describes a situation where something you&amp;apos;ve recently noticed, experienced, or been told about, suddenly seems to occur with a surprising frequency. Once your attention is drawn to a particular item or concept, you start noticing it everywhere, creating the illusion that its frequency has increased. This bias does not actually involve an increase in the occurrence of the item or concept but is rather due to your heightened awareness and sensitivity to it.
+
+Connected with Confirmation bias. But Confirmation bias is about how we seek, interpret, and remember information in ways that confirm what we already believe. The Frequency Illusion is about perceiving an increase in the frequency of something we&amp;apos;ve recently noticed.</rdfs:comment>
+        <rdfs:isDefinedBy>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#FrequencyIllusion</rdfs:isDefinedBy>
+        <rdfs:label>Frequency Illusion</rdfs:label>
+    </owl:Class>
     
 
 
     <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#IllusoryTruthEffect -->
 
-    <owl:Class rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#IllusoryTruthEffect"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#IllusoryTruthEffect">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#CognitiveBias"/>
+        <rdfs:comment>The illusory truth effect is a cognitive bias where people are more likely to believe that statements are true if they have heard them before, regardless of their actual veracity. This effect demonstrates how repetition can lead to increased belief in a statement, even if it is false or lacking in evidence. Essentially, familiarity breeds credibility in the minds of individuals, influencing their perception of truth.</rdfs:comment>
+        <rdfs:isDefinedBy>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#IllusoryTruthEffect</rdfs:isDefinedBy>
+        <rdfs:label>Illusory Truth Effect</rdfs:label>
+    </owl:Class>
     
 
 
     <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#MereExposureEffect -->
 
-    <owl:Class rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#MereExposureEffect"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#MereExposureEffect">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#CognitiveBias"/>
+        <rdfs:comment>The mere-exposure effect is a psychological phenomenon where people tend to develop a preference for things they are repeatedly exposed to, even if they initially had no particular positive or negative feelings toward those things. In essence, familiarity breeds liking. This effect suggests that mere exposure to something can increase feelings of comfort, trust, or preference for it, without any conscious reasoning or decision-making involved. It has been observed in various contexts, including advertising, interpersonal attraction, and consumer behavior.</rdfs:comment>
+        <rdfs:isDefinedBy>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#MereExposureEffect</rdfs:isDefinedBy>
+        <rdfs:label>Mere Exposure Effect</rdfs:label>
+    </owl:Class>
     
 
 
     <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#MisattributedMemory -->
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#MisattributedMemory">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#CognitiveBias"/>
         <rdfs:comment>Describes a generic Misattribution of Memory</rdfs:comment>
+        <rdfs:isDefinedBy>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#MisattributedMemory</rdfs:isDefinedBy>
+        <rdfs:label>Misattributed Memory</rdfs:label>
     </owl:Class>
     
 
 
     <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#MoodCongruentMemory -->
 
-    <owl:Class rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#MoodCongruentMemory"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#MoodCongruentMemory">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#CognitiveBias"/>
+        <rdfs:comment>Mood-congruent memory bias is a cognitive bias that affects how we recall past events. This bias occurs when our current mood influences the way we remember information, leading us to recall memories that are consistent with our current mood more easily than those that are not. For instance, if you&amp;apos;re feeling happy, you&amp;apos;re more likely to remember positive events, while if you&amp;apos;re feeling sad, you&amp;apos;re more likely to recall negative or sad events. This bias can impact both the recall of personal memories and the interpretation of events, potentially reinforcing our current mood by selectively recalling mood-consistent memories.</rdfs:comment>
+        <rdfs:isDefinedBy>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#MoodCongruentMemory</rdfs:isDefinedBy>
+        <rdfs:label>Mood Congruent Memory</rdfs:label>
+    </owl:Class>
     
 
 
     <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#OmissionBias -->
 
-    <owl:Class rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#OmissionBias"/>
-    
-
-
-    <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#SourceConfusion -->
-
-    <owl:Class rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#SourceConfusion">
-        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#MisattributedMemory"/>
-        <rdfs:comment>Describes the Source Confusion bias occurrence</rdfs:comment>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#OmissionBias">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#CognitiveBias"/>
+        <rdfs:comment>Omission bias is a cognitive bias that describes the tendency of people to judge harmful actions (commissions) as worse, or less moral, than equally harmful inactions (omissions), even if the outcomes are the same or similar. This bias can affect decision-making processes in various contexts, including moral and ethical judgments, health decisions, and legal interpretations. Essentially, individuals might perceive the act of not doing something as more acceptable or less blameworthy than actively doing something that leads to a similar negative outcome. This can lead to situations where passive decisions are favored over active ones, even if the active decision would result in a better outcome or prevent harm.</rdfs:comment>
+        <rdfs:isDefinedBy>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#OmissionBias</rdfs:isDefinedBy>
+        <rdfs:label>Omission Bias</rdfs:label>
     </owl:Class>
     
 
 
     <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#SpacingEffect -->
 
-    <owl:Class rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#SpacingEffect"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#SpacingEffect">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#CognitiveBias"/>
+        <rdfs:comment>The Spacing Effect is a phenomenon observed in psychology and education, referring to the improved ability to remember information or perform a skill when study or practice sessions are spaced out over time, rather than concentrated in a short period. This effect suggests that distributed practice, involving intervals between learning sessions, enhances long-term memory retention more effectively than massed practice, where learning sessions are crammed together.</rdfs:comment>
+        <rdfs:isDefinedBy>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#SpacingEffect</rdfs:isDefinedBy>
+        <rdfs:label>Spacing Effect</rdfs:label>
+    </owl:Class>
     
 
 
     <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#Suggestibility -->
 
-    <owl:Class rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#Suggestibility"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#Suggestibility">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#CognitiveBias"/>
+        <rdfs:comment>This is an ontology that describes the behaviour of a person affected by the Misattribution of memory bias.</rdfs:comment>
+        <rdfs:isDefinedBy>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#Suggestibility</rdfs:isDefinedBy>
+        <rdfs:label>Suggestability</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl##Cryptomnesia -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl##Cryptomnesia">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#MisattributedMemory"/>
+        <rdfs:comment>Describes the occurence of the Cryptomnesia bias</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl##FalseMemory -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl##FalseMemory">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#MisattributedMemory"/>
+        <rdfs:comment>Describes the False Memory bias occurrence</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl##SourceConfusion -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl##SourceConfusion">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#MisattributedMemory"/>
+        <rdfs:comment>Describes the Source Confusion bias occurrence</rdfs:comment>
+    </owl:Class>
 </rdf:RDF>
 
 
 
-<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
 
