@@ -257,7 +257,7 @@ Reflecting on the week&apos;s challenges, Alex realizes they underestimated how 
 
     <owl:DatatypeProperty rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/Empathy%20Gap/EmpathyGap.owl#hasPhysicalType">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/Empathy%20Gap/EmpathyGap.owlPhysicalState"/>
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#PhysicalState"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">This property allows sub-typing of entities – a form of specialization – through the use of a terminological hierarchy, or thesaurus.</rdfs:comment>
         <rdfs:isDefinedBy>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/Empathy%20Gap/EmpathyGap.owl#hasPhysicalType</rdfs:isDefinedBy>
@@ -311,32 +311,6 @@ Reflecting on the week&apos;s challenges, Alex realizes they underestimated how 
     
 
 
-    <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/Empathy%20Gap/EmpathyGap.owlPhysicalState -->
-
-    <owl:Class rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/Empathy%20Gap/EmpathyGap.owlPhysicalState">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/Empathy%20Gap/EmpathyGap.owl#hasPhysicalType"/>
-                        <owl:hasValue>negative</owl:hasValue>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/Empathy%20Gap/EmpathyGap.owl#hasPhysicalType"/>
-                        <owl:hasValue>positive</owl:hasValue>
-                    </owl:Restriction>
-                </owl:unionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="https://delicias.dia.fi.upm.es/ontologies/ObjectWithStates.owl#State"/>
-        <owl:disjointWith rdf:resource="https://softeng.polito.it/rsctx/EmotionalState"/>
-        <rdfs:comment xml:lang="en">Refers to the current condition of an entity&amp;apos;s body, encompassing aspects like health, energy levels, fatigue, and overall physical well-being. Has a type (predefined string as positive, negative, etc.)</rdfs:comment>
-        <rdfs:isDefinedBy>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/Empathy%20Gap/EmpathyGap.owlPhysicalState</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">PhysicalState</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#BiasedAgent -->
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#BiasedAgent">
@@ -370,6 +344,32 @@ Reflecting on the week&apos;s challenges, Alex realizes they underestimated how 
     
 
 
+    <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#PhysicalState -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#PhysicalState">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/Empathy%20Gap/EmpathyGap.owl#hasPhysicalType"/>
+                        <owl:hasValue>negative</owl:hasValue>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/Empathy%20Gap/EmpathyGap.owl#hasPhysicalType"/>
+                        <owl:hasValue>positive</owl:hasValue>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://delicias.dia.fi.upm.es/ontologies/ObjectWithStates.owl#State"/>
+        <owl:disjointWith rdf:resource="https://softeng.polito.it/rsctx/EmotionalState"/>
+        <rdfs:comment xml:lang="en">Refers to the current condition of an entity&amp;apos;s body, encompassing aspects like health, energy levels, fatigue, and overall physical well-being. Has a type (predefined string as positive, negative, etc.)</rdfs:comment>
+        <rdfs:isDefinedBy>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/Empathy%20Gap/EmpathyGap.owlPhysicalState</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">PhysicalState</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://softeng.polito.it/rsctx/EmotionalState -->
 
     <owl:Class rdf:about="https://softeng.polito.it/rsctx/EmotionalState">
@@ -388,7 +388,7 @@ Reflecting on the week&apos;s challenges, Alex realizes they underestimated how 
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="https://delicias.dia.fi.upm.es/ontologies/ObjectWithStates.owl#State"/>
-        <rdfs:comment xml:lang="en">The state of a person&amp;apos;s emotions (especially with regard to pleasure or dejection). Has type which is a predefined sting. In our case: positive and negative or other predefined values.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The state of a person&apos;s emotions (especially with regard to pleasure or dejection). Has type which is a predefined sting. In our case: positive and negative or other predefined values.</rdfs:comment>
         <rdfs:isDefinedBy>https://softeng.polito.it/rsctx/EmotionalState</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">EmotionalState</rdfs:label>
     </owl:Class>
