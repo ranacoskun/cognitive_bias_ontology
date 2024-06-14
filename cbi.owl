@@ -1,17 +1,46 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="urn:absolute:2/"
      xml:base="urn:absolute:2/"
+     xmlns:fs="https://w3id.org/framester/data/framestercore/"
      xmlns:cbi="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#"
+     xmlns:crm="https://www.cidoc-crm.org/html/cidoc_crm_v7.1.3.html#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+     xmlns:exob="http://ontologydesignpatterns.org/wiki/Submissions:Experience_%26_Observation#"
+     xmlns:obst="https://delicias.dia.fi.upm.es/ontologies/ObjectWithStates.owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:rsctx="https://softeng.polito.it/rsctx/#"
+     xmlns:situation="http://www.ontologydesignpatterns.org/cp/owl/situation.owl#">
     <owl:Ontology rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#">
-        <rdfs:comment>General Ontology containing all the classes and properties used in the broader project dedicated to cognitive biases</rdfs:comment>
+        <rdfs:comment xml:lang="en">This ontology containsl the classes and properties used in a broader project dedicated to cognitive biases. Here you will find classes and properties which could be common for different biases.</rdfs:comment>
         <rdfs:isDefinedBy>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#</rdfs:isDefinedBy>
         <rdfs:label>CBI Ontology</rdfs:label>
     </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#hasComponent -->
+
+    <owl:AnnotationProperty rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#hasComponent"/>
+    
+
+
+    <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#userStory -->
+
+    <owl:AnnotationProperty rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#userStory"/>
     
 
 
@@ -26,10 +55,36 @@
     
 
 
+    <!-- http://ontologydesignpatterns.org/wiki/Submissions:Experience_%26_Observation#isEngagedIn -->
+
+    <owl:ObjectProperty rdf:about="http://ontologydesignpatterns.org/wiki/Submissions:Experience_%26_Observation#isEngagedIn">
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#BiasedAgent"/>
+        <rdfs:range rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/situation.owl#Situation"/>
+        <rdfs:comment xml:lang="en">Because an activity may engage other participants than the one performing it, engagements are in general considered individual rather than collective, therefore each participants has their own engagement and only some of them will be conscious and/or documented.</rdfs:comment>
+        <rdfs:isDefinedBy>http://ontologydesignpatterns.org/wiki/Submissions:Experience_%26_Observation#isEngagedIn</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">isEngagedIn</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://delicias.dia.fi.upm.es/ontologies/ObjectWithStates.owl#hasState -->
+
+    <owl:ObjectProperty rdf:about="https://delicias.dia.fi.upm.es/ontologies/ObjectWithStates.owl#hasState">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/framester/data/framestercore/People"/>
+        <rdfs:range rdf:resource="https://delicias.dia.fi.upm.es/ontologies/ObjectWithStates.owl#State"/>
+        <rdfs:isDefinedBy>https://delicias.dia.fi.upm.es/ontologies/ObjectWithStates.owl#hasState</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">hasState</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#affects -->
 
     <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#affects">
         <owl:inverseOf rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#isAffectedBy"/>
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#CognitiveBias"/>
+        <rdfs:range rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#BiasedAgent"/>
         <rdfs:comment>inverse of isAffectedBy</rdfs:comment>
         <rdfs:isDefinedBy>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#affects</rdfs:isDefinedBy>
         <rdfs:label>affects</rdfs:label>
@@ -40,6 +95,8 @@
     <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#hasTrigger -->
 
     <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#hasTrigger">
+        <rdfs:domain rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/situation.owl#Situation"/>
+        <rdfs:range rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#Trigger"/>
         <rdfs:comment>Signifies the stimuli, conditions, or events that initiate or activate a specific cognitive process.</rdfs:comment>
         <rdfs:isDefinedBy>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#hasTrigger</rdfs:isDefinedBy>
         <rdfs:label>has Trigger</rdfs:label>
@@ -50,6 +107,8 @@
     <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#influences -->
 
     <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#influences">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:comment>An entity having and effect on the other entity</rdfs:comment>
         <rdfs:isDefinedBy>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#influences</rdfs:isDefinedBy>
         <rdfs:label>influences</rdfs:label>
@@ -60,10 +119,45 @@
     <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#isAffectedBy -->
 
     <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#isAffectedBy">
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#BiasedAgent"/>
+        <rdfs:range rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#CognitiveBias"/>
         <rdfs:comment>Describes the relationship between a cognitive bias and an individual on the base of influence.</rdfs:comment>
         <rdfs:isDefinedBy>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#isAffectedBy</rdfs:isDefinedBy>
         <rdfs:label>is affected by</rdfs:label>
     </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#hasEmotionalType -->
+
+    <owl:DatatypeProperty rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#hasEmotionalType">
+        <rdfs:isDefinedBy>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#hasEmotionalType</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">hasEmotionalType</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.cidoc-crm.org/html/cidoc_crm_v7.1.3.html#hasType -->
+
+    <owl:DatatypeProperty rdf:about="https://www.cidoc-crm.org/html/cidoc_crm_v7.1.3.html#hasType">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#Trigger"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">This property allows sub-typing of entities – a form of specialization – through the use of a terminological hierarchy, or thesaurus.</rdfs:comment>
+        <rdfs:isDefinedBy>https://www.cidoc-crm.org/html/cidoc_crm_v7.1.3.html#hasType</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">hasType</rdfs:label>
+    </owl:DatatypeProperty>
     
 
 
@@ -75,6 +169,26 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/situation.owl#Situation -->
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/cp/owl/situation.owl#Situation">
+        <rdfs:comment xml:lang="en">Represents situation where Biased Agent is expiriencing a Bias</rdfs:comment>
+        <rdfs:isDefinedBy>http://www.ontologydesignpatterns.org/cp/owl/situation.owl#Situation</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Situation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://delicias.dia.fi.upm.es/ontologies/ObjectWithStates.owl#State -->
+
+    <owl:Class rdf:about="https://delicias.dia.fi.upm.es/ontologies/ObjectWithStates.owl#State">
+        <rdfs:comment xml:lang="en">States are the different states that an object can have. States must belong to a single collection of non-duplicate elements (i.e., to a set).</rdfs:comment>
+        <rdfs:isDefinedBy>https://delicias.dia.fi.upm.es/ontologies/ObjectWithStates.owl#State</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">State</rdfs:label>
+    </owl:Class>
     
 
 
@@ -127,6 +241,8 @@ In essence, while the Baader-Meinhof Phenomenon often refers to more distinctive
     <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#BiasedAgent -->
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#BiasedAgent">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/framester/data/framestercore/People"/>
+        <owl:disjointWith rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#NonBiasedAgent"/>
         <rdfs:comment>Represents an entity that experiences the bias.</rdfs:comment>
         <rdfs:isDefinedBy>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#BiasedAgent</rdfs:isDefinedBy>
         <rdfs:label>Biased Agent</rdfs:label>
@@ -144,6 +260,17 @@ In essence, while the Baader-Meinhof Phenomenon often refers to more distinctive
     
 
 
+    <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#ConfirmationBias -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#ConfirmationBias">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#CognitiveBias"/>
+        <rdfs:comment xml:lang="en">Represents Confirmation Bias, which is a type of cognitive bias that involves favoring information that confirms one’s preexisting beliefs or hypotheses. Individuals exhibiting this bias are more likely to seek out, interpret, remember, and share information in a way that confirms their preconceptions. Frequency Illusion and Confirmation Bias are connected according to the description.</rdfs:comment>
+        <rdfs:isDefinedBy>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#ConfirmationBias</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Confirmation Bias</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#ContextEffect -->
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#ContextEffect">
@@ -151,6 +278,15 @@ In essence, while the Baader-Meinhof Phenomenon often refers to more distinctive
         <rdfs:comment>A context effect refers to the influence that the surrounding environment or circumstances have on perception, cognition, decision-making, or behavior. This effect suggests that how something is perceived or understood can be significantly impacted by the context in which it is presented or experienced. Context effects can manifest in various ways, such as priming, framing, or situational cues, and they play a crucial role in shaping human experiences and responses to stimuli.</rdfs:comment>
         <rdfs:isDefinedBy>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#ContextEffect</rdfs:isDefinedBy>
         <rdfs:label>Context Effect</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#Cryptomnesia -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#Cryptomnesia">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#MisattributedMemory"/>
+        <rdfs:comment>Describes the occurrence of the Cryptomnesia bias</rdfs:comment>
     </owl:Class>
     
 
@@ -173,6 +309,15 @@ In essence, while the Baader-Meinhof Phenomenon often refers to more distinctive
         <rdfs:comment>The &quot;empathy gap&quot;; refers to a cognitive bias where people underestimate the influences of visceral drives on their own attitudes, preferences, and behaviors. Typically, this gap manifests when a person is in one state (e.g., calm, content) and fails to accurately predict their behavior or decisions when in a different state (e.g., angry, hungry, in pain). This can also apply when judging others&amp;apos; actions without considering their emotional or physical state, leading to misunderstandings or misjudgments.</rdfs:comment>
         <rdfs:isDefinedBy>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#EmpathyGap</rdfs:isDefinedBy>
         <rdfs:label>Empathy Gap</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#FalseMemory -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#FalseMemory">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#MisattributedMemory"/>
+        <rdfs:comment>Describes the False Memory bias occurrence</rdfs:comment>
     </owl:Class>
     
 
@@ -234,6 +379,17 @@ Connected with Confirmation bias. But Confirmation bias is about how we seek, in
     
 
 
+    <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#NonBiasedAgent -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#NonBiasedAgent">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/framester/data/framestercore/People"/>
+        <rdfs:comment xml:lang="en">Represents an idealized entity that makes decisions based on objective analysis, facts, and logical reasoning, without being affected by cognitive biases.</rdfs:comment>
+        <rdfs:isDefinedBy>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#NonBiasedAgent</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">NonBiasedAgent</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#OmissionBias -->
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#OmissionBias">
@@ -241,6 +397,26 @@ Connected with Confirmation bias. But Confirmation bias is about how we seek, in
         <rdfs:comment>Omission bias is a cognitive bias that describes the tendency of people to judge harmful actions (commissions) as worse, or less moral, than equally harmful inactions (omissions), even if the outcomes are the same or similar. This bias can affect decision-making processes in various contexts, including moral and ethical judgments, health decisions, and legal interpretations. Essentially, individuals might perceive the act of not doing something as more acceptable or less blameworthy than actively doing something that leads to a similar negative outcome. This can lead to situations where passive decisions are favored over active ones, even if the active decision would result in a better outcome or prevent harm.</rdfs:comment>
         <rdfs:isDefinedBy>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#OmissionBias</rdfs:isDefinedBy>
         <rdfs:label>Omission Bias</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#PhysicalState -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#PhysicalState">
+        <rdfs:subClassOf rdf:resource="https://delicias.dia.fi.upm.es/ontologies/ObjectWithStates.owl#State"/>
+        <rdfs:comment xml:lang="en">Refers to the current condition of an entity&amp;apos;s body, encompassing aspects like health, energy levels, fatigue, and overall physical well-being. Has a type (predefined string as positive, negative, etc.)</rdfs:comment>
+        <rdfs:isDefinedBy>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/Empathy%20Gap/EmpathyGap.owlPhysicalState</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">PhysicalState</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#SourceConfusion -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#SourceConfusion">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#MisattributedMemory"/>
+        <rdfs:comment>Describes the Source Confusion bias occurrence</rdfs:comment>
     </owl:Class>
     
 
@@ -267,33 +443,60 @@ Connected with Confirmation bias. But Confirmation bias is about how we seek, in
     
 
 
-    <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl##Cryptomnesia -->
+    <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#Trigger -->
 
-    <owl:Class rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl##Cryptomnesia">
-        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#MisattributedMemory"/>
-        <rdfs:comment>Describes the occurence of the Cryptomnesia bias</rdfs:comment>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#Trigger">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://www.cidoc-crm.org/html/cidoc_crm_v7.1.3.html#hasType"/>
+                        <owl:hasValue>context-dependent</owl:hasValue>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://www.cidoc-crm.org/html/cidoc_crm_v7.1.3.html#hasType"/>
+                        <owl:hasValue>state-dependent</owl:hasValue>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment xml:lang="en">Represents an environmental or contextual stimulus that facilitates the recall of memories by a BiasedAgent. Has types depending on the provenance of the trigger: context-dependent (referring to the environment) and state-dependent (referring to the person experiencing the bias).</rdfs:comment>
+        <rdfs:isDefinedBy>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#Trigger</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Trigger</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl##FalseMemory -->
+    <!-- https://softeng.polito.it/rsctx/#EmotionalState -->
 
-    <owl:Class rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl##FalseMemory">
-        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#MisattributedMemory"/>
-        <rdfs:comment>Describes the False Memory bias occurrence</rdfs:comment>
+    <owl:Class rdf:about="https://softeng.polito.it/rsctx/#EmotionalState">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#hasEmotionalType"/>
+                        <owl:hasValue>negative</owl:hasValue>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#hasEmotionalType"/>
+                        <owl:hasValue>positive</owl:hasValue>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://delicias.dia.fi.upm.es/ontologies/ObjectWithStates.owl#State"/>
+        <rdfs:comment xml:lang="en">The state of a person&apos;s emotions (especially with regard to pleasure or dejection). Has type which is a predefined sting. In our case: positive and negative or other predefined values.</rdfs:comment>
+        <rdfs:isDefinedBy>https://softeng.polito.it/rsctx/#EmotionalState</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Emotional State</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl##SourceConfusion -->
+    <!-- https://w3id.org/framester/data/framestercore/People -->
 
-    <owl:Class rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl##SourceConfusion">
-        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#MisattributedMemory"/>
-        <rdfs:comment>Describes the Source Confusion bias occurrence</rdfs:comment>
-    </owl:Class>
+    <owl:Class rdf:about="https://w3id.org/framester/data/framestercore/People"/>
 </rdf:RDF>
 
 
 
 <!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
-

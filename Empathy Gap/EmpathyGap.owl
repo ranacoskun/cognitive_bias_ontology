@@ -1,9 +1,10 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="https://github.com/ranacoskun/cognitive_bias_ontology#"
-     xml:base="https://github.com/ranacoskun/cognitive_bias_ontology"
+<rdf:RDF xmlns="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/Empathy%20Gap/EmpathyGap.owl#"
+     xml:base="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/Empathy%20Gap/EmpathyGap.owl"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:eg="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/Empathy%20Gap/EmpathyGap.owl#"
      xmlns:fs="https://w3id.org/framester/data/framestercore/"
-     xmlns:cbi="https://github.com/ranacoskun/cognitive_bias_ontology#"
-     xmlns:crm="https://www.cidoc-crm.org/html/cidoc_crm_v7.1.3.html#"
+     xmlns:cbi="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
@@ -11,27 +12,27 @@
      xmlns:obst="https://delicias.dia.fi.upm.es/ontologies/ObjectWithStates.owl#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:rsctx="https://softeng.polito.it/rsctx/#"
-     xmlns:terms="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/"
      xmlns:reaction="http://www.ontologydesignpatterns.org/cp/owl/reaction.owl.v0.1#"
      xmlns:parameter="http://www.ontologydesignpatterns.org/cp/owl/parameter.owl#"
-     xmlns:classification="http://www.ontologydesignpatterns.org/cp/owl/classification.owl#">
+     xmlns:cidoc_crm_v7="https://www.cidoc-crm.org/html/cidoc_crm_v7.1.3.html#">
     <owl:Ontology rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/Empathy%20Gap/EmpathyGap.owl">
+        <dc:created>13/6/2024</dc:created>
+        <dc:creator xml:lang="en">Evgeniia Vdovichenko</dc:creator>
+        <dc:description xml:lang="en">Empathy Gap Bias specification of Cognitive Bias Ontology</dc:description>
         <rdfs:comment xml:lang="en">The &quot;empathy gap&quot; refers to a cognitive bias where people underestimate the influences of visceral drives on their own attitudes, preferences, and behaviors. Typically, this gap manifests when a person is in one state (e.g., calm, content) and fails to accurately predict their behavior or decisions when in a different state (e.g., angry, hungry, in pain). This can also apply when judging others&apos; actions without considering their emotional or physical state, leading to misunderstandings or misjudgments.</rdfs:comment>
         <rdfs:label xml:lang="en">Empathy Gap module of the Cognitive Bias Ontology</rdfs:label>
-        <hasComponent>http://www.ontologydesignpatterns.org/cp/owl/classification.owl#</hasComponent>
-        <hasComponent>http://www.ontologydesignpatterns.org/cp/owl/parameter.owl#</hasComponent>
-        <hasComponent>http://www.ontologydesignpatterns.org/cp/owl/reaction.owl.v0.1#</hasComponent>
-        <hasComponent>https://delicias.dia.fi.upm.es/ontologies/ObjectWithStates.owl</hasComponent>
-        <hasComponent>https://softeng.polito.it/rsctx/</hasComponent>
-        <hasComponent>https://w3id.org/framester/data/framestercore/</hasComponent>
-        <hasComponent>https://www.cidoc-crm.org/html/cidoc_crm_v7.1.3.html#</hasComponent>
-        <userStory xml:lang="en">It&apos;s Sunday evening, and Alex is feeling particularly motivated after a weekend of relaxation and light activities. Looking to capitalize on this burst of energy, Alex decides it&apos;s the perfect time to commit to a new fitness routine. They sign up for a series of 6:00 AM workout sessions at the local gym, confident in their ability to wake up early and energized by the thought of transforming their fitness level.
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.0</owl:versionInfo>
+        <cbi:hasComponent>http://www.ontologydesignpatterns.org/cp/owl/parameter.owl#</cbi:hasComponent>
+        <cbi:hasComponent>http://www.ontologydesignpatterns.org/cp/owl/reaction.owl.v0.1#</cbi:hasComponent>
+        <cbi:hasComponent>https://delicias.dia.fi.upm.es/ontologies/ObjectWithStates.owl</cbi:hasComponent>
+        <cbi:hasComponent>https://softeng.polito.it/rsctx/</cbi:hasComponent>
+        <cbi:hasComponent>https://w3id.org/framester/data/framestercore/</cbi:hasComponent>
+        <cbi:hasComponent>https://www.cidoc-crm.org/html/cidoc_crm_v7.1.3.html#</cbi:hasComponent>
+        <cbi:userStory xml:lang="en">It&apos;s Sunday evening, and Alex is feeling particularly motivated after a weekend of relaxation and light activities. Looking to capitalize on this burst of energy, Alex decides it&apos;s the perfect time to commit to a new fitness routine. They sign up for a series of 6:00 AM workout sessions at the local gym, confident in their ability to wake up early and energized by the thought of transforming their fitness level.
+
 However, as the week progresses, Alex&apos;s initial enthusiasm begins to wane. The comfort of a warm bed and the chill of the early morning make getting up increasingly difficult. By Wednesday, the alarm clock&apos;s siren call is met with dread, and by Friday, Alex hits the snooze button one too many times, missing the workout entirely.
-Reflecting on the week&apos;s challenges, Alex realizes they underestimated how their morning disposition could change, especially when faced with the reality of early wake-up calls. Determined to not let this setback derail their fitness goals, Alex starts looking for strategies to make morning workouts more appealing. 
-</userStory>
-        <terms:created>19/5/2024</terms:created>
-        <terms:creator xml:lang="en">Evgeniia Vdovichenko</terms:creator>
-        <terms:description xml:lang="en">Empathy Gap Bias specification of Cognitive Bias Ontology</terms:description>
+
+Reflecting on the week&apos;s challenges, Alex realizes they underestimated how their morning disposition could change, especially when faced with the reality of early wake-up calls. Determined to not let this setback derail their fitness goals, Alex starts looking for strategies to make morning workouts more appealing.</cbi:userStory>
     </owl:Ontology>
     
 
@@ -47,45 +48,39 @@ Reflecting on the week&apos;s challenges, Alex realizes they underestimated how 
     
 
 
+    <!-- http://purl.org/dc/elements/1.1/created -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/created"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    
+
+
     <!-- http://www.w3.org/1999/02/22-rdf-syntax-ns#about -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#about"/>
     
 
 
-    <!-- https://github.com/ranacoskun/cognitive_bias_ontology#hasComponent -->
+    <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#hasComponent -->
 
-    <owl:AnnotationProperty rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology#hasComponent"/>
+    <owl:AnnotationProperty rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#hasComponent"/>
     
 
 
-    <!-- https://github.com/ranacoskun/cognitive_bias_ontology#userStory -->
+    <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#userStory -->
 
-    <owl:AnnotationProperty rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology#userStory"/>
-    
-
-
-    <!-- https://github.com/ranacoskun/cognitive_bias_ontology#userstory -->
-
-    <owl:AnnotationProperty rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology#userstory"/>
-    
-
-
-    <!-- https://www.dublincore.org/specifications/dublin-core/dcmi-terms/created -->
-
-    <owl:AnnotationProperty rdf:about="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/created"/>
-    
-
-
-    <!-- https://www.dublincore.org/specifications/dublin-core/dcmi-terms/creator -->
-
-    <owl:AnnotationProperty rdf:about="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/creator"/>
-    
-
-
-    <!-- https://www.dublincore.org/specifications/dublin-core/dcmi-terms/description -->
-
-    <owl:AnnotationProperty rdf:about="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/description"/>
+    <owl:AnnotationProperty rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#userStory"/>
     
 
 
@@ -100,20 +95,15 @@ Reflecting on the week&apos;s challenges, Alex realizes they underestimated how 
     
 
 
-    <!-- http://www.ontologydesignpatterns.org/cp/owl/classification.owl#isClassifiedBy -->
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/parameter.owl#hasParameter -->
 
-    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/cp/owl/classification.owl#isClassifiedBy">
-        <rdfs:domain rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology#BiasedAgent"/>
-        <rdfs:domain rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology#EmpathyGap"/>
-        <rdfs:domain rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology#NonBiasedAgent"/>
-        <rdfs:domain rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology#PhysicalState"/>
-        <rdfs:domain rdf:resource="https://softeng.polito.it/rsctx/EmotionalState"/>
-        <rdfs:range rdf:resource="https://delicias.dia.fi.upm.es/ontologies/ObjectWithStates.owl#State"/>
-        <rdfs:range rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology#CognitiveBias"/>
-        <rdfs:range rdf:resource="https://w3id.org/framester/data/framestercore/People"/>
-        <rdfs:label xml:lang="en">isClassifiedBy</rdfs:label>
-        <rdfs:seeAlso>http://ontologydesignpatterns.org/wiki/Submissions:Classification</rdfs:seeAlso>
-        <terms:description xml:lang="en">To represent the relations between concepts (roles, task, parameters) and entities (person, events, values), which concepts can be assigned to. To formalize the application (e.g. tagging) of informal knowledge organization systems such as lexica, thesauri, subject directories, folksonomies, etc., where concepts are first-order elements.</terms:description>
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/cp/owl/parameter.owl#hasParameter">
+        <owl:inverseOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/parameter.owl#isParameterFor"/>
+        <rdfs:domain rdf:resource="https://w3id.org/framester/data/framestercore/Predicting"/>
+        <rdfs:range rdf:resource="https://w3id.org/framester/data/framestercore/Accuracy"/>
+        <rdfs:comment xml:lang="en">A Concept can have a Parameter that constrains the attributes that a classified Entity can have in a certain Situation, e.g. a 4WheelDriver Role definedIn the ItalianTrafficLaw has a MinimumAge parameter on the Amount 16</rdfs:comment>
+        <rdfs:label xml:lang="en">hasParameter</rdfs:label>
+        <rdfs:seeAlso>http://ontologydesignpatterns.org/wiki/Submissions:Parameter</rdfs:seeAlso>
     </owl:ObjectProperty>
     
 
@@ -136,9 +126,9 @@ Reflecting on the week&apos;s challenges, Alex realizes they underestimated how 
     <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/cp/owl/parameter.owl#isParameterFor">
         <rdfs:domain rdf:resource="https://w3id.org/framester/data/framestercore/Accuracy"/>
         <rdfs:range rdf:resource="https://w3id.org/framester/data/framestercore/Predicting"/>
+        <rdfs:comment xml:lang="en">A Concept can have a Parameter that constrains the attributes that a classified Entity can have in a certain Situation, e.g. a 4WheelDriver Role definedIn the ItalianTrafficLaw has a MinimumAge parameter on the Amount 16</rdfs:comment>
         <rdfs:label xml:lang="en">isParameterFor</rdfs:label>
         <rdfs:seeAlso>http://ontologydesignpatterns.org/wiki/Submissions:Parameter</rdfs:seeAlso>
-        <terms:description xml:lang="en">A Concept can have a Parameter that constrains the attributes that a classified Entity can have in a certain Situation, e.g. a 4WheelDriver Role definedIn the ItalianTrafficLaw has a MinimumAge parameter on the Amount 16</terms:description>
     </owl:ObjectProperty>
     
 
@@ -147,10 +137,11 @@ Reflecting on the week&apos;s challenges, Alex realizes they underestimated how 
 
     <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/cp/owl/reaction.owl.v0.1#isPerformedBy">
         <owl:inverseOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/reaction.owl.v0.1#performs"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/framester/data/framestercore/Deciding"/>
         <rdfs:domain rdf:resource="https://w3id.org/framester/data/framestercore/Predicting"/>
-        <rdfs:range rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology#BiasedAgent"/>
-        <rdfs:range rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology#NonBiasedAgent"/>
+        <rdfs:range rdf:resource="https://w3id.org/framester/data/framestercore/People"/>
+        <rdfs:isDefinedBy>http://www.ontologydesignpatterns.org/cp/owl/reaction.owl.v0.1#isPerformedBy</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">isPerformedBy</rdfs:label>
         <rdfs:seeAlso>http://ontologydesignpatterns.org/wiki/Submissions:Reaction</rdfs:seeAlso>
     </owl:ObjectProperty>
@@ -160,10 +151,12 @@ Reflecting on the week&apos;s challenges, Alex realizes they underestimated how 
     <!-- http://www.ontologydesignpatterns.org/cp/owl/reaction.owl.v0.1#performs -->
 
     <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/cp/owl/reaction.owl.v0.1#performs">
-        <rdfs:domain rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology#BiasedAgent"/>
-        <rdfs:domain rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology#NonBiasedAgent"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#BiasedAgent"/>
+        <rdfs:domain rdf:resource="https://w3id.org/framester/data/framestercore/People"/>
         <rdfs:range rdf:resource="https://w3id.org/framester/data/framestercore/Deciding"/>
         <rdfs:range rdf:resource="https://w3id.org/framester/data/framestercore/Predicting"/>
+        <rdfs:isDefinedBy>http://www.ontologydesignpatterns.org/cp/owl/reaction.owl.v0.1#performs</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">performs</rdfs:label>
         <rdfs:seeAlso>http://ontologydesignpatterns.org/wiki/Submissions:Reaction</rdfs:seeAlso>
     </owl:ObjectProperty>
@@ -173,11 +166,12 @@ Reflecting on the week&apos;s challenges, Alex realizes they underestimated how 
     <!-- https://delicias.dia.fi.upm.es/ontologies/ObjectWithStates.owl#hasState -->
 
     <owl:ObjectProperty rdf:about="https://delicias.dia.fi.upm.es/ontologies/ObjectWithStates.owl#hasState">
-        <rdfs:domain rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology#BiasedAgent"/>
+        <owl:inverseOf rdf:resource="https://delicias.dia.fi.upm.es/ontologies/ObjectWithStates.owl#isStateOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#BiasedAgent"/>
         <rdfs:range rdf:resource="https://delicias.dia.fi.upm.es/ontologies/ObjectWithStates.owl#State"/>
         <rdfs:label xml:lang="en">hasState</rdfs:label>
         <rdfs:seeAlso>http://ontologydesignpatterns.org/wiki/Submissions:Object_with_states</rdfs:seeAlso>
-        <terms:description xml:lang="en">Defines the state of an object.</terms:description>
     </owl:ObjectProperty>
     
 
@@ -185,32 +179,51 @@ Reflecting on the week&apos;s challenges, Alex realizes they underestimated how 
     <!-- https://delicias.dia.fi.upm.es/ontologies/ObjectWithStates.owl#isStateOf -->
 
     <owl:ObjectProperty rdf:about="https://delicias.dia.fi.upm.es/ontologies/ObjectWithStates.owl#isStateOf">
-        <owl:inverseOf rdf:resource="https://delicias.dia.fi.upm.es/ontologies/ObjectWithStates.owl#%20hasState"/>
         <rdfs:domain rdf:resource="https://delicias.dia.fi.upm.es/ontologies/ObjectWithStates.owl#State"/>
-        <rdfs:range rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology#BiasedAgent"/>
+        <rdfs:range rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#BiasedAgent"/>
+        <rdfs:comment xml:lang="en">Defines the object that has an state</rdfs:comment>
         <rdfs:label xml:lang="en">isStateOf</rdfs:label>
         <rdfs:seeAlso>http://ontologydesignpatterns.org/wiki/Submissions:Object_with_states</rdfs:seeAlso>
-        <terms:description xml:lang="en">Defines the object that has an state</terms:description>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://delicias.dia.fi.upm.es/ontologies/ObjectWithStates.owl#%20hasState -->
+    <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#affectedBy -->
 
-    <owl:ObjectProperty rdf:about="https://delicias.dia.fi.upm.es/ontologies/ObjectWithStates.owl#%20hasState"/>
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#affectedBy">
+        <owl:inverseOf rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#affects"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#BiasedAgent"/>
+        <rdfs:range rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#CognitiveBias"/>
+        <rdfs:comment xml:lang="en">Describes the relationship between a Cognitive Bias and an Individual on the base of influence.</rdfs:comment>
+        <rdfs:isDefinedBy>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#affectedBy</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">affectedBy</rdfs:label>
+    </owl:ObjectProperty>
     
 
 
-    <!-- https://github.com/ranacoskun/cognitive_bias_ontology#affectedBy -->
+    <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#affects -->
 
-    <owl:ObjectProperty rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology#affectedBy">
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#affects">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-        <rdfs:domain rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology#BiasedAgent"/>
-        <rdfs:domain rdf:resource="https://w3id.org/framester/data/framestercore/Predicting"/>
-        <rdfs:range rdf:resource="https://delicias.dia.fi.upm.es/ontologies/ObjectWithStates.owl#State"/>
-        <rdfs:range rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology#CognitiveBias"/>
-        <rdfs:label xml:lang="en">affectedBy</rdfs:label>
-        <terms:description xml:lang="en">Describes a relationship between entities on the base of influence.</terms:description>
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#CognitiveBias"/>
+        <rdfs:range rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#BiasedAgent"/>
+        <rdfs:comment xml:lang="en">Inverse of AffectedBy.</rdfs:comment>
+        <rdfs:isDefinedBy>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#affects</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">affects</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#influences -->
+
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#influences">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="https://delicias.dia.fi.upm.es/ontologies/ObjectWithStates.owl#State"/>
+        <rdfs:range rdf:resource="https://w3id.org/framester/data/framestercore/Predicting"/>
+        <rdfs:comment xml:lang="en">An entity having and effect on the other entity</rdfs:comment>
+        <rdfs:isDefinedBy>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#influences</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">influences</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -220,9 +233,10 @@ Reflecting on the week&apos;s challenges, Alex realizes they underestimated how 
     <owl:ObjectProperty rdf:about="https://www.cidoc-crm.org/html/cidoc_crm_v7.1.3.html#isAbout">
         <rdfs:domain rdf:resource="https://w3id.org/framester/data/framestercore/Predicting"/>
         <rdfs:range rdf:resource="https://w3id.org/framester/data/framestercore/Deciding"/>
+        <rdfs:comment xml:lang="en">This property documents that an instance of E89 Propositional Object has as subject an instance of E1 CRM Entity. This differs from P67 refers to (is referred to by), which refers to an instance of E1 CRM Entity, in that it describes the primary subject or subjects of an instance of E89 Propositional Object.</rdfs:comment>
+        <rdfs:isDefinedBy>https://www.cidoc-crm.org/html/cidoc_crm_v7.1.3.html#isAbout</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">isAbout</rdfs:label>
         <rdfs:seeAlso>https://cidoc-crm.org/html/cidoc_crm_v7.1.3.html#P129</rdfs:seeAlso>
-        <terms:description xml:lang="en">This property documents that an instance of E89 Propositional Object has as subject an instance of E1 CRM Entity. This differs from P67 refers to (is referred to by), which refers to an instance of E1 CRM Entity, in that it describes the primary subject or subjects of an instance of E89 Propositional Object.</terms:description>
     </owl:ObjectProperty>
     
 
@@ -244,22 +258,36 @@ Reflecting on the week&apos;s challenges, Alex realizes they underestimated how 
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/framester/data/framestercore/Accuracy"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Parametrizes values from a datatype. For example, a Parameter AgeForDriving hasParameterDataValue 18 on datatype xsd:int, in the Italian traffic code. In this example, AgeForDriving isDefinedIn the Norm ItalianTrafficCodeAgeDriving.</rdfs:comment>
+        <rdfs:isDefinedBy>http://www.ontologydesignpatterns.org/cp/owl/parameter.owl#hasParameterDataValue</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">hasParameterDataValue</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://ontologydesignpatterns.org/wiki/Submissions:Parameter"/>
-        <terms:description>Parametrizes values from a datatype. For example, a Parameter AgeForDriving hasParameterDataValue 18 on datatype xsd:int, in the Italian traffic code. In this example, AgeForDriving isDefinedIn the Norm ItalianTrafficCodeAgeDriving.</terms:description>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://www.cidoc-crm.org/html/cidoc_crm_v7.1.3.html#hasType -->
+    <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/Empathy%20Gap/EmpathyGap.owl#hasPhysicalType -->
 
-    <owl:DatatypeProperty rdf:about="https://www.cidoc-crm.org/html/cidoc_crm_v7.1.3.html#hasType">
+    <owl:DatatypeProperty rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/Empathy%20Gap/EmpathyGap.owl#hasPhysicalType">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology#PhysicalState"/>
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#PhysicalState"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">This property allows sub-typing of entities – a form of specialization – through the use of a terminological hierarchy, or thesaurus.</rdfs:comment>
+        <rdfs:isDefinedBy>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/Empathy%20Gap/EmpathyGap.owl#hasPhysicalType</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">hasPhysicalType</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#hasEmotionalType -->
+
+    <owl:DatatypeProperty rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#hasEmotionalType">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://softeng.polito.it/rsctx/EmotionalState"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label xml:lang="en">hasType</rdfs:label>
-        <terms:description>This property allows sub-typing of entities – a form of specialization – through the use of a terminological hierarchy, or thesaurus.</terms:description>
+        <rdfs:comment xml:lang="en">This property allows sub-typing of entities – a form of specialization – through the use of a terminological hierarchy, or thesaurus.</rdfs:comment>
+        <rdfs:isDefinedBy>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/Empathy%20Gap/EmpathyGap.owl#hasEmotionalType</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">hasEmotionalType</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -278,71 +306,79 @@ Reflecting on the week&apos;s challenges, Alex realizes they underestimated how 
     <!-- https://delicias.dia.fi.upm.es/ontologies/ObjectWithStates.owl#State -->
 
     <owl:Class rdf:about="https://delicias.dia.fi.upm.es/ontologies/ObjectWithStates.owl#State">
+        <rdfs:comment xml:lang="en">States are the different states that an object can have. States must belong to a single collection of non-duplicate elements (i.e., to a set).</rdfs:comment>
+        <rdfs:isDefinedBy>https://delicias.dia.fi.upm.es/ontologies/ObjectWithStates.owl#State</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">State</rdfs:label>
-        <terms:description xml:lang="en">States are the different states that an object can have. States must belong to a single collection of non-duplicate elements (i.e., to a set).</terms:description>
     </owl:Class>
     
 
 
-    <!-- https://github.com/ranacoskun/cognitive_bias_ontology#BiasedAgent -->
+    <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/Empathy%20Gap/EmpathyGap.owlEmpathyGap -->
 
-    <owl:Class rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology#BiasedAgent">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/framester/data/framestercore/People"/>
-        <owl:disjointWith rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology#NonBiasedAgent"/>
-        <rdfs:label xml:lang="en">BiasedAgent</rdfs:label>
-        <terms:description xml:lang="en">Represents an entity that experiences the bias.</terms:description>
-    </owl:Class>
-    
-
-
-    <!-- https://github.com/ranacoskun/cognitive_bias_ontology#CognitiveBias -->
-
-    <owl:Class rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology#CognitiveBias">
-        <owl:disjointWith rdf:resource="https://w3id.org/framester/data/framestercore/Accuracy"/>
-        <rdfs:label xml:lang="en">CognitiveBias</rdfs:label>
-        <terms:description xml:lang="en">Represents the overarching concept of cognitive biases.</terms:description>
-    </owl:Class>
-    
-
-
-    <!-- https://github.com/ranacoskun/cognitive_bias_ontology#EmpathyGap -->
-
-    <owl:Class rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology#EmpathyGap">
-        <rdfs:subClassOf rdf:resource="https://github.com/ranacoskun/cognitive_bias_ontology#CognitiveBias"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/Empathy%20Gap/EmpathyGap.owlEmpathyGap">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#CognitiveBias"/>
+        <rdfs:comment xml:lang="en">A cognitive bias where a person underestimates the influence of different emotional or physical states on their decisions or behaviors.</rdfs:comment>
+        <rdfs:isDefinedBy>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/Empathy%20Gap/EmpathyGap.owlEmpathyGap</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">EmpathyGap</rdfs:label>
-        <terms:description xml:lang="en">A cognitive bias where a person underestimates the influence of different emotional or physical states on their decisions or behaviors.</terms:description>
     </owl:Class>
     
 
 
-    <!-- https://github.com/ranacoskun/cognitive_bias_ontology#NonBiasedAgent -->
+    <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#BiasedAgent -->
 
-    <owl:Class rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology#NonBiasedAgent">
+    <owl:Class rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#BiasedAgent">
         <rdfs:subClassOf rdf:resource="https://w3id.org/framester/data/framestercore/People"/>
-        <rdfs:label xml:lang="en">NonBiasedAgent</rdfs:label>
-        <terms:description xml:lang="en">Represents an idealized entity that makes decisions based on objective analysis, facts, and logical reasoning, without being affected by cognitive biases.</terms:description>
+        <owl:disjointWith rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#NonBiasedAgent"/>
+        <rdfs:comment xml:lang="en">Represents an entity that experiences the bias.</rdfs:comment>
+        <rdfs:isDefinedBy>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#BiasedAgent</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">BiasedAgent</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://github.com/ranacoskun/cognitive_bias_ontology#PhysicalState -->
+    <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#CognitiveBias -->
 
-    <owl:Class rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology#PhysicalState">
+    <owl:Class rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#CognitiveBias">
+        <rdfs:comment xml:lang="en">Represents the overarching concept of cognitive biases.</rdfs:comment>
+        <rdfs:isDefinedBy>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#CognitiveBias</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">CognitiveBias</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#NonBiasedAgent -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#NonBiasedAgent">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/framester/data/framestercore/People"/>
+        <rdfs:comment xml:lang="en">Represents an idealized entity that makes decisions based on objective analysis, facts, and logical reasoning, without being affected by cognitive biases.</rdfs:comment>
+        <rdfs:isDefinedBy>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#NonBiasedAgent</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">NonBiasedAgent</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#PhysicalState -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#PhysicalState">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/Empathy%20Gap/EmpathyGap.owl#hasPhysicalType"/>
+                        <owl:hasValue>negative</owl:hasValue>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/Empathy%20Gap/EmpathyGap.owl#hasPhysicalType"/>
+                        <owl:hasValue>positive</owl:hasValue>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="https://delicias.dia.fi.upm.es/ontologies/ObjectWithStates.owl#State"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://www.cidoc-crm.org/html/cidoc_crm_v7.1.3.html#hasType"/>
-                <owl:hasValue xml:lang="en">negative</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://www.cidoc-crm.org/html/cidoc_crm_v7.1.3.html#hasType"/>
-                <owl:hasValue xml:lang="en">positive</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="https://softeng.polito.it/rsctx/EmotionalState"/>
+        <rdfs:comment xml:lang="en">Refers to the current condition of an entity&amp;apos;s body, encompassing aspects like health, energy levels, fatigue, and overall physical well-being. Has a type (predefined string as positive, negative, etc.)</rdfs:comment>
+        <rdfs:isDefinedBy>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/Empathy%20Gap/EmpathyGap.owlPhysicalState</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">PhysicalState</rdfs:label>
-        <terms:description xml:lang="en">Refers to the current condition of an entity&apos;s body, encompassing aspects like health, energy levels, fatigue, and overall physical well-being. Has a type (predefined string as &quot;positive&quot;, &quot;negative&quot;, etc.)</terms:description>
     </owl:Class>
     
 
@@ -350,21 +386,24 @@ Reflecting on the week&apos;s challenges, Alex realizes they underestimated how 
     <!-- https://softeng.polito.it/rsctx/EmotionalState -->
 
     <owl:Class rdf:about="https://softeng.polito.it/rsctx/EmotionalState">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#hasEmotionalType"/>
+                        <owl:hasValue>negative</owl:hasValue>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#hasEmotionalType"/>
+                        <owl:hasValue>positive</owl:hasValue>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="https://delicias.dia.fi.upm.es/ontologies/ObjectWithStates.owl#State"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://www.cidoc-crm.org/html/cidoc_crm_v7.1.3.html#hasType"/>
-                <owl:hasValue xml:lang="en">negative</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://www.cidoc-crm.org/html/cidoc_crm_v7.1.3.html#hasType"/>
-                <owl:hasValue xml:lang="en">positive</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">The state of a person&apos;s emotions (especially with regard to pleasure or dejection). Has type which is a predefined sting. In our case: positive and negative or other predefined values.</rdfs:comment>
+        <rdfs:isDefinedBy>https://softeng.polito.it/rsctx/EmotionalState</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">EmotionalState</rdfs:label>
-        <terms:description xml:lang="en">The state of a person&apos;s emotions (especially with regard to pleasure or dejection). Has type which is a predefined sting. In our case: &quot;positive&quot; and &quot;negative&quot;or other predefined values.</terms:description>
     </owl:Class>
     
 
@@ -372,14 +411,15 @@ Reflecting on the week&apos;s challenges, Alex realizes they underestimated how 
     <!-- https://w3id.org/framester/data/framestercore/Accuracy -->
 
     <owl:Class rdf:about="https://w3id.org/framester/data/framestercore/Accuracy">
-        <rdfs:subClassOf>
+        <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/parameter.owl#hasParameterDataValue"/>
-                <owl:hasValue xml:lang="en">low</owl:hasValue>
+                <owl:hasValue>low</owl:hasValue>
             </owl:Restriction>
-        </rdfs:subClassOf>
+        </owl:equivalentClass>
+        <rdfs:comment xml:lang="en">Presents the accuracy of predicting of decisions.</rdfs:comment>
+        <rdfs:isDefinedBy>https://w3id.org/framester/data/framestercore/Accuracy</rdfs:isDefinedBy>
         <rdfs:label>Accuracy</rdfs:label>
-        <terms:description xml:lang="en">Presents the accuracy of predicting of decisions.</terms:description>
     </owl:Class>
     
 
@@ -387,8 +427,15 @@ Reflecting on the week&apos;s challenges, Alex realizes they underestimated how 
     <!-- https://w3id.org/framester/data/framestercore/Deciding -->
 
     <owl:Class rdf:about="https://w3id.org/framester/data/framestercore/Deciding">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/reaction.owl.v0.1#isPerformedBy"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/framester/data/framestercore/People"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:comment xml:lang="en">Models activity of taking decision.</rdfs:comment>
+        <rdfs:isDefinedBy>https://w3id.org/framester/data/framestercore/Deciding</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Deciding</rdfs:label>
-        <terms:description xml:lang="en">Models activity of taking decision.</terms:description>
     </owl:Class>
     
 
@@ -396,8 +443,9 @@ Reflecting on the week&apos;s challenges, Alex realizes they underestimated how 
     <!-- https://w3id.org/framester/data/framestercore/People -->
 
     <owl:Class rdf:about="https://w3id.org/framester/data/framestercore/People">
+        <rdfs:comment xml:lang="en">Denotes a human being and express that we are talking about human cognitive biases.</rdfs:comment>
+        <rdfs:isDefinedBy>https://w3id.org/framester/data/framestercore/People</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">People</rdfs:label>
-        <terms:description xml:lang="en">Denotes a human being and express that we are talking about human cognitive biases.</terms:description>
     </owl:Class>
     
 
@@ -405,8 +453,15 @@ Reflecting on the week&apos;s challenges, Alex realizes they underestimated how 
     <!-- https://w3id.org/framester/data/framestercore/Predicting -->
 
     <owl:Class rdf:about="https://w3id.org/framester/data/framestercore/Predicting">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/reaction.owl.v0.1#isPerformedBy"/>
+                <owl:someValuesFrom rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#BiasedAgent"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:comment xml:lang="en">Models the activity of predicting the decisions.</rdfs:comment>
+        <rdfs:isDefinedBy>https://w3id.org/framester/data/framestercore/Predicting</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Predicting</rdfs:label>
-        <terms:description xml:lang="en">Models the activity of predicting the decisions.</terms:description>
     </owl:Class>
     
 
@@ -414,72 +469,92 @@ Reflecting on the week&apos;s challenges, Alex realizes they underestimated how 
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
-    // General axioms
+    // Individuals
     //
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://delicias.dia.fi.upm.es/ontologies/ObjectWithStates.owl#State"/>
-            <rdf:Description rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology#BiasedAgent"/>
-            <rdf:Description rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology#CognitiveBias"/>
-            <rdf:Description rdf:about="https://w3id.org/framester/data/framestercore/Accuracy"/>
-            <rdf:Description rdf:about="https://w3id.org/framester/data/framestercore/Deciding"/>
-            <rdf:Description rdf:about="https://w3id.org/framester/data/framestercore/Predicting"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://delicias.dia.fi.upm.es/ontologies/ObjectWithStates.owl#State"/>
-            <rdf:Description rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology#CognitiveBias"/>
-            <rdf:Description rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology#NonBiasedAgent"/>
-            <rdf:Description rdf:about="https://w3id.org/framester/data/framestercore/Accuracy"/>
-            <rdf:Description rdf:about="https://w3id.org/framester/data/framestercore/Deciding"/>
-            <rdf:Description rdf:about="https://w3id.org/framester/data/framestercore/Predicting"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://delicias.dia.fi.upm.es/ontologies/ObjectWithStates.owl#State"/>
-            <rdf:Description rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology#CognitiveBias"/>
-            <rdf:Description rdf:about="https://w3id.org/framester/data/framestercore/Accuracy"/>
-            <rdf:Description rdf:about="https://w3id.org/framester/data/framestercore/Deciding"/>
-            <rdf:Description rdf:about="https://w3id.org/framester/data/framestercore/People"/>
-            <rdf:Description rdf:about="https://w3id.org/framester/data/framestercore/Predicting"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://delicias.dia.fi.upm.es/ontologies/ObjectWithStates.owl#State"/>
-            <rdf:Description rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology#EmpathyGap"/>
-            <rdf:Description rdf:about="https://w3id.org/framester/data/framestercore/Accuracy"/>
-            <rdf:Description rdf:about="https://w3id.org/framester/data/framestercore/Deciding"/>
-            <rdf:Description rdf:about="https://w3id.org/framester/data/framestercore/People"/>
-            <rdf:Description rdf:about="https://w3id.org/framester/data/framestercore/Predicting"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology#BiasedAgent"/>
-            <rdf:Description rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology#CognitiveBias"/>
-            <rdf:Description rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology#NonBiasedAgent"/>
-            <rdf:Description rdf:about="https://github.com/ranacoskun/cognitive_bias_ontology#PhysicalState"/>
-            <rdf:Description rdf:about="https://softeng.polito.it/rsctx/EmotionalState"/>
-            <rdf:Description rdf:about="https://w3id.org/framester/data/framestercore/Accuracy"/>
-            <rdf:Description rdf:about="https://w3id.org/framester/data/framestercore/Deciding"/>
-            <rdf:Description rdf:about="https://w3id.org/framester/data/framestercore/People"/>
-            <rdf:Description rdf:about="https://w3id.org/framester/data/framestercore/Predicting"/>
-        </owl:members>
-    </rdf:Description>
+    
+
+
+    <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/Empathy%20Gap/EmpathyGap.owl#ActionPrediction -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/Empathy%20Gap/EmpathyGap.owl#ActionPrediction">
+        <rdf:type rdf:resource="https://w3id.org/framester/data/framestercore/Predicting"/>
+        <parameter:hasParameter rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/Empathy%20Gap/EmpathyGap.owl#PredictionAccuracy"/>
+        <reaction:isPerformedBy rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/Empathy%20Gap/EmpathyGap.owl#Alex"/>
+        <cidoc_crm_v7:isAbout rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/Empathy%20Gap/EmpathyGap.owl#SigningUp"/>
+        <rdfs:comment xml:lang="en">Prediction of future activity</rdfs:comment>
+        <rdfs:isDefinedBy>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/Empathy%20Gap/EmpathyGap.owl#ActionPrediction</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">ActionPrediction</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/Empathy%20Gap/EmpathyGap.owl#Alex -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/Empathy%20Gap/EmpathyGap.owl#Alex">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#BiasedAgent"/>
+        <reaction:performs rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/Empathy%20Gap/EmpathyGap.owl#ActionPrediction"/>
+        <reaction:performs rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/Empathy%20Gap/EmpathyGap.owl#SigningUp"/>
+        <obst:hasState rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/Empathy%20Gap/EmpathyGap.owl#Excited"/>
+        <cbi:affectedBy rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/Empathy%20Gap/EmpathyGap.owl#EmpathyGapInstance"/>
+        <rdfs:comment xml:lang="en">Alex is an individual who experiences the empathy gap while trying to establish a new fitness routine.</rdfs:comment>
+        <rdfs:isDefinedBy>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/Empathy%20Gap/EmpathyGap.owl#Alex</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Alex</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/Empathy%20Gap/EmpathyGap.owl#EmpathyGapInstance -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/Empathy%20Gap/EmpathyGap.owl#EmpathyGapInstance">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/Empathy%20Gap/EmpathyGap.owlEmpathyGap"/>
+        <cbi:affects rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/Empathy%20Gap/EmpathyGap.owl#Alex"/>
+        <rdfs:comment xml:lang="en">The situation of expiriencing the Empathy Gap Bias</rdfs:comment>
+        <rdfs:isDefinedBy>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/Empathy%20Gap/EmpathyGap.owl#EmpathyGapInstance</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">EmpathyGapInstance</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/Empathy%20Gap/EmpathyGap.owl#Excited -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/Empathy%20Gap/EmpathyGap.owl#Excited">
+        <rdf:type rdf:resource="https://softeng.polito.it/rsctx/EmotionalState"/>
+        <obst:isStateOf rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/Empathy%20Gap/EmpathyGap.owl#Alex"/>
+        <cbi:influences rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/Empathy%20Gap/EmpathyGap.owl#ActionPrediction"/>
+        <cbi:hasEmotionalType>positive</cbi:hasEmotionalType>
+        <rdfs:comment xml:lang="en">Feeling particularly motivated after a weekend of relaxation and light activities.</rdfs:comment>
+        <rdfs:isDefinedBy>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/Empathy%20Gap/EmpathyGap.owl#Excited</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Excited</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/Empathy%20Gap/EmpathyGap.owl#PredictionAccuracy -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/Empathy%20Gap/EmpathyGap.owl#PredictionAccuracy">
+        <rdf:type rdf:resource="https://w3id.org/framester/data/framestercore/Accuracy"/>
+        <parameter:isParameterFor rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/Empathy%20Gap/EmpathyGap.owl#ActionPrediction"/>
+        <rdfs:comment xml:lang="en">Accuracy of predictions made by Alex</rdfs:comment>
+        <rdfs:isDefinedBy>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/Empathy%20Gap/EmpathyGap.owl#PredictionAccuracy</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">PredictionAccuracy</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/Empathy%20Gap/EmpathyGap.owl#SigningUp -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/Empathy%20Gap/EmpathyGap.owl#SigningUp">
+        <rdf:type rdf:resource="https://w3id.org/framester/data/framestercore/Deciding"/>
+        <reaction:isPerformedBy rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/Empathy%20Gap/EmpathyGap.owl#Alex"/>
+        <rdfs:comment xml:lang="en">The decision of Alex signing up for the 6:00 AM workout sessions at the gym.</rdfs:comment>
+        <rdfs:isDefinedBy>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/Empathy%20Gap/EmpathyGap.owl#SigningUp</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Signing Up</rdfs:label>
+    </owl:NamedIndividual>
 </rdf:RDF>
 
 
 
 <!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
-
