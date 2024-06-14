@@ -85,13 +85,13 @@
         <ObjectProperty IRI="hasStimulus"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="influences"/>
-    </Declaration>
-    <Declaration>
         <ObjectProperty IRI="isBoundTo"/>
     </Declaration>
     <Declaration>
         <ObjectProperty abbreviatedIRI="cbi:affects"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="cbi:influences"/>
     </Declaration>
     <Declaration>
         <ObjectProperty abbreviatedIRI="cbi:isAffectedBy"/>
@@ -169,12 +169,12 @@
         <NamedIndividual IRI="MealOrder"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="influences"/>
+        <ObjectProperty abbreviatedIRI="cbi:influences"/>
         <NamedIndividual IRI="ElegantDecor"/>
         <NamedIndividual IRI="DinerDecision"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="influences"/>
+        <ObjectProperty abbreviatedIRI="cbi:influences"/>
         <NamedIndividual IRI="HigherPrices"/>
         <NamedIndividual IRI="DinerDecision"/>
     </ObjectPropertyAssertion>
@@ -194,7 +194,7 @@
         <NamedIndividual IRI="ContextEffectInstance"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="influences"/>
+        <ObjectProperty abbreviatedIRI="cbi:influences"/>
         <NamedIndividual IRI="UpscaleAmbiance"/>
         <NamedIndividual IRI="DinerDecision"/>
     </ObjectPropertyAssertion>
@@ -215,12 +215,12 @@
         <Class abbreviatedIRI="dul:Situation"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="influences"/>
-        <Class IRI="Context"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
         <ObjectProperty IRI="isBoundTo"/>
         <Class abbreviatedIRI="cbi:ContextEffect"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="cbi:influences"/>
+        <Class IRI="Context"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty abbreviatedIRI="cbi:isAffectedBy"/>
@@ -239,15 +239,15 @@
         <Class abbreviatedIRI="emotion:Stimulus"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="influences"/>
+        <ObjectProperty IRI="isBoundTo"/>
+        <Class IRI="Context"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="cbi:influences"/>
         <ObjectUnionOf>
             <Class IRI="Perception"/>
             <Class abbreviatedIRI="fs:Deciding"/>
         </ObjectUnionOf>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="isBoundTo"/>
-        <Class IRI="Context"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty abbreviatedIRI="cbi:isAffectedBy"/>
@@ -490,21 +490,6 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>influences</IRI>
-        <Literal>An entity having and effect on the other entity</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
-        <IRI>influences</IRI>
-        <Literal>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/ContextEffect/Context_Effect.owl#influences</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>influences</IRI>
-        <Literal>influences</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>isBoundTo</IRI>
         <Literal>Reflects the relationship between Context Effect and entity that it is bound to</Literal>
     </AnnotationAssertion>
@@ -579,6 +564,21 @@ A context effect refers to the influence that the surrounding environment or cir
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>cbi:affects</AbbreviatedIRI>
         <Literal>affects</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>cbi:influences</AbbreviatedIRI>
+        <Literal>An entity having and effect on the other entity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>cbi:influences</AbbreviatedIRI>
+        <Literal>https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#influences</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>cbi:influences</AbbreviatedIRI>
+        <Literal>influences</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
