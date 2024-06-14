@@ -403,7 +403,7 @@
 
     <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/BaseRateFallacy/baseratefallacy.owl#Rate">
         <rdf:type rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/BaseRateFallacy/baseratefallacy.owl#BaseRate"/>
-        <parameter1:ParameterDataValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.002</parameter1:ParameterDataValue>
+        <parameter1:ParameterDataValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.002</parameter1:ParameterDataValue>
         <rdfs:comment xml:lang="en">Rate of disease within the population</rdfs:comment>
         <rdfs:label xml:lang="en">Rate</rdfs:label>
     </owl:NamedIndividual>
