@@ -18,7 +18,7 @@
      xmlns:classification="http://www.ontologydesignpatterns.org/cp/owl/classification.owl#">
     <owl:Ontology rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/SpacingEffect/spacingeffect.owl#">
         <dc:creator xml:lang="en">Rana Coskun</dc:creator>
-        <rdfs:comment xml:lang="en">The &quot;Spacing Effect&quot; is a phenomenon observed in psychology and education, referring to the improved ability to remember information or perform a skill when study or practice sessions are spaced out over time, rather than concentrated in a short period. This effect suggests that distributed practice, involving intervals between learning sessions, enhances long-term memory retention more effectively than massed practice, where learning sessions are crammed together.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The Spacing Effect is a phenomenon observed in psychology and education, referring to the improved ability to remember information or perform a skill when study or practice sessions are spaced out over time, rather than concentrated in a short period. This effect suggests that distributed practice, involving intervals between learning sessions, enhances long-term memory retention more effectively than massed practice, where learning sessions are crammed together.</rdfs:comment>
         <rdfs:label xml:lang="en">Spacing Effect</rdfs:label>
         <rdfs:seeAlso xml:lang="en">http://ontologydesignpatterns.org/wiki/Submissions:Experience_%26_Observation</rdfs:seeAlso>
         <rdfs:seeAlso xml:lang="en">http://ontologydesignpatterns.org/wiki/Submissions:Parameter</rdfs:seeAlso>
